@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E8AA95D1AEF2CD0005C17FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AA95C1AEF2CD0005C17FC /* AppDelegate.swift */; };
+		2E8AA9641AEF2CD0005C17FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8AA9631AEF2CD0005C17FC /* Images.xcassets */; };
+		2E8AA9671AEF2CD0005C17FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8AA9651AEF2CD0005C17FC /* LaunchScreen.xib */; };
+		2E8AA9731AEF2CD0005C17FC /* Lunch_MeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AA9721AEF2CD0005C17FC /* Lunch_MeetTests.swift */; };
+		2E8AA97E1AEF2D27005C17FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AA97C1AEF2D27005C17FC /* LoginViewController.swift */; };
+		2E8AA97F1AEF2D27005C17FC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8AA97D1AEF2D27005C17FC /* LoginViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E8AA96D1AEF2CD0005C17FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E8AA94F1AEF2CD0005C17FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E8AA9561AEF2CD0005C17FC;
+			remoteInfo = "Lunch Meet";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E8AA9571AEF2CD0005C17FC /* Lunch Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Meet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E8AA95B1AEF2CD0005C17FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E8AA95C1AEF2CD0005C17FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E8AA9631AEF2CD0005C17FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2E8AA9661AEF2CD0005C17FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2E8AA96C1AEF2CD0005C17FC /* Lunch MeetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lunch MeetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E8AA9711AEF2CD0005C17FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E8AA9721AEF2CD0005C17FC /* Lunch_MeetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunch_MeetTests.swift; sourceTree = "<group>"; };
+		2E8AA97C1AEF2D27005C17FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2E8AA97D1AEF2D27005C17FC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E8AA9541AEF2CD0005C17FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E8AA9691AEF2CD0005C17FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E8AA94E1AEF2CD0005C17FC = {
+			isa = PBXGroup;
+			children = (
+				2E8AA9591AEF2CD0005C17FC /* Lunch Meet */,
+				2E8AA96F1AEF2CD0005C17FC /* Lunch MeetTests */,
+				2E8AA9581AEF2CD0005C17FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E8AA9581AEF2CD0005C17FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E8AA9571AEF2CD0005C17FC /* Lunch Meet.app */,
+				2E8AA96C1AEF2CD0005C17FC /* Lunch MeetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E8AA9591AEF2CD0005C17FC /* Lunch Meet */ = {
+			isa = PBXGroup;
+			children = (
+				2E8AA95C1AEF2CD0005C17FC /* AppDelegate.swift */,
+				2E8AA9811AEF2D32005C17FC /* Controllers */,
+				2E8AA9631AEF2CD0005C17FC /* Images.xcassets */,
+				2E8AA9651AEF2CD0005C17FC /* LaunchScreen.xib */,
+				2E8AA95A1AEF2CD0005C17FC /* Supporting Files */,
+			);
+			path = "Lunch Meet";
+			sourceTree = "<group>";
+		};
+		2E8AA95A1AEF2CD0005C17FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E8AA95B1AEF2CD0005C17FC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E8AA96F1AEF2CD0005C17FC /* Lunch MeetTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E8AA9721AEF2CD0005C17FC /* Lunch_MeetTests.swift */,
+				2E8AA9701AEF2CD0005C17FC /* Supporting Files */,
+			);
+			path = "Lunch MeetTests";
+			sourceTree = "<group>";
+		};
+		2E8AA9701AEF2CD0005C17FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E8AA9711AEF2CD0005C17FC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E8AA9801AEF2D2B005C17FC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2E8AA97C1AEF2D27005C17FC /* LoginViewController.swift */,
+				2E8AA97D1AEF2D27005C17FC /* LoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		2E8AA9811AEF2D32005C17FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E8AA9801AEF2D2B005C17FC /* Login */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E8AA9561AEF2CD0005C17FC /* Lunch Meet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E8AA9761AEF2CD0005C17FC /* Build configuration list for PBXNativeTarget "Lunch Meet" */;
+			buildPhases = (
+				2E8AA9531AEF2CD0005C17FC /* Sources */,
+				2E8AA9541AEF2CD0005C17FC /* Frameworks */,
+				2E8AA9551AEF2CD0005C17FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lunch Meet";
+			productName = "Lunch Meet";
+			productReference = 2E8AA9571AEF2CD0005C17FC /* Lunch Meet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E8AA96B1AEF2CD0005C17FC /* Lunch MeetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E8AA9791AEF2CD0005C17FC /* Build configuration list for PBXNativeTarget "Lunch MeetTests" */;
+			buildPhases = (
+				2E8AA9681AEF2CD0005C17FC /* Sources */,
+				2E8AA9691AEF2CD0005C17FC /* Frameworks */,
+				2E8AA96A1AEF2CD0005C17FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E8AA96E1AEF2CD0005C17FC /* PBXTargetDependency */,
+			);
+			name = "Lunch MeetTests";
+			productName = "Lunch MeetTests";
+			productReference = 2E8AA96C1AEF2CD0005C17FC /* Lunch MeetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E8AA94F1AEF2CD0005C17FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Greyson Wright";
+				TargetAttributes = {
+					2E8AA9561AEF2CD0005C17FC = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					2E8AA96B1AEF2CD0005C17FC = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 2E8AA9561AEF2CD0005C17FC;
+					};
+				};
+			};
+			buildConfigurationList = 2E8AA9521AEF2CD0005C17FC /* Build configuration list for PBXProject "Lunch Meet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E8AA94E1AEF2CD0005C17FC;
+			productRefGroup = 2E8AA9581AEF2CD0005C17FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E8AA9561AEF2CD0005C17FC /* Lunch Meet */,
+				2E8AA96B1AEF2CD0005C17FC /* Lunch MeetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E8AA9551AEF2CD0005C17FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8AA9671AEF2CD0005C17FC /* LaunchScreen.xib in Resources */,
+				2E8AA9641AEF2CD0005C17FC /* Images.xcassets in Resources */,
+				2E8AA97F1AEF2D27005C17FC /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E8AA96A1AEF2CD0005C17FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E8AA9531AEF2CD0005C17FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8AA97E1AEF2D27005C17FC /* LoginViewController.swift in Sources */,
+				2E8AA95D1AEF2CD0005C17FC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E8AA9681AEF2CD0005C17FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8AA9731AEF2CD0005C17FC /* Lunch_MeetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E8AA96E1AEF2CD0005C17FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E8AA9561AEF2CD0005C17FC /* Lunch Meet */;
+			targetProxy = 2E8AA96D1AEF2CD0005C17FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E8AA9651AEF2CD0005C17FC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E8AA9661AEF2CD0005C17FC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E8AA9741AEF2CD0005C17FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E8AA9751AEF2CD0005C17FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E8AA9771AEF2CD0005C17FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lunch Meet/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E8AA9781AEF2CD0005C17FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Lunch Meet/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2E8AA97A1AEF2CD0005C17FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lunch MeetTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lunch Meet.app/Lunch Meet";
+			};
+			name = Debug;
+		};
+		2E8AA97B1AEF2CD0005C17FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lunch MeetTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lunch Meet.app/Lunch Meet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E8AA9521AEF2CD0005C17FC /* Build configuration list for PBXProject "Lunch Meet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8AA9741AEF2CD0005C17FC /* Debug */,
+				2E8AA9751AEF2CD0005C17FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E8AA9761AEF2CD0005C17FC /* Build configuration list for PBXNativeTarget "Lunch Meet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8AA9771AEF2CD0005C17FC /* Debug */,
+				2E8AA9781AEF2CD0005C17FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E8AA9791AEF2CD0005C17FC /* Build configuration list for PBXNativeTarget "Lunch MeetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8AA97A1AEF2CD0005C17FC /* Debug */,
+				2E8AA97B1AEF2CD0005C17FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E8AA94F1AEF2CD0005C17FC /* Project object */;
+}
