@@ -13,6 +13,20 @@
 		2E8AA9731AEF2CD0005C17FC /* Lunch_MeetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AA9721AEF2CD0005C17FC /* Lunch_MeetTests.swift */; };
 		2E8AA97E1AEF2D27005C17FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AA97C1AEF2D27005C17FC /* LoginViewController.swift */; };
 		2E8AA97F1AEF2D27005C17FC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8AA97D1AEF2D27005C17FC /* LoginViewController.xib */; };
+		2E8FA2411AF31C7D00E9F78E /* Depot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA22C1AF31C7D00E9F78E /* Depot.swift */; };
+		2E8FA2431AF31C7D00E9F78E /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA22E1AF31C7D00E9F78E /* TestData.swift */; };
+		2E8FA2441AF31C7D00E9F78E /* WebserviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA22F1AF31C7D00E9F78E /* WebserviceData.swift */; };
+		2E8FA2581AF31D1600E9F78E /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA2571AF31D1600E9F78E /* LoginRequest.m */; };
+		2E8FA25C1AF31D2A00E9F78E /* LoginResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA25B1AF31D2A00E9F78E /* LoginResponse.m */; };
+		2E8FA25F1AF3221500E9F78E /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA25D1AF3221500E9F78E /* FeedTableViewController.swift */; };
+		2E8FA2601AF3221500E9F78E /* FeedTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FA25E1AF3221500E9F78E /* FeedTableViewController.xib */; };
+		2E8FA2641AF3224500E9F78E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA2621AF3224500E9F78E /* ProfileViewController.swift */; };
+		2E8FA2651AF3224500E9F78E /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FA2631AF3224500E9F78E /* ProfileViewController.xib */; };
+		2E8FA2691AF3241C00E9F78E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA2671AF3241C00E9F78E /* SignUpViewController.swift */; };
+		2E8FA26A1AF3241C00E9F78E /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FA2681AF3241C00E9F78E /* SignUpViewController.xib */; };
+		2E8FA26D1AF3268400E9F78E /* LunchMeetSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA26C1AF3268400E9F78E /* LunchMeetSingleton.swift */; };
+		2E8FA2721AF3290300E9F78E /* AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA2711AF3290300E9F78E /* AccessToken.m */; };
+		2E8FA2751AF3298900E9F78E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA2741AF3298900E9F78E /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +50,25 @@
 		2E8AA9721AEF2CD0005C17FC /* Lunch_MeetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunch_MeetTests.swift; sourceTree = "<group>"; };
 		2E8AA97C1AEF2D27005C17FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2E8AA97D1AEF2D27005C17FC /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		2E8FA22C1AF31C7D00E9F78E /* Depot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Depot.swift; sourceTree = "<group>"; };
+		2E8FA22E1AF31C7D00E9F78E /* TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		2E8FA22F1AF31C7D00E9F78E /* WebserviceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceData.swift; sourceTree = "<group>"; };
+		2E8FA2551AF31D1500E9F78E /* Lunch Meet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lunch Meet-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E8FA2561AF31D1600E9F78E /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
+		2E8FA2571AF31D1600E9F78E /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
+		2E8FA25A1AF31D2A00E9F78E /* LoginResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginResponse.h; sourceTree = "<group>"; };
+		2E8FA25B1AF31D2A00E9F78E /* LoginResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginResponse.m; sourceTree = "<group>"; };
+		2E8FA25D1AF3221500E9F78E /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		2E8FA25E1AF3221500E9F78E /* FeedTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewController.xib; sourceTree = "<group>"; };
+		2E8FA2621AF3224500E9F78E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2E8FA2631AF3224500E9F78E /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		2E8FA2671AF3241C00E9F78E /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2E8FA2681AF3241C00E9F78E /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		2E8FA26C1AF3268400E9F78E /* LunchMeetSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchMeetSingleton.swift; sourceTree = "<group>"; };
+		2E8FA2701AF3290300E9F78E /* AccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessToken.h; sourceTree = "<group>"; };
+		2E8FA2711AF3290300E9F78E /* AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessToken.m; sourceTree = "<group>"; };
+		2E8FA2731AF3298900E9F78E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2E8FA2741AF3298900E9F78E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +110,10 @@
 		2E8AA9591AEF2CD0005C17FC /* Lunch Meet */ = {
 			isa = PBXGroup;
 			children = (
+				2E8FA2551AF31D1500E9F78E /* Lunch Meet-Bridging-Header.h */,
+				2E8FA26C1AF3268400E9F78E /* LunchMeetSingleton.swift */,
 				2E8AA95C1AEF2CD0005C17FC /* AppDelegate.swift */,
+				2E8FA1481AF31C2700E9F78E /* Webservices */,
 				2E8AA9811AEF2D32005C17FC /* Controllers */,
 				2E8AA9631AEF2CD0005C17FC /* Images.xcassets */,
 				2E8AA9651AEF2CD0005C17FC /* LaunchScreen.xib */,
@@ -124,8 +160,73 @@
 			isa = PBXGroup;
 			children = (
 				2E8AA9801AEF2D2B005C17FC /* Login */,
+				2E8FA26B1AF3242000E9F78E /* Sign Up */,
+				2E8FA2611AF3221900E9F78E /* Feed */,
+				2E8FA2661AF3224A00E9F78E /* Profile */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2E8FA1481AF31C2700E9F78E /* Webservices */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FA2591AF31D1E00E9F78E /* DTOs */,
+				2E8FA22B1AF31C7D00E9F78E /* Depot */,
+			);
+			name = Webservices;
+			sourceTree = "<group>";
+		};
+		2E8FA22B1AF31C7D00E9F78E /* Depot */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FA22C1AF31C7D00E9F78E /* Depot.swift */,
+				2E8FA22E1AF31C7D00E9F78E /* TestData.swift */,
+				2E8FA22F1AF31C7D00E9F78E /* WebserviceData.swift */,
+			);
+			name = Depot;
+			path = Swift/Depot;
+			sourceTree = "<group>";
+		};
+		2E8FA2591AF31D1E00E9F78E /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FA2561AF31D1600E9F78E /* LoginRequest.h */,
+				2E8FA2571AF31D1600E9F78E /* LoginRequest.m */,
+				2E8FA25A1AF31D2A00E9F78E /* LoginResponse.h */,
+				2E8FA25B1AF31D2A00E9F78E /* LoginResponse.m */,
+				2E8FA2701AF3290300E9F78E /* AccessToken.h */,
+				2E8FA2711AF3290300E9F78E /* AccessToken.m */,
+				2E8FA2731AF3298900E9F78E /* User.h */,
+				2E8FA2741AF3298900E9F78E /* User.m */,
+			);
+			name = DTOs;
+			sourceTree = "<group>";
+		};
+		2E8FA2611AF3221900E9F78E /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FA25D1AF3221500E9F78E /* FeedTableViewController.swift */,
+				2E8FA25E1AF3221500E9F78E /* FeedTableViewController.xib */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		2E8FA2661AF3224A00E9F78E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FA2621AF3224500E9F78E /* ProfileViewController.swift */,
+				2E8FA2631AF3224500E9F78E /* ProfileViewController.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		2E8FA26B1AF3242000E9F78E /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FA2671AF3241C00E9F78E /* SignUpViewController.swift */,
+				2E8FA2681AF3241C00E9F78E /* SignUpViewController.xib */,
+			);
+			name = "Sign Up";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +312,9 @@
 				2E8AA9671AEF2CD0005C17FC /* LaunchScreen.xib in Resources */,
 				2E8AA9641AEF2CD0005C17FC /* Images.xcassets in Resources */,
 				2E8AA97F1AEF2D27005C17FC /* LoginViewController.xib in Resources */,
+				2E8FA2651AF3224500E9F78E /* ProfileViewController.xib in Resources */,
+				2E8FA26A1AF3241C00E9F78E /* SignUpViewController.xib in Resources */,
+				2E8FA2601AF3221500E9F78E /* FeedTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,8 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8FA2751AF3298900E9F78E /* User.m in Sources */,
+				2E8FA25C1AF31D2A00E9F78E /* LoginResponse.m in Sources */,
+				2E8FA2441AF31C7D00E9F78E /* WebserviceData.swift in Sources */,
 				2E8AA97E1AEF2D27005C17FC /* LoginViewController.swift in Sources */,
+				2E8FA25F1AF3221500E9F78E /* FeedTableViewController.swift in Sources */,
+				2E8FA2691AF3241C00E9F78E /* SignUpViewController.swift in Sources */,
+				2E8FA26D1AF3268400E9F78E /* LunchMeetSingleton.swift in Sources */,
 				2E8AA95D1AEF2CD0005C17FC /* AppDelegate.swift in Sources */,
+				2E8FA2581AF31D1600E9F78E /* LoginRequest.m in Sources */,
+				2E8FA2641AF3224500E9F78E /* ProfileViewController.swift in Sources */,
+				2E8FA2411AF31C7D00E9F78E /* Depot.swift in Sources */,
+				2E8FA2431AF31C7D00E9F78E /* TestData.swift in Sources */,
+				2E8FA2721AF3290300E9F78E /* AccessToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,10 +465,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Lunch Meet/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lunch Meet/Lunch Meet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -361,10 +479,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Lunch Meet/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lunch Meet/Lunch Meet-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -421,6 +541,7 @@
 				2E8AA9781AEF2CD0005C17FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E8AA9791AEF2CD0005C17FC /* Build configuration list for PBXNativeTarget "Lunch MeetTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +550,7 @@
 				2E8AA97B1AEF2CD0005C17FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
