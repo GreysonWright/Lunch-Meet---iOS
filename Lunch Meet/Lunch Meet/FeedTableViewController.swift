@@ -10,6 +10,24 @@ import UIKit
 
 class FeedTableViewController: UITableViewController {
 	
+	var feedObjects: [FeedItem] = [ ]
+	
+	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+		
+		
+		refreshControl = UIRefreshControl()
+		refreshControl?.addTarget(self, action: Selector("getFeed"), forControlEvents: UIControlEvents.ValueChanged)
+		
+		tableView.registerNib(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "FeedCell")
+		
+		getFeed()
+	}
+	
+	required init(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,40 +40,62 @@ class FeedTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+		
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
-    }
 	
 	func signOutButtonTapped(){
 		LunchMeetSingleton.sharedInstance.appDelegate.window?.rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
 	}
+	
+	func getFeed(){
+		DepotSingleton.sharedDepot.getFeed { (response: [FeedItem]) -> Void in
+			if response.count != 0{
+					self.feedObjects = response
+			}
+			dispatch_async(dispatch_get_main_queue(), { () -> Void in
+				
+				self.refreshControl?.endRefreshing()
+				self.tableView.reloadData()
+			})
+		}
+	}
+	
+    // MARK: - Table view data source
 
-    /*
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Potentially incomplete method implementation.
+//        // Return the number of sections.
+//        return 0
+//    }
+
+	override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+		return 72
+	}
+	
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return feedObjects.count
+    }
+	
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell", forIndexPath: indexPath) as! FeedTableViewCell
+		
+		let feedItem = feedObjects[indexPath.row]
+		
+		cell.eventLabel.text = feedItem.event
+		cell.detailsLabel.text = feedItem.details
+		cell.dateLabel.text = feedItem.date
+		
         return cell
     }
-    */
+	
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		//Present action sheet
+	}
 
     /*
     // Override to support conditional editing of the table view.

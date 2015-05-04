@@ -51,4 +51,32 @@ class TestData: NSObject, DepotInterface {
 			response(loginResponse)
 		})
 	}
+	
+	func getFeed(response: (([FeedItem]) -> Void)) {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+			sleep(1)
+			
+			let feedItem0 = FeedItem()
+			feedItem0.event = "Lunch"
+			feedItem0.details = "Chick Fil-A"
+			feedItem0.date = "5/20/2015"
+			feedItem0.type = "event"
+			
+			let feedItem1 = FeedItem()
+			feedItem1.event = "Friend Added"
+			feedItem1.details = "John Doe"
+			feedItem1.date = "2 days ago"
+			feedItem1.type = "friend"
+			
+			let feedItem2 = FeedItem()
+			feedItem2.event = "Joined Group"
+			feedItem2.details = "Cool People"
+			feedItem2.date = "1 day ago"
+			feedItem2.type = "group"
+			
+			let feedObjects = [feedItem0, feedItem1, feedItem2]
+			
+			response(feedObjects)
+		})
+	}
 }

@@ -44,4 +44,8 @@ class WebserviceData: NSObject, DepotInterface {
 	func login(request: LoginRequest, response: ((LoginResponse) -> Void)) {
 		
 	}
+	
+	func getFeed(response: (([FeedItem]) -> Void)) {
+		
+	}
 }

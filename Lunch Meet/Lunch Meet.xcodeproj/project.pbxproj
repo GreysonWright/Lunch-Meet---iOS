@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E718BE61AF3DA0200CDBB6F /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E718BE41AF3DA0200CDBB6F /* FeedTableViewCell.swift */; };
+		2E718BE71AF3DA0200CDBB6F /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E718BE51AF3DA0200CDBB6F /* FeedTableViewCell.xib */; };
+		2E86A1051AF7AE0F00CAA119 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E86A1041AF7AE0F00CAA119 /* NSObject+ObjectMap.m */; };
+		2E86A1091AF7AE7600CAA119 /* WebOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E86A1081AF7AE7600CAA119 /* WebOperation.m */; };
 		2E8AA95D1AEF2CD0005C17FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AA95C1AEF2CD0005C17FC /* AppDelegate.swift */; };
 		2E8AA9641AEF2CD0005C17FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8AA9631AEF2CD0005C17FC /* Images.xcassets */; };
 		2E8AA9671AEF2CD0005C17FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8AA9651AEF2CD0005C17FC /* LaunchScreen.xib */; };
@@ -27,6 +31,7 @@
 		2E8FA26D1AF3268400E9F78E /* LunchMeetSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA26C1AF3268400E9F78E /* LunchMeetSingleton.swift */; };
 		2E8FA2721AF3290300E9F78E /* AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA2711AF3290300E9F78E /* AccessToken.m */; };
 		2E8FA2751AF3298900E9F78E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA2741AF3298900E9F78E /* User.m */; };
+		2E90D5A01AF3B01900497FD2 /* FeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90D59F1AF3B01900497FD2 /* FeedItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E718BE41AF3DA0200CDBB6F /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		2E718BE51AF3DA0200CDBB6F /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		2E86A1031AF7AE0F00CAA119 /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
+		2E86A1041AF7AE0F00CAA119 /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
+		2E86A1071AF7AE7600CAA119 /* WebOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebOperation.h; sourceTree = "<group>"; };
+		2E86A1081AF7AE7600CAA119 /* WebOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebOperation.m; sourceTree = "<group>"; };
+		2E86A10B1AF7AED200CAA119 /* WebOperationHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebOperationHeaders.h; sourceTree = "<group>"; };
 		2E8AA9571AEF2CD0005C17FC /* Lunch Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Meet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8AA95B1AEF2CD0005C17FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E8AA95C1AEF2CD0005C17FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +81,8 @@
 		2E8FA2711AF3290300E9F78E /* AccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessToken.m; sourceTree = "<group>"; };
 		2E8FA2731AF3298900E9F78E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		2E8FA2741AF3298900E9F78E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2E90D59E1AF3B01900497FD2 /* FeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItem.h; sourceTree = "<group>"; };
+		2E90D59F1AF3B01900497FD2 /* FeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +103,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E718BE31AF3D9E500CDBB6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E718BE81AF3DA0700CDBB6F /* Feed */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2E718BE81AF3DA0700CDBB6F /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				2E718BE41AF3DA0200CDBB6F /* FeedTableViewCell.swift */,
+				2E718BE51AF3DA0200CDBB6F /* FeedTableViewCell.xib */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		2E86A1021AF7ADFC00CAA119 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2E86A1061AF7AE1400CAA119 /* NSObject+ObjectMap */,
+				2E86A10A1AF7AE7A00CAA119 /* WebOperation */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		2E86A1061AF7AE1400CAA119 /* NSObject+ObjectMap */ = {
+			isa = PBXGroup;
+			children = (
+				2E86A1031AF7AE0F00CAA119 /* NSObject+ObjectMap.h */,
+				2E86A1041AF7AE0F00CAA119 /* NSObject+ObjectMap.m */,
+			);
+			name = "NSObject+ObjectMap";
+			sourceTree = "<group>";
+		};
+		2E86A10A1AF7AE7A00CAA119 /* WebOperation */ = {
+			isa = PBXGroup;
+			children = (
+				2E86A10B1AF7AED200CAA119 /* WebOperationHeaders.h */,
+				2E86A1071AF7AE7600CAA119 /* WebOperation.h */,
+				2E86A1081AF7AE7600CAA119 /* WebOperation.m */,
+			);
+			name = WebOperation;
+			sourceTree = "<group>";
+		};
 		2E8AA94E1AEF2CD0005C17FC = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +172,9 @@
 				2E8FA2551AF31D1500E9F78E /* Lunch Meet-Bridging-Header.h */,
 				2E8FA26C1AF3268400E9F78E /* LunchMeetSingleton.swift */,
 				2E8AA95C1AEF2CD0005C17FC /* AppDelegate.swift */,
+				2E86A1021AF7ADFC00CAA119 /* Libraries */,
 				2E8FA1481AF31C2700E9F78E /* Webservices */,
+				2E718BE31AF3D9E500CDBB6F /* Views */,
 				2E8AA9811AEF2D32005C17FC /* Controllers */,
 				2E8AA9631AEF2CD0005C17FC /* Images.xcassets */,
 				2E8AA9651AEF2CD0005C17FC /* LaunchScreen.xib */,
@@ -198,6 +259,8 @@
 				2E8FA2711AF3290300E9F78E /* AccessToken.m */,
 				2E8FA2731AF3298900E9F78E /* User.h */,
 				2E8FA2741AF3298900E9F78E /* User.m */,
+				2E90D59E1AF3B01900497FD2 /* FeedItem.h */,
+				2E90D59F1AF3B01900497FD2 /* FeedItem.m */,
 			);
 			name = DTOs;
 			sourceTree = "<group>";
@@ -315,6 +378,7 @@
 				2E8FA2651AF3224500E9F78E /* ProfileViewController.xib in Resources */,
 				2E8FA26A1AF3241C00E9F78E /* SignUpViewController.xib in Resources */,
 				2E8FA2601AF3221500E9F78E /* FeedTableViewController.xib in Resources */,
+				2E718BE71AF3DA0200CDBB6F /* FeedTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,8 +399,12 @@
 				2E8FA2751AF3298900E9F78E /* User.m in Sources */,
 				2E8FA25C1AF31D2A00E9F78E /* LoginResponse.m in Sources */,
 				2E8FA2441AF31C7D00E9F78E /* WebserviceData.swift in Sources */,
+				2E86A1091AF7AE7600CAA119 /* WebOperation.m in Sources */,
 				2E8AA97E1AEF2D27005C17FC /* LoginViewController.swift in Sources */,
+				2E718BE61AF3DA0200CDBB6F /* FeedTableViewCell.swift in Sources */,
+				2E90D5A01AF3B01900497FD2 /* FeedItem.m in Sources */,
 				2E8FA25F1AF3221500E9F78E /* FeedTableViewController.swift in Sources */,
+				2E86A1051AF7AE0F00CAA119 /* NSObject+ObjectMap.m in Sources */,
 				2E8FA2691AF3241C00E9F78E /* SignUpViewController.swift in Sources */,
 				2E8FA26D1AF3268400E9F78E /* LunchMeetSingleton.swift in Sources */,
 				2E8AA95D1AEF2CD0005C17FC /* AppDelegate.swift in Sources */,

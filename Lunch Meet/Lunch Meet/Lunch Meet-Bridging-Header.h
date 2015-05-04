@@ -6,3 +6,4 @@
 #import "LoginResponse.h"
 #import "AccessToken.h"
 #import "User.h"
+#import "FeedItem.h"

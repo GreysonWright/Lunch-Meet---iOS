@@ -39,6 +39,7 @@ enum DataSources {
 //MARK: Protocol
 @objc protocol DepotInterface{
 	func login(request: LoginRequest, response: ((LoginResponse) -> Void))
+	func getFeed(response: (([FeedItem]) -> Void))
 }
 
 //MARK: Class
@@ -80,5 +81,9 @@ class DepotSingleton {
 	
 	func login(request: LoginRequest, response: ((LoginResponse) -> Void)){
 		return dataSource!.login(request, response: response)
+	}
+	
+	func getFeed(response: (([FeedItem]) -> Void)){
+		return dataSource!.getFeed(response)
 	}
 }

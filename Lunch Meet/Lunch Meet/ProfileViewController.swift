@@ -12,7 +12,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		
         // Do any additional setup after loading the view.
     }
 
@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 		
 		title = "Me"
+		tabBarItem.image = UIImage(named: "Image")
 	}
 	
 	required init(coder aDecoder: NSCoder) {
