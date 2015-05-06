@@ -28,6 +28,8 @@ class SignUpViewController: UIViewController {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 		
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("cancelButtonTapped"))
+		navigationItem.rightBarButtonItem?.tintColor = UIColor.whiteColor()
+		
 	}
 	
 	required init(coder aDecoder: NSCoder) {

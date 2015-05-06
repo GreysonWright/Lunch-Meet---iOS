@@ -52,10 +52,8 @@ class TestData: NSObject, DepotInterface {
 		})
 	}
 	
-	func getFeed(response: (([FeedItem]) -> Void)) {
-		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-			sleep(1)
-			
+	func getFeed(response: (([FeedItem]) -> Void), synchronously: Bool) {
+		func getReturnObjects() -> [FeedItem]{
 			let feedItem0 = FeedItem()
 			feedItem0.event = "Lunch"
 			feedItem0.details = "Chick Fil-A"
@@ -76,7 +74,15 @@ class TestData: NSObject, DepotInterface {
 			
 			let feedObjects = [feedItem0, feedItem1, feedItem2]
 			
-			response(feedObjects)
-		})
+			return feedObjects
+		}
+		if !synchronously{
+			dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+				sleep(1)
+				response(getReturnObjects())
+			})
+		} else{
+			response(getReturnObjects())
+		}
 	}
 }

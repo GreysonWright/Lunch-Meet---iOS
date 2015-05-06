@@ -45,7 +45,7 @@ class WebserviceData: NSObject, DepotInterface {
 		
 	}
 	
-	func getFeed(response: (([FeedItem]) -> Void)) {
+	func getFeed(response: (([FeedItem]) -> Void), synchronously: Bool) {
 		
 	}
 }

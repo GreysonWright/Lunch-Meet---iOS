@@ -11,6 +11,7 @@ import UIKit
 class FeedTableViewController: UITableViewController {
 	
 	var feedObjects: [FeedItem] = [ ]
+	var sync = true
 	
 	override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -33,8 +34,8 @@ class FeedTableViewController: UITableViewController {
 
 		title = "Activity"
 		
-		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: Selector("signOutButtonTapped"))
-		
+		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("signOutButtonTapped"))
+		navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor() //UIColor(red: 255/255, green: 53/255, blue: 138/255, alpha: 1)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,7 +54,7 @@ class FeedTableViewController: UITableViewController {
 	}
 	
 	func getFeed(){
-		DepotSingleton.sharedDepot.getFeed { (response: [FeedItem]) -> Void in
+		DepotSingleton.sharedDepot.getFeed ({ (response: [FeedItem]) -> Void in
 			if response.count != 0{
 					self.feedObjects = response
 			}
@@ -61,8 +62,12 @@ class FeedTableViewController: UITableViewController {
 				
 				self.refreshControl?.endRefreshing()
 				self.tableView.reloadData()
+				
 			})
-		}
+			
+		}, synchronously: sync)
+		
+		sync = false
 	}
 	
     // MARK: - Table view data source
@@ -94,7 +99,8 @@ class FeedTableViewController: UITableViewController {
     }
 	
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		//Present action sheet
+		//Present action sheet with locate and view details
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
 	}
 
     /*

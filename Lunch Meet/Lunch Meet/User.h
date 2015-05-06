@@ -10,4 +10,11 @@
 
 @interface User : NSObject
 
+@property NSString *firstName;
+@property NSString *lastName;
+@property NSDate *birthDate;
+@property NSString *favoritePlace;
+@property NSString *city;
+@property NSString *state;
+
 @end

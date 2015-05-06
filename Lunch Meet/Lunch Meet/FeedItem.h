@@ -13,6 +13,7 @@
 
 @property NSString *event;
 @property NSString *details;
+@property NSString *location;
 @property NSString *date;
 @property NSString *type;
 @property UIImage *image;

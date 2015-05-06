@@ -20,13 +20,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		UINavigationBar.appearance().barTintColor = UIColor(red: 0/255, green: 102/255, blue: 153/255, alpha: 1)
+		UINavigationBar.appearance().barTintColor = UIColor(red: 70/255, green: 102/255, blue: 153/255, alpha: 1)
+		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
 		
 		usernameField.delegate = self
 		passwordField.delegate = self
 		
-		let textFieldTint = UIColor(red: 0/255, green: 51/255, blue: 153/255, alpha: 1)
+		let textFieldTint = UIColor.whiteColor()//UIColor(red: 0/255, green: 51/255, blue: 153/255, alpha: 1)
 		
+		usernameField.attributedPlaceholder = NSAttributedString(string:usernameField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white: 1, alpha: 0.5)]);
+		passwordField.attributedPlaceholder = NSAttributedString(string:passwordField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white: 1, alpha: 0.5)]);
 		usernameField.tintColor = textFieldTint
 		passwordField.tintColor = textFieldTint
 		usernameField.textColor = textFieldTint
@@ -60,8 +63,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		if textField == usernameField{
 			passwordField.becomeFirstResponder()
 		} else{
-			passwordField.resignFirstResponder()
-			login()
+			if passwordField.text != "" && usernameField.text != ""{
+				passwordField.resignFirstResponder()
+				login()
+			}
 		}
 		return true
 	}
@@ -97,8 +102,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 					let profileNavController = UINavigationController(rootViewController: ProfileViewController(nibName: "ProfileViewController", bundle: nil))
 					
 					let tabbarController = UITabBarController()
-					tabbarController.tabBar.barTintColor = UIColor(red: 0/255, green: 102/255, blue: 153/255, alpha: 1)
-					tabbarController.tabBar.tintColor = UIColor(red: 0/255, green: 51/255, blue: 153/255, alpha: 1)
+					tabbarController.tabBar.barTintColor = UIColor(red: 70/255, green: 102/255, blue: 153/255, alpha: 1)
+					tabbarController.tabBar.tintColor = UIColor.whiteColor() //UIColor(red: 0/255, green: 51/255, blue: 153/255, alpha: 1)
 					tabbarController.viewControllers = [feedNavController, profileNavController]
 					LunchMeetSingleton.sharedInstance.appDelegate.window?.rootViewController = tabbarController
 					
@@ -115,6 +120,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	@IBAction func signUpButtonTapped(sender: AnyObject) {
 		let signUpNavController = UINavigationController(rootViewController: SignUpViewController(nibName: "SignUpViewController", bundle: nil))
 		presentViewController(signUpNavController, animated: true, completion: nil)
+		
+	}
+	
+	@IBAction func resetPasswordButtonTapped(sender: AnyObject) {
 		
 	}
 }
