@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Lunch_Meet" customModuleProvider="target">
             <connections>
+                <outlet property="editProfileButton" destination="RZg-Uu-lbY" id="xgj-WR-d5o"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,29 +15,97 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P7w-jb-NUq">
-                    <rect key="frame" x="8" y="8" width="100" height="100"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P7w-jb-NUq">
+                    <rect key="frame" x="8" y="71" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.27450980390000002" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="WLB-3o-m3I"/>
+                        <constraint firstAttribute="width" constant="100" id="eCy-eO-ayT"/>
+                    </constraints>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="8" y="8" width="110" height="110"/>
+                    </variation>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqd-OY-5mB">
-                    <rect key="frame" x="116" y="33" width="130" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqd-OY-5mB">
+                    <rect key="frame" x="116" y="81" width="181" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="uLK-0a-opI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" red="0.27450980390000002" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="126" y="18" width="130" height="30"/>
+                    </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMG-3U-vgI">
-                    <rect key="frame" x="137" y="62" width="130" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMG-3U-vgI">
+                    <rect key="frame" x="137" y="110" width="160" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Ixi-Wg-sQO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" red="0.27450980390000002" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="145" y="47" width="130" height="30"/>
+                    </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xz5-vO-arj">
-                    <rect key="frame" x="279" y="33" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52o-Fp-aip">
+                    <rect key="frame" x="111" y="140" width="47" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="8v9-J4-Yqc"/>
+                        <constraint firstAttribute="width" constant="47" id="LKm-Qk-OrE"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.27450980390000002" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="126" y="87" width="47" height="21"/>
+                    </variation>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aneamil@domain.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajv-g7-2NI">
+                    <rect key="frame" x="166" y="140" width="169" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.27450980390000002" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="181" y="87" width="169" height="21"/>
+                    </variation>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZg-Uu-lbY">
+                    <rect key="frame" x="305" y="95" width="30" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Ie8-Cc-GTf"/>
+                        <constraint firstAttribute="width" constant="30" id="YPW-RG-gxb"/>
+                    </constraints>
+                    <state key="normal" title="Edit">
+                        <color key="titleColor" red="0.27450980390000002" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="editProfileButtonTapped:" destination="-1" eventType="touchUpInside" id="hUr-60-uY9"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="RZg-Uu-lbY" firstAttribute="leading" secondItem="GMG-3U-vgI" secondAttribute="trailing" constant="8" id="9wq-Ka-DTH"/>
+                <constraint firstItem="52o-Fp-aip" firstAttribute="leading" secondItem="P7w-jb-NUq" secondAttribute="trailing" constant="3" id="A99-qj-SQK"/>
+                <constraint firstItem="RZg-Uu-lbY" firstAttribute="leading" secondItem="Aqd-OY-5mB" secondAttribute="trailing" constant="8" id="Jng-L1-oVb"/>
+                <constraint firstItem="GMG-3U-vgI" firstAttribute="top" secondItem="Aqd-OY-5mB" secondAttribute="bottom" constant="8" id="OpT-83-z9s"/>
+                <constraint firstItem="Aqd-OY-5mB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="81" id="TXF-tm-MzE"/>
+                <constraint firstItem="Ajv-g7-2NI" firstAttribute="top" secondItem="GMG-3U-vgI" secondAttribute="bottom" constant="9" id="XGi-MQ-KQX"/>
+                <constraint firstItem="RZg-Uu-lbY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="95" id="bal-WQ-SQR"/>
+                <constraint firstItem="GMG-3U-vgI" firstAttribute="leading" secondItem="P7w-jb-NUq" secondAttribute="trailing" constant="29" id="dxh-Fy-8GR"/>
+                <constraint firstItem="52o-Fp-aip" firstAttribute="top" secondItem="GMG-3U-vgI" secondAttribute="bottom" constant="9" id="hWh-jd-7k9"/>
+                <constraint firstItem="Ajv-g7-2NI" firstAttribute="leading" secondItem="52o-Fp-aip" secondAttribute="trailing" constant="8" id="iO0-Qt-T8z"/>
+                <constraint firstItem="Ajv-g7-2NI" firstAttribute="trailing" secondItem="RZg-Uu-lbY" secondAttribute="trailing" id="lnJ-1X-MTg"/>
+                <constraint firstItem="P7w-jb-NUq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="71" id="r7l-76-DQB"/>
+                <constraint firstItem="P7w-jb-NUq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="u1s-Lg-2gg"/>
+                <constraint firstItem="Aqd-OY-5mB" firstAttribute="leading" secondItem="P7w-jb-NUq" secondAttribute="trailing" constant="8" id="ztk-QC-uO3"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="254" y="184"/>
         </view>
     </objects>
 </document>

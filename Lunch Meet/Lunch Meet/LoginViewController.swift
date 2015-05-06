@@ -13,13 +13,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet var usernameField: UITextField!
 	@IBOutlet var passwordField: UITextField!
 	@IBOutlet var loginButton: UIButton!
-	@IBOutlet var signUpButton: UIButton!
-	
+	@IBOutlet var helpView: UIView!
+	@IBOutlet var helpViewContainer: UIView!
 	@IBOutlet var loadingView: UIVisualEffectView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		helpViewContainer.addSubview(helpView)
+		
 		UINavigationBar.appearance().barTintColor = UIColor(red: 70/255, green: 102/255, blue: 153/255, alpha: 1)
 		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
 		
@@ -34,8 +36,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		passwordField.tintColor = textFieldTint
 		usernameField.textColor = textFieldTint
 		passwordField.textColor = textFieldTint
-		usernameField.layer.cornerRadius = 5
-		passwordField.layer.cornerRadius = 5
+		usernameField.layer.cornerRadius = 10
+		passwordField.layer.cornerRadius = 10
 		usernameField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0)
 		passwordField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0)
 		usernameField.addTarget(self, action:"editingChanged:", forControlEvents: .EditingChanged);
@@ -45,7 +47,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		view.addSubview(loadingView)
 		
 		loginButton.layer.cornerRadius = 15
-		signUpButton.layer.cornerRadius = 15
 	}
 	
 	override func viewDidAppear(animated: Bool) {

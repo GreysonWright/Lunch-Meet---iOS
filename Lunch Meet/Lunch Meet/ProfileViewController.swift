@@ -10,10 +10,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+	@IBOutlet var editProfileButton: UIButton!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
         // Do any additional setup after loading the view.
+		
+		editProfileButton.layer.borderWidth = 0.5
+		editProfileButton.layer.borderColor = UIColor(red: 70, green: 102, blue: 153, alpha: 1).CGColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +37,8 @@ class ProfileViewController: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 
+	@IBAction func editProfileButtonTapped(sender: AnyObject) {
+		
+	}
+	
 }
