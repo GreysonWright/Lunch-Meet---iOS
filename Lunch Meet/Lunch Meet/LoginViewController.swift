@@ -110,9 +110,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 					
 					self.loadingView.hidden = true
 				} else{
+					
 					self.loadingView.hidden = true
 					let alertView = UIAlertView(title: "Uh oh!", message: "Looks like your account doesn't exist. If you think you have an account, check your internet connection.", delegate: self, cancelButtonTitle: "Ok")
 					alertView.show()
+					
 				}
 			})
 		})

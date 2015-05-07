@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface User : NSObject
 
+@property NSNumber *id;
+@property UIImage *profileImage;
 @property NSString *firstName;
 @property NSString *lastName;
 @property NSDate *birthDate;

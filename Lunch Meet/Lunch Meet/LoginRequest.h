@@ -10,4 +10,7 @@
 
 @interface LoginRequest : NSObject
 
+@property NSString *username;
+@property NSString *password;
+
 @end

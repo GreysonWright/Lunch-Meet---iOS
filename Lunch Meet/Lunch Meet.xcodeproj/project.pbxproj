@@ -32,6 +32,9 @@
 		2E8FA2721AF3290300E9F78E /* AccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA2711AF3290300E9F78E /* AccessToken.m */; };
 		2E8FA2751AF3298900E9F78E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FA2741AF3298900E9F78E /* User.m */; };
 		2E90D5A01AF3B01900497FD2 /* FeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E90D59F1AF3B01900497FD2 /* FeedItem.m */; };
+		2EAD08611AFBC82F00C15558 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD08601AFBC82F00C15558 /* Group.m */; };
+		2EAD08641AFBC98A00C15558 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD08621AFBC98A00C15558 /* GroupCollectionViewCell.swift */; };
+		2EAD08651AFBC98A00C15558 /* GroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD08631AFBC98A00C15558 /* GroupCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,10 @@
 		2E8FA2741AF3298900E9F78E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2E90D59E1AF3B01900497FD2 /* FeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItem.h; sourceTree = "<group>"; };
 		2E90D59F1AF3B01900497FD2 /* FeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItem.m; sourceTree = "<group>"; };
+		2EAD085F1AFBC82F00C15558 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		2EAD08601AFBC82F00C15558 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		2EAD08621AFBC98A00C15558 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		2EAD08631AFBC98A00C15558 /* GroupCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +113,8 @@
 		2E718BE31AF3D9E500CDBB6F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2E718BE81AF3DA0700CDBB6F /* Feed */,
+				2EAD08591AFBC69B00C15558 /* CollectionView Cells */,
+				2EAD08581AFBC68E00C15558 /* TableView Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -261,6 +269,8 @@
 				2E8FA2741AF3298900E9F78E /* User.m */,
 				2E90D59E1AF3B01900497FD2 /* FeedItem.h */,
 				2E90D59F1AF3B01900497FD2 /* FeedItem.m */,
+				2EAD085F1AFBC82F00C15558 /* Group.h */,
+				2EAD08601AFBC82F00C15558 /* Group.m */,
 			);
 			name = DTOs;
 			sourceTree = "<group>";
@@ -290,6 +300,31 @@
 				2E8FA2681AF3241C00E9F78E /* SignUpViewController.xib */,
 			);
 			name = "Sign Up";
+			sourceTree = "<group>";
+		};
+		2EAD08581AFBC68E00C15558 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2E718BE81AF3DA0700CDBB6F /* Feed */,
+			);
+			name = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		2EAD08591AFBC69B00C15558 /* CollectionView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD085A1AFBC6A300C15558 /* Group */,
+			);
+			name = "CollectionView Cells";
+			sourceTree = "<group>";
+		};
+		2EAD085A1AFBC6A300C15558 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD08621AFBC98A00C15558 /* GroupCollectionViewCell.swift */,
+				2EAD08631AFBC98A00C15558 /* GroupCollectionViewCell.xib */,
+			);
+			name = Group;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EAD08651AFBC98A00C15558 /* GroupCollectionViewCell.xib in Resources */,
 				2E8AA9671AEF2CD0005C17FC /* LaunchScreen.xib in Resources */,
 				2E8AA9641AEF2CD0005C17FC /* Images.xcassets in Resources */,
 				2E8AA97F1AEF2D27005C17FC /* LoginViewController.xib in Resources */,
@@ -398,7 +434,9 @@
 			files = (
 				2E8FA2751AF3298900E9F78E /* User.m in Sources */,
 				2E8FA25C1AF31D2A00E9F78E /* LoginResponse.m in Sources */,
+				2EAD08611AFBC82F00C15558 /* Group.m in Sources */,
 				2E8FA2441AF31C7D00E9F78E /* WebserviceData.swift in Sources */,
+				2EAD08641AFBC98A00C15558 /* GroupCollectionViewCell.swift in Sources */,
 				2E86A1091AF7AE7600CAA119 /* WebOperation.m in Sources */,
 				2E8AA97E1AEF2D27005C17FC /* LoginViewController.swift in Sources */,
 				2E718BE61AF3DA0200CDBB6F /* FeedTableViewCell.swift in Sources */,

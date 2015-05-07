@@ -10,4 +10,7 @@
 
 @interface AccessToken : NSObject
 
+@property NSString *token;
+@property NSDate *expiration;
+
 @end

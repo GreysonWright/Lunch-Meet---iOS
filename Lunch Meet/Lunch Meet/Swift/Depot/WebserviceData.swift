@@ -48,4 +48,8 @@ class WebserviceData: NSObject, DepotInterface {
 	func getFeed(response: (([FeedItem]) -> Void), synchronously: Bool) {
 		
 	}
+	
+	func getGroups(response: (([Group]) -> Void)) {
+		
+	}
 }

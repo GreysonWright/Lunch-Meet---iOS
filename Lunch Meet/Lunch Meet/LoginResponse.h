@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AccessToken.h"
+#import "User.h"
 
 @interface LoginResponse : NSObject
+
+@property AccessToken *accessToken;
+@property User *user;
 
 @end

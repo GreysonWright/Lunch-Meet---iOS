@@ -46,9 +46,34 @@ class TestData: NSObject, DepotInterface {
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), { () -> Void in
 			sleep(1)
 			
+			let user = User()
+			user.id = 0
+			user.firstName = "Dennis"
+			user.lastName = "Ritchie"
+			user.birthDate = NSDate()
+			user.favoritePlace = "Olive Garden"
+			user.city = "Silicon Valley"
+			user.state = "California"
+			user.profileImage = UIImage(named: "Image")
+			
+			let accessToken = AccessToken()
+			accessToken.token = "039aduf339jdq23kjn"
+			accessToken.expiration = NSDate()
+			
 			let loginResponse = LoginResponse()
+			loginResponse.accessToken = accessToken
+			loginResponse.user = user
+			
+			LunchMeetSingleton.sharedInstance.user = loginResponse.user
+			LunchMeetSingleton.sharedInstance.accessToken = loginResponse.accessToken
+			
+			if LunchMeetSingleton.sharedInstance.user.profileImage == nil{
+//				LunchMeetSingleton.sharedInstance.user.profileImage = UIImage(named: "")
+				//assign default image
+			}
 			
 			response(loginResponse)
+			
 		})
 	}
 	
@@ -84,5 +109,20 @@ class TestData: NSObject, DepotInterface {
 		} else{
 			response(getReturnObjects())
 		}
+	}
+	
+	func getGroups(response: (([Group]) -> Void)) {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+			sleep(1)
+			
+			let group = Group()
+			group.name = "Cool Poeple"
+			group.image = UIImage(named: "Image")
+//			group.members =
+//			group.owner = 
+			
+			let groupArray = [group]
+			response(groupArray)
+		})
 	}
 }

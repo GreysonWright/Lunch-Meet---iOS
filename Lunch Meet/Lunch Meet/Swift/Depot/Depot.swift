@@ -40,6 +40,7 @@ enum DataSources {
 @objc protocol DepotInterface{
 	func login(request: LoginRequest, response: ((LoginResponse) -> Void))
 	func getFeed(response: (([FeedItem]) -> Void), synchronously: Bool)
+	func getGroups(response: (([Group]) -> Void))
 }
 
 //MARK: Class
@@ -85,5 +86,8 @@ class DepotSingleton {
 	
 	func getFeed(response: (([FeedItem]) -> Void), synchronously: Bool){
 		return dataSource!.getFeed(response, synchronously: synchronously)
+	}
+	func getGroups(response: (([Group]) -> Void)) {
+		return dataSource!.getGroups(response)
 	}
 }
