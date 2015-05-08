@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Lunch_Meet" customModuleProvider="target">
             <connections>
                 <outlet property="firstNameLabel" destination="Aqd-OY-5mB" id="BfB-BL-hwV"/>
+                <outlet property="friendTableView" destination="yZp-lo-bXG" id="1di-1u-c94"/>
                 <outlet property="groupCollectionView" destination="Yhh-pw-gsl" id="LMG-sq-rJT"/>
                 <outlet property="lastNameLabel" destination="GMG-3U-vgI" id="Sm9-wG-WEG"/>
                 <outlet property="profileImageView" destination="P7w-jb-NUq" id="3db-2x-6q8"/>
@@ -39,16 +40,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Yhh-pw-gsl">
-                    <rect key="frame" x="0.0" y="179" width="600" height="81"/>
+                    <rect key="frame" x="-1" y="179" width="602" height="81"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="81" id="1EC-Y1-L2n"/>
+                        <constraint firstAttribute="height" constant="81" id="SaC-ne-Ai4"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hOr-js-ogD">
                         <size key="itemSize" width="80" height="80"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                     </collectionViewFlowLayout>
                     <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="0.0" y="179" width="400" height="81"/>
@@ -58,18 +59,30 @@
                         <outlet property="delegate" destination="-1" id="I9t-qz-Ly9"/>
                     </connections>
                 </collectionView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yZp-lo-bXG">
+                    <rect key="frame" x="0.0" y="260" width="600" height="340"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="zdf-gZ-rma"/>
+                        <outlet property="delegate" destination="-1" id="MC3-wx-Fuk"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="yZp-lo-bXG" secondAttribute="bottom" id="2ja-3u-kgD"/>
                 <constraint firstItem="Aqd-OY-5mB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="71" id="8c4-LM-zdh"/>
-                <constraint firstItem="Yhh-pw-gsl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="A2s-cL-wNk"/>
+                <constraint firstAttribute="trailing" secondItem="Yhh-pw-gsl" secondAttribute="trailing" constant="-1" id="9SV-Wu-sNv"/>
+                <constraint firstItem="yZp-lo-bXG" firstAttribute="top" secondItem="Yhh-pw-gsl" secondAttribute="bottom" id="JEt-0l-w3U"/>
+                <constraint firstItem="Yhh-pw-gsl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="Mb9-Dz-21p"/>
                 <constraint firstItem="P7w-jb-NUq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="71" id="Pwh-zJ-ofD"/>
-                <constraint firstItem="Yhh-pw-gsl" firstAttribute="top" secondItem="P7w-jb-NUq" secondAttribute="bottom" constant="8" id="Rwb-cQ-WL6"/>
                 <constraint firstItem="P7w-jb-NUq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cBc-4T-sl0"/>
+                <constraint firstItem="Yhh-pw-gsl" firstAttribute="top" secondItem="P7w-jb-NUq" secondAttribute="bottom" constant="8" id="epm-Kk-tue"/>
                 <constraint firstItem="Aqd-OY-5mB" firstAttribute="leading" secondItem="P7w-jb-NUq" secondAttribute="trailing" constant="14" id="guw-Zm-8gE"/>
                 <constraint firstItem="GMG-3U-vgI" firstAttribute="leading" secondItem="P7w-jb-NUq" secondAttribute="trailing" constant="37" id="kV7-S7-fRI"/>
                 <constraint firstItem="GMG-3U-vgI" firstAttribute="top" secondItem="Aqd-OY-5mB" secondAttribute="bottom" constant="8" id="nhR-IZ-mjB"/>
-                <constraint firstAttribute="trailing" secondItem="Yhh-pw-gsl" secondAttribute="trailing" id="pSQ-Bx-H7M"/>
+                <constraint firstItem="yZp-lo-bXG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="te0-Sf-FDU"/>
+                <constraint firstAttribute="trailing" secondItem="yZp-lo-bXG" secondAttribute="trailing" id="u2F-xX-F4i"/>
             </constraints>
             <point key="canvasLocation" x="254" y="184"/>
         </view>

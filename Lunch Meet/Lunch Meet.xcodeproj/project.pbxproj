@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E718BE61AF3DA0200CDBB6F /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E718BE41AF3DA0200CDBB6F /* FeedTableViewCell.swift */; };
 		2E718BE71AF3DA0200CDBB6F /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E718BE51AF3DA0200CDBB6F /* FeedTableViewCell.xib */; };
+		2E7E6DF71AFCF4D600DCC4D8 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E6DF51AFCF4D600DCC4D8 /* FriendTableViewCell.swift */; };
+		2E7E6DF81AFCF4D600DCC4D8 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E7E6DF61AFCF4D600DCC4D8 /* FriendTableViewCell.xib */; };
 		2E86A1051AF7AE0F00CAA119 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E86A1041AF7AE0F00CAA119 /* NSObject+ObjectMap.m */; };
 		2E86A1091AF7AE7600CAA119 /* WebOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E86A1081AF7AE7600CAA119 /* WebOperation.m */; };
 		2E8AA95D1AEF2CD0005C17FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AA95C1AEF2CD0005C17FC /* AppDelegate.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		2E718BE41AF3DA0200CDBB6F /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		2E718BE51AF3DA0200CDBB6F /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		2E7E6DF51AFCF4D600DCC4D8 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		2E7E6DF61AFCF4D600DCC4D8 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
 		2E86A1031AF7AE0F00CAA119 /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
 		2E86A1041AF7AE0F00CAA119 /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
 		2E86A1071AF7AE7600CAA119 /* WebOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebOperation.h; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 				2E718BE51AF3DA0200CDBB6F /* FeedTableViewCell.xib */,
 			);
 			name = Feed;
+			sourceTree = "<group>";
+		};
+		2E7E6DF41AFCF4BB00DCC4D8 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				2E7E6DF51AFCF4D600DCC4D8 /* FriendTableViewCell.swift */,
+				2E7E6DF61AFCF4D600DCC4D8 /* FriendTableViewCell.xib */,
+			);
+			name = Friend;
 			sourceTree = "<group>";
 		};
 		2E86A1021AF7ADFC00CAA119 /* Libraries */ = {
@@ -306,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				2E718BE81AF3DA0700CDBB6F /* Feed */,
+				2E7E6DF41AFCF4BB00DCC4D8 /* Friend */,
 			);
 			name = "TableView Cells";
 			sourceTree = "<group>";
@@ -414,6 +428,7 @@
 				2E8FA2651AF3224500E9F78E /* ProfileViewController.xib in Resources */,
 				2E8FA26A1AF3241C00E9F78E /* SignUpViewController.xib in Resources */,
 				2E8FA2601AF3221500E9F78E /* FeedTableViewController.xib in Resources */,
+				2E7E6DF81AFCF4D600DCC4D8 /* FriendTableViewCell.xib in Resources */,
 				2E718BE71AF3DA0200CDBB6F /* FeedTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +454,7 @@
 				2EAD08641AFBC98A00C15558 /* GroupCollectionViewCell.swift in Sources */,
 				2E86A1091AF7AE7600CAA119 /* WebOperation.m in Sources */,
 				2E8AA97E1AEF2D27005C17FC /* LoginViewController.swift in Sources */,
+				2E7E6DF71AFCF4D600DCC4D8 /* FriendTableViewCell.swift in Sources */,
 				2E718BE61AF3DA0200CDBB6F /* FeedTableViewCell.swift in Sources */,
 				2E90D5A01AF3B01900497FD2 /* FeedItem.m in Sources */,
 				2E8FA25F1AF3221500E9F78E /* FeedTableViewController.swift in Sources */,

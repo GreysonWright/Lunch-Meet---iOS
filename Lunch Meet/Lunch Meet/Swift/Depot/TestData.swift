@@ -32,16 +32,16 @@ import Foundation
 private let _sharedInstance = TestData()
 
 class TestData: NSObject, DepotInterface {
-    
-    //Singleton Access
-    class var sharedInstance: TestData {
-        return _sharedInstance
-    }
-    
-    private override init() {
-        super.init()
-    }
-    
+	
+	//Singleton Access
+	class var sharedInstance: TestData {
+		return _sharedInstance
+	}
+	
+	private override init() {
+		super.init()
+	}
+	
 	func login(request: LoginRequest, response: ((LoginResponse) -> Void)) {
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), { () -> Void in
 			sleep(1)
@@ -68,7 +68,7 @@ class TestData: NSObject, DepotInterface {
 			LunchMeetSingleton.sharedInstance.accessToken = loginResponse.accessToken
 			
 			if LunchMeetSingleton.sharedInstance.user.profileImage == nil{
-//				LunchMeetSingleton.sharedInstance.user.profileImage = UIImage(named: "")
+				//				LunchMeetSingleton.sharedInstance.user.profileImage = UIImage(named: "")
 				//assign default image
 			}
 			
@@ -77,8 +77,10 @@ class TestData: NSObject, DepotInterface {
 		})
 	}
 	
-	func getFeed(response: (([FeedItem]) -> Void), synchronously: Bool) {
-		func getReturnObjects() -> [FeedItem]{
+	func getFeed(response: ([FeedItem]) -> Void) {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+			sleep(1)
+			
 			let feedItem0 = FeedItem()
 			feedItem0.event = "Lunch"
 			feedItem0.details = "Chick Fil-A"
@@ -98,31 +100,45 @@ class TestData: NSObject, DepotInterface {
 			feedItem2.type = "group"
 			
 			let feedObjects = [feedItem0, feedItem1, feedItem2]
-			
-			return feedObjects
-		}
-		if !synchronously{
-			dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-				sleep(1)
-				response(getReturnObjects())
-			})
-		} else{
-			response(getReturnObjects())
-		}
+			response(feedObjects)
+		})
 	}
 	
 	func getGroups(response: (([Group]) -> Void)) {
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
 			sleep(1)
 			
+			let userID = LunchMeetSingleton.sharedInstance.user.id
+			
 			let group = Group()
 			group.name = "Cool Poeple"
 			group.image = UIImage(named: "Image")
-//			group.members =
-//			group.owner = 
+			//			group.members =
+			//			group.owner =
 			
 			let groupArray = [group]
-			response(groupArray)
+			response(groupArray as [Group])
+		})
+	}
+	
+	func getFriends(response: (([User]) -> Void)) {
+		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+			sleep(1)
+			
+			let userID = LunchMeetSingleton.sharedInstance.user.id
+			
+			let friend = User()
+			friend.id = 2
+			friend.firstName = "John"
+			friend.lastName = "Smith"
+			friend.birthDate = NSDate()
+			friend.favoritePlace = "Glory Bound"
+			friend.city = "Tuscaloosa"
+			friend.state = "Alabama"
+			friend.profileImage = UIImage(named: "Image")
+			
+			let friends = [friend]
+			response(friends as [User])
 		})
 	}
 }

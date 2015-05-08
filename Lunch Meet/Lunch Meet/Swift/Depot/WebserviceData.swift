@@ -45,11 +45,15 @@ class WebserviceData: NSObject, DepotInterface {
 		
 	}
 	
-	func getFeed(response: (([FeedItem]) -> Void), synchronously: Bool) {
+	func getFeed(response: (([FeedItem]) -> Void)) {
 		
 	}
 	
 	func getGroups(response: (([Group]) -> Void)) {
+		
+	}
+	
+	func getFriends(response: (([User]) -> Void)) {
 		
 	}
 }

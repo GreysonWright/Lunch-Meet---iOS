@@ -54,9 +54,9 @@ class FeedTableViewController: UITableViewController {
 	}
 	
 	func getFeed(){
-		DepotSingleton.sharedDepot.getFeed ({ (response: [FeedItem]) -> Void in
+		DepotSingleton.sharedDepot.getFeed { (response: [FeedItem]) -> Void in
 			if response.count != 0{
-					self.feedObjects = response
+				self.feedObjects = response
 			}
 			dispatch_async(dispatch_get_main_queue(), { () -> Void in
 				
@@ -65,9 +65,7 @@ class FeedTableViewController: UITableViewController {
 				
 			})
 			
-		}, synchronously: sync)
-		
-		sync = false
+		}
 	}
 	
     // MARK: - Table view data source

@@ -98,14 +98,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 			dispatch_async(dispatch_get_main_queue(), { () -> Void in
 				if response != nil{
 					
-					let feedNavController = UINavigationController(rootViewController: FeedTableViewController(nibName: "FeedTableViewController", bundle: nil))
 					
-					let profileNavController = UINavigationController(rootViewController: ProfileViewController(nibName: "ProfileViewController", bundle: nil))
+					let feedVC = FeedTableViewController(nibName: "FeedTableViewController", bundle: nil)
+					let feedNavController = UINavigationController(rootViewController: feedVC)
+					DepotSingleton.sharedDepot.getFeed { (response: [FeedItem]) -> Void in
+						if response.count != 0{
+							feedVC.feedObjects = response
+						} else{
+							feedVC.feedObjects = [ ]
+						}
+					}
+					
+					let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+					let profileNavController = UINavigationController(rootViewController: profileVC)
 					
 					let tabbarController = UITabBarController()
 					tabbarController.tabBar.barTintColor = UIColor(red: 70/255, green: 102/255, blue: 153/255, alpha: 1)
 					tabbarController.tabBar.tintColor = UIColor.whiteColor() //UIColor(red: 0/255, green: 51/255, blue: 153/255, alpha: 1)
 					tabbarController.viewControllers = [feedNavController, profileNavController]
+					
 					LunchMeetSingleton.sharedInstance.appDelegate.window?.rootViewController = tabbarController
 					
 					self.loadingView.hidden = true
