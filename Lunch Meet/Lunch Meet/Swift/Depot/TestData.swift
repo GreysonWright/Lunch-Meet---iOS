@@ -111,7 +111,7 @@ class TestData: NSObject, DepotInterface {
 			let userID = LunchMeetSingleton.sharedInstance.user.id
 			
 			let group = Group()
-			group.name = "Cool Poeple"
+			group.name = "Cool People"
 			group.image = UIImage(named: "Image")
 			//			group.members =
 			//			group.owner =

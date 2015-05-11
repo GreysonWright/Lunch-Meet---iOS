@@ -98,7 +98,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 			dispatch_async(dispatch_get_main_queue(), { () -> Void in
 				if response != nil{
 					
-					
+					//Feed
 					let feedVC = FeedTableViewController(nibName: "FeedTableViewController", bundle: nil)
 					let feedNavController = UINavigationController(rootViewController: feedVC)
 					DepotSingleton.sharedDepot.getFeed { (response: [FeedItem]) -> Void in
@@ -107,19 +107,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 						} else{
 							feedVC.feedObjects = [ ]
 						}
+						
+						dispatch_async(dispatch_get_main_queue(), { () -> Void in
+							
+							//Profile
+							let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+							let profileNavController = UINavigationController(rootViewController: profileVC)
+							
+							//Tabbar
+							let tabbarController = UITabBarController()
+							tabbarController.tabBar.barTintColor = UIColor(red: 70/255, green: 102/255, blue: 153/255, alpha: 1)
+							tabbarController.tabBar.tintColor = UIColor.whiteColor() //UIColor(red: 0/255, green: 51/255, blue: 153/255, alpha: 1)
+							tabbarController.viewControllers = [feedNavController, profileNavController]
+							
+							//Login
+							LunchMeetSingleton.sharedInstance.appDelegate.window?.rootViewController = tabbarController
+							self.loadingView.hidden = true
+							
+						})
 					}
 					
-					let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-					let profileNavController = UINavigationController(rootViewController: profileVC)
-					
-					let tabbarController = UITabBarController()
-					tabbarController.tabBar.barTintColor = UIColor(red: 70/255, green: 102/255, blue: 153/255, alpha: 1)
-					tabbarController.tabBar.tintColor = UIColor.whiteColor() //UIColor(red: 0/255, green: 51/255, blue: 153/255, alpha: 1)
-					tabbarController.viewControllers = [feedNavController, profileNavController]
-					
-					LunchMeetSingleton.sharedInstance.appDelegate.window?.rootViewController = tabbarController
-					
-					self.loadingView.hidden = true
 				} else{
 					
 					self.loadingView.hidden = true
@@ -138,6 +145,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	@IBAction func resetPasswordButtonTapped(sender: AnyObject) {
-		
+		let resetPasswordNavController = UINavigationController(rootViewController: ResetPasswordViewController(nibName: "ResetPasswordViewController", bundle: nil))
+		presentViewController(resetPasswordNavController, animated: true, completion: nil)
 	}
 }

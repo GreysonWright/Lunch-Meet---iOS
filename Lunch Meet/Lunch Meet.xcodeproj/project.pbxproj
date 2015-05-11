@@ -11,6 +11,8 @@
 		2E718BE71AF3DA0200CDBB6F /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E718BE51AF3DA0200CDBB6F /* FeedTableViewCell.xib */; };
 		2E7E6DF71AFCF4D600DCC4D8 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7E6DF51AFCF4D600DCC4D8 /* FriendTableViewCell.swift */; };
 		2E7E6DF81AFCF4D600DCC4D8 /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E7E6DF61AFCF4D600DCC4D8 /* FriendTableViewCell.xib */; };
+		2E7FB1F91AFDB00E00CCFCFA /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7FB1F71AFDB00E00CCFCFA /* ResetPasswordViewController.swift */; };
+		2E7FB1FA1AFDB00E00CCFCFA /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E7FB1F81AFDB00E00CCFCFA /* ResetPasswordViewController.xib */; };
 		2E86A1051AF7AE0F00CAA119 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E86A1041AF7AE0F00CAA119 /* NSObject+ObjectMap.m */; };
 		2E86A1091AF7AE7600CAA119 /* WebOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E86A1081AF7AE7600CAA119 /* WebOperation.m */; };
 		2E8AA95D1AEF2CD0005C17FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8AA95C1AEF2CD0005C17FC /* AppDelegate.swift */; };
@@ -54,6 +56,8 @@
 		2E718BE51AF3DA0200CDBB6F /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		2E7E6DF51AFCF4D600DCC4D8 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		2E7E6DF61AFCF4D600DCC4D8 /* FriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		2E7FB1F71AFDB00E00CCFCFA /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		2E7FB1F81AFDB00E00CCFCFA /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		2E86A1031AF7AE0F00CAA119 /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
 		2E86A1041AF7AE0F00CAA119 /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
 		2E86A1071AF7AE7600CAA119 /* WebOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebOperation.h; sourceTree = "<group>"; };
@@ -139,6 +143,15 @@
 				2E7E6DF61AFCF4D600DCC4D8 /* FriendTableViewCell.xib */,
 			);
 			name = Friend;
+			sourceTree = "<group>";
+		};
+		2E7FB1FB1AFDB01500CCFCFA /* Reset Password */ = {
+			isa = PBXGroup;
+			children = (
+				2E7FB1F71AFDB00E00CCFCFA /* ResetPasswordViewController.swift */,
+				2E7FB1F81AFDB00E00CCFCFA /* ResetPasswordViewController.xib */,
+			);
+			name = "Reset Password";
 			sourceTree = "<group>";
 		};
 		2E86A1021AF7ADFC00CAA119 /* Libraries */ = {
@@ -242,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				2E8AA9801AEF2D2B005C17FC /* Login */,
+				2E7FB1FB1AFDB01500CCFCFA /* Reset Password */,
 				2E8FA26B1AF3242000E9F78E /* Sign Up */,
 				2E8FA2611AF3221900E9F78E /* Feed */,
 				2E8FA2661AF3224A00E9F78E /* Profile */,
@@ -422,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EAD08651AFBC98A00C15558 /* GroupCollectionViewCell.xib in Resources */,
+				2E7FB1FA1AFDB00E00CCFCFA /* ResetPasswordViewController.xib in Resources */,
 				2E8AA9671AEF2CD0005C17FC /* LaunchScreen.xib in Resources */,
 				2E8AA9641AEF2CD0005C17FC /* Images.xcassets in Resources */,
 				2E8AA97F1AEF2D27005C17FC /* LoginViewController.xib in Resources */,
@@ -453,6 +468,7 @@
 				2E8FA2441AF31C7D00E9F78E /* WebserviceData.swift in Sources */,
 				2EAD08641AFBC98A00C15558 /* GroupCollectionViewCell.swift in Sources */,
 				2E86A1091AF7AE7600CAA119 /* WebOperation.m in Sources */,
+				2E7FB1F91AFDB00E00CCFCFA /* ResetPasswordViewController.swift in Sources */,
 				2E8AA97E1AEF2D27005C17FC /* LoginViewController.swift in Sources */,
 				2E7E6DF71AFCF4D600DCC4D8 /* FriendTableViewCell.swift in Sources */,
 				2E718BE61AF3DA0200CDBB6F /* FeedTableViewCell.swift in Sources */,
