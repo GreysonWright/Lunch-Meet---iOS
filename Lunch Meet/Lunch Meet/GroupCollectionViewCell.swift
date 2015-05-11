@@ -16,6 +16,12 @@ class GroupCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+		
+		imageView.layer.cornerRadius = imageView.frame.size.width / 2;
+		imageView.clipsToBounds = true;
+		
+		imageView.layer.borderWidth = 1
+		imageView.layer.borderColor = UIColor(red: 75/255, green: 102/255, blue: 153/255, alpha: 1).CGColor
     }
 
 }

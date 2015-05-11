@@ -29,6 +29,8 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 		firstNameLabel.text = LunchMeetSingleton.sharedInstance.user.firstName
 		lastNameLabel.text = LunchMeetSingleton.sharedInstance.user.lastName
 		profileImageView.image = LunchMeetSingleton.sharedInstance.user.profileImage
+		profileImageView.layer.borderWidth = 1
+		profileImageView.layer.borderColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1).CGColor
 		
 		firstNameLabel.sizeToFit()
 		lastNameLabel.sizeToFit()
@@ -36,6 +38,7 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 		
 		//Groups
 		loadingGroupLabel = UILabel(frame: CGRect(x: 10, y: 10, width: 10, height: 30))
+		loadingGroupLabel.textColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1)
 		loadingGroupLabel.text = "Loading groups..."
 		loadingGroupLabel.sizeToFit()
 		groupCollectionView.addSubview(loadingGroupLabel)
@@ -44,13 +47,14 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
 		groupCollectionView.addConstraint(NSLayoutConstraint(item: loadingGroupLabel, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: groupCollectionView, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0))
 		groupCollectionView.addConstraint(NSLayoutConstraint(item: loadingGroupLabel, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: groupCollectionView, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 0))
 		
-		groupCollectionView.layer.borderColor = UIColor.blackColor().CGColor
+		groupCollectionView.layer.borderColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1).CGColor
 		groupCollectionView.layer.borderWidth = 0.5
 		
 		groupCollectionView.registerNib(UINib(nibName: "GroupCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "GroupCell")
 		
 		//Friends
 		friendLoadingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 30))
+		friendLoadingLabel.textColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1)
 		friendLoadingLabel.text = "Loading friends..."
 		friendLoadingLabel.sizeToFit()
 		friendTableView.addSubview(friendLoadingLabel)

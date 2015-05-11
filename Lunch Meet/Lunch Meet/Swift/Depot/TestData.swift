@@ -54,7 +54,7 @@ class TestData: NSObject, DepotInterface {
 			user.favoritePlace = "Olive Garden"
 			user.city = "Silicon Valley"
 			user.state = "California"
-			user.profileImage = UIImage(named: "Image")
+			user.profileImage = UIImage(named: "test")
 			
 			let accessToken = AccessToken()
 			accessToken.token = "039aduf339jdq23kjn"
@@ -135,7 +135,7 @@ class TestData: NSObject, DepotInterface {
 			friend.favoritePlace = "Glory Bound"
 			friend.city = "Tuscaloosa"
 			friend.state = "Alabama"
-			friend.profileImage = UIImage(named: "Image")
+			friend.profileImage = UIImage(named: "test")
 			
 			let friends = [friend]
 			response(friends as [User])

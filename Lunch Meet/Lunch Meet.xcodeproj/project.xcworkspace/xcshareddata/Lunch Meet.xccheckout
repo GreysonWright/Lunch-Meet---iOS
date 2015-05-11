@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F804D123-FB62-4550-8420-FEF47D7D485B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Lunch Meet</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C5FFEBCD3232682EF9DC6D9A9EC50A228F2A8286</key>
 		<string>https://bitbucket.org/GreysonWright/lunch-meet-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Lunch Meet/Lunch Meet.xcodeproj/project.xcworkspace</string>
+	<string>Lunch Meet/Lunch Meet.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C5FFEBCD3232682EF9DC6D9A9EC50A228F2A8286</key>
