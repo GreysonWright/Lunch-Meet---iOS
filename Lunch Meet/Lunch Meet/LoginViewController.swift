@@ -2,150 +2,54 @@
 //  LoginViewController.swift
 //  Lunch Meet
 //
-//  Created by greyson on 4/27/15.
+//  Created by greyson on 6/10/15.
 //  Copyright (c) 2015 Greyson Wright. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
-
+class LoginViewController: UIViewController {
+	
 	@IBOutlet var usernameField: UITextField!
 	@IBOutlet var passwordField: UITextField!
 	@IBOutlet var loginButton: UIButton!
-	@IBOutlet var helpView: UIView!
-	@IBOutlet var helpViewContainer: UIView!
-	@IBOutlet var loadingView: UIVisualEffectView!
+
+	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		helpViewContainer.addSubview(helpView)
-		
-		UINavigationBar.appearance().barTintColor = UIColor(red: 70/255, green: 102/255, blue: 153/255, alpha: 1)
-		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-		
-		usernameField.delegate = self
-		passwordField.delegate = self
-		
-		let textFieldTint = UIColor.whiteColor()//UIColor(red: 0/255, green: 51/255, blue: 153/255, alpha: 1)
-		
-		usernameField.attributedPlaceholder = NSAttributedString(string:usernameField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white: 1, alpha: 0.5)]);
-		passwordField.attributedPlaceholder = NSAttributedString(string:passwordField.placeholder!, attributes: [NSForegroundColorAttributeName: UIColor(white: 1, alpha: 0.5)]);
-		usernameField.tintColor = textFieldTint
-		passwordField.tintColor = textFieldTint
-		usernameField.textColor = textFieldTint
-		passwordField.textColor = textFieldTint
 		usernameField.layer.cornerRadius = 10
+		usernameField.layer.borderWidth = 1
+		usernameField.layer.borderColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1).CGColor
+		usernameField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+
 		passwordField.layer.cornerRadius = 10
-		usernameField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0)
-		passwordField.layer.sublayerTransform = CATransform3DMakeTranslation(5, 0, 0)
-		usernameField.addTarget(self, action:"editingChanged:", forControlEvents: .EditingChanged);
-		passwordField.addTarget(self, action:"editingChanged:", forControlEvents:.EditingChanged);
+		passwordField.layer.borderWidth = 1
+		passwordField.layer.borderColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1).CGColor
+		passwordField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
 		
-		loadingView.frame = UIScreen.mainScreen().bounds
-		view.addSubview(loadingView)
+		loginButton.layer.cornerRadius = 10
+		loginButton.layer.borderWidth = 1
+		loginButton.layer.borderColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1).CGColor
 		
-		loginButton.layer.cornerRadius = 15
-	}
-	
-	override func viewDidAppear(animated: Bool) {
-		super.viewDidAppear(animated)
-		
-		usernameField.becomeFirstResponder()
-	}
+        // Do any additional setup after loading the view.
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-	func textFieldShouldReturn(textField: UITextField) -> Bool {
-		if textField == usernameField{
-			passwordField.becomeFirstResponder()
-		} else{
-			if passwordField.text != "" && usernameField.text != ""{
-				passwordField.resignFirstResponder()
-				login()
-			}
-		}
-		return true
-	}
 	
-	func editingChanged(textField: UITextField){
-		if usernameField.text != "" && passwordField.text != ""{
-			loginButton.enabled = true
-			loginButton.alpha = 1
-		} else{
-			loginButton.enabled = false
-			loginButton.alpha = 0.5
-		}
-	}
-	
+	//MARK: - UIButton Actions
 	@IBAction func loginButtonTapped(sender: AnyObject) {
-		login()
-	}
-	
-	func login(){
 		
-		usernameField.resignFirstResponder()
-		passwordField.resignFirstResponder()
+		let mainVC = MainViewController(nibName: "MainViewController", bundle: nil)
 		
-		loadingView.hidden = false
+		let mainNavigationController = UINavigationController(rootViewController: mainVC)
 		
-		let request = LoginRequest()
-		DepotSingleton.sharedDepot.login(request, response: { (response: LoginResponse?) -> Void in
-			dispatch_async(dispatch_get_main_queue(), { () -> Void in
-				if response != nil{
-					
-					//Feed
-					let feedVC = FeedTableViewController(nibName: "FeedTableViewController", bundle: nil)
-					let feedNavController = UINavigationController(rootViewController: feedVC)
-					DepotSingleton.sharedDepot.getFeed { (response: [FeedItem]) -> Void in
-						if response.count != 0{
-							feedVC.feedObjects = response
-						} else{
-							feedVC.feedObjects = [ ]
-						}
-						
-						dispatch_async(dispatch_get_main_queue(), { () -> Void in
-							
-							//Profile
-							let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-							let profileNavController = UINavigationController(rootViewController: profileVC)
-							
-							//Tabbar
-							let tabbarController = UITabBarController()
-							tabbarController.tabBar.barTintColor = UIColor(red: 70/255, green: 102/255, blue: 153/255, alpha: 1)
-							tabbarController.tabBar.tintColor = UIColor.whiteColor() //UIColor(red: 0/255, green: 51/255, blue: 153/255, alpha: 1)
-							tabbarController.viewControllers = [feedNavController, profileNavController]
-							
-							//Login
-							LunchMeetSingleton.sharedInstance.appDelegate.window?.rootViewController = tabbarController
-							self.loadingView.hidden = true
-							
-						})
-					}
-					
-				} else{
-					
-					self.loadingView.hidden = true
-					let alertView = UIAlertView(title: "Uh oh!", message: "Looks like your account doesn't exist. If you think you have an account, check your internet connection.", delegate: self, cancelButtonTitle: "Ok")
-					alertView.show()
-					
-				}
-			})
-		})
-	}
-	
-	@IBAction func signUpButtonTapped(sender: AnyObject) {
-		let signUpNavController = UINavigationController(rootViewController: SignUpViewController(nibName: "SignUpViewController", bundle: nil))
-		presentViewController(signUpNavController, animated: true, completion: nil)
+		appDelegate.window?.rootViewController = mainNavigationController
 		
 	}
-	
-	@IBAction func resetPasswordButtonTapped(sender: AnyObject) {
-		let resetPasswordNavController = UINavigationController(rootViewController: ResetPasswordViewController(nibName: "ResetPasswordViewController", bundle: nil))
-		presentViewController(resetPasswordNavController, animated: true, completion: nil)
-	}
+
 }

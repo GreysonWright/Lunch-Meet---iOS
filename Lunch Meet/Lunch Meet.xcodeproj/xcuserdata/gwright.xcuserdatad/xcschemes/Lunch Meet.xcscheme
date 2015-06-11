@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2E8AA9561AEF2CD0005C17FC"
+               BlueprintIdentifier = "2EF4A0DC1B293E95003ED259"
                BuildableName = "Lunch Meet.app"
                BlueprintName = "Lunch Meet"
                ReferencedContainer = "container:Lunch Meet.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2E8AA96B1AEF2CD0005C17FC"
+               BlueprintIdentifier = "2EF4A0F11B293E95003ED259"
                BuildableName = "Lunch MeetTests.xctest"
                BlueprintName = "Lunch MeetTests"
                ReferencedContainer = "container:Lunch Meet.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2E8AA96B1AEF2CD0005C17FC"
+               BlueprintIdentifier = "2EF4A0F11B293E95003ED259"
                BuildableName = "Lunch MeetTests.xctest"
                BlueprintName = "Lunch MeetTests"
                ReferencedContainer = "container:Lunch Meet.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2E8AA9561AEF2CD0005C17FC"
+            BlueprintIdentifier = "2EF4A0DC1B293E95003ED259"
             BuildableName = "Lunch Meet.app"
             BlueprintName = "Lunch Meet"
             ReferencedContainer = "container:Lunch Meet.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2E8AA9561AEF2CD0005C17FC"
+            BlueprintIdentifier = "2EF4A0DC1B293E95003ED259"
             BuildableName = "Lunch Meet.app"
             BlueprintName = "Lunch Meet"
             ReferencedContainer = "container:Lunch Meet.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2E8AA9561AEF2CD0005C17FC"
+            BlueprintIdentifier = "2EF4A0DC1B293E95003ED259"
             BuildableName = "Lunch Meet.app"
             BlueprintName = "Lunch Meet"
             ReferencedContainer = "container:Lunch Meet.xcodeproj">

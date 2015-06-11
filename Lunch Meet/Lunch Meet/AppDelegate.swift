@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Lunch Meet
 //
-//  Created by greyson on 4/27/15.
+//  Created by greyson on 6/10/15.
 //  Copyright (c) 2015 Greyson Wright. All rights reserved.
 //
 
@@ -15,10 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		// Override point for customization after application launch.
+		
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
+		
 		window?.rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+		
 		window?.makeKeyAndVisible()
+		
 		return true
 	}
 
