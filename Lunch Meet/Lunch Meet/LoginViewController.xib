@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Lunch_Meet" customModuleProvider="target">
             <connections>
+                <outlet property="forgotPasswordButtonBottomConstraint" destination="h2r-X4-3Ta" id="oNn-gt-Zgd"/>
                 <outlet property="loginButton" destination="wdp-LT-VQy" id="awD-4I-05E"/>
                 <outlet property="passwordField" destination="CQU-Qs-ygG" id="MEO-hO-lNU"/>
                 <outlet property="usernameField" destination="VNn-kA-fft" id="gzw-TA-MJC"/>
@@ -17,37 +18,38 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VNn-kA-fft">
-                    <rect key="frame" x="125" y="119" width="350" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VNn-kA-fft" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="25" y="119" width="550" height="40"/>
+                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="350" id="GQI-pk-5iJ"/>
-                        <constraint firstAttribute="height" constant="30" id="LpL-dZ-ZLp"/>
+                        <constraint firstAttribute="height" constant="40" id="wwb-Zp-ov9"/>
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CQU-Qs-ygG">
-                    <rect key="frame" x="125" y="164" width="350" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CQU-Qs-ygG" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="25" y="167" width="550" height="40"/>
+                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="350" id="VLV-nb-ykc"/>
-                        <constraint firstAttribute="height" constant="30" id="sOH-lo-PG6"/>
+                        <constraint firstAttribute="height" constant="40" id="kBY-ze-eGh"/>
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-LT-VQy">
-                    <rect key="frame" x="230" y="206" width="140" height="32"/>
+                    <rect key="frame" x="230" y="219" width="140" height="32"/>
+                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="Imo-MK-Qgo"/>
                         <constraint firstAttribute="width" constant="140" id="v5b-O0-Kcd"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Login">
-                        <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" red="0.83806204320655098" green="0.8940520161326998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -71,16 +73,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="VNn-kA-fft" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="119" id="3JX-gU-vGb"/>
-                <constraint firstAttribute="centerX" secondItem="CQU-Qs-ygG" secondAttribute="centerX" id="9Pe-cm-oHC"/>
+                <constraint firstItem="VNn-kA-fft" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="119" id="7VA-J5-gYx"/>
+                <constraint firstAttribute="trailing" secondItem="VNn-kA-fft" secondAttribute="trailing" constant="25" id="WTb-Pn-HMR"/>
+                <constraint firstAttribute="trailing" secondItem="CQU-Qs-ygG" secondAttribute="trailing" constant="25" id="X4r-5F-Ivi"/>
+                <constraint firstItem="wdp-LT-VQy" firstAttribute="top" secondItem="CQU-Qs-ygG" secondAttribute="bottom" constant="12" id="azn-ye-gLX"/>
                 <constraint firstAttribute="centerX" secondItem="3Oa-pf-oec" secondAttribute="centerX" id="bcy-F7-Xdq"/>
-                <constraint firstItem="wdp-LT-VQy" firstAttribute="top" secondItem="CQU-Qs-ygG" secondAttribute="bottom" constant="12" id="eRu-Gr-Dqd"/>
                 <constraint firstAttribute="centerX" secondItem="AkS-Ah-V6C" secondAttribute="centerX" id="gKf-0R-oRX"/>
                 <constraint firstAttribute="bottom" secondItem="AkS-Ah-V6C" secondAttribute="bottom" constant="8" id="h2r-X4-3Ta"/>
+                <constraint firstItem="CQU-Qs-ygG" firstAttribute="top" secondItem="VNn-kA-fft" secondAttribute="bottom" constant="8" id="hSL-yp-mFQ"/>
+                <constraint firstItem="VNn-kA-fft" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="j7X-2L-Qhi"/>
                 <constraint firstItem="AkS-Ah-V6C" firstAttribute="top" secondItem="3Oa-pf-oec" secondAttribute="bottom" constant="8" id="o3R-1N-Nlg"/>
-                <constraint firstItem="CQU-Qs-ygG" firstAttribute="top" secondItem="VNn-kA-fft" secondAttribute="bottom" constant="15" id="tCF-c4-xvf"/>
                 <constraint firstAttribute="centerX" secondItem="wdp-LT-VQy" secondAttribute="centerX" id="v8R-CA-b1d"/>
-                <constraint firstAttribute="centerX" secondItem="VNn-kA-fft" secondAttribute="centerX" id="wHx-xK-Ja0"/>
+                <constraint firstItem="CQU-Qs-ygG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="zlv-3V-hQk"/>
             </constraints>
         </view>
     </objects>

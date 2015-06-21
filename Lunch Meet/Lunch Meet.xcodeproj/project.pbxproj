@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E540ED81B367F9D00DA4490 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E540ED71B367F9D00DA4490 /* TextField.swift */; };
 		2EF4A0E31B293E95003ED259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4A0E21B293E95003ED259 /* AppDelegate.swift */; };
 		2EF4A0EA1B293E95003ED259 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4A0E91B293E95003ED259 /* Images.xcassets */; };
 		2EF4A0ED1B293E95003ED259 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4A0EB1B293E95003ED259 /* LaunchScreen.xib */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E540ED71B367F9D00DA4490 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		2EF4A0DD1B293E95003ED259 /* Lunch Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Meet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF4A0E11B293E95003ED259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF4A0E21B293E95003ED259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E540ED91B367FA300DA4490 /* Custom Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2E540ED71B367F9D00DA4490 /* TextField.swift */,
+			);
+			name = "Custom Objects";
+			sourceTree = "<group>";
+		};
 		2EF4A0D41B293E95003ED259 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2EF4A0E21B293E95003ED259 /* AppDelegate.swift */,
+				2E540ED91B367FA300DA4490 /* Custom Objects */,
 				2EF4A1071B293F30003ED259 /* Controllers */,
 				2EF4A0E91B293E95003ED259 /* Images.xcassets */,
 				2EF4A0EB1B293E95003ED259 /* LaunchScreen.xib */,
@@ -265,6 +276,7 @@
 				2EF4A10A1B294201003ED259 /* MainViewController.swift in Sources */,
 				2EF4A1041B293F24003ED259 /* LoginViewController.swift in Sources */,
 				2EF4A1111B2949CE003ED259 /* ProfileViewController.swift in Sources */,
+				2E540ED81B367F9D00DA4490 /* TextField.swift in Sources */,
 				2EF4A0E31B293E95003ED259 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +469,7 @@
 				2EF4A0FE1B293E95003ED259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EF4A0FF1B293E95003ED259 /* Build configuration list for PBXNativeTarget "Lunch MeetTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +478,7 @@
 				2EF4A1011B293E95003ED259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

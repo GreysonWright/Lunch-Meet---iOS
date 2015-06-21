@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="Lunch_Meet" customModuleProvider="target">
             <connections>
+                <outlet property="firstNameField" destination="nIl-aT-07t" id="Coq-bn-Qoe"/>
+                <outlet property="lastNameField" destination="1OT-YX-yWC" id="xjn-xD-A0D"/>
+                <outlet property="profileImageView" destination="WIZ-5S-h7Z" id="ZyV-xv-tc6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +16,98 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nIl-aT-07t" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="233" width="584" height="45"/>
+                    <color key="backgroundColor" red="0.88762204406849698" green="0.91974055140566391" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="7aV-IQ-iYQ"/>
+                        <constraint firstAttribute="height" constant="45" id="gN4-Bh-1Cx"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1OT-YX-yWC" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="286" width="584" height="45"/>
+                    <color key="backgroundColor" red="0.88762204406849698" green="0.91974055140566391" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="JXZ-xe-Knb"/>
+                        <constraint firstAttribute="height" constant="45" id="bhR-p0-WzZ"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Birth Date" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="B86-gZ-JIP" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="339" width="584" height="45"/>
+                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="OgS-Y6-gOb"/>
+                        <constraint firstAttribute="height" constant="45" id="xgx-U5-la8"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="WIZ-5S-h7Z">
+                    <rect key="frame" x="225" y="74" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="c8C-I6-T13"/>
+                        <constraint firstAttribute="width" constant="150" id="qbF-6r-FGA"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City, State" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tyw-fi-ae5" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="392" width="584" height="45"/>
+                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="3Gz-ye-bQJ"/>
+                        <constraint firstAttribute="height" constant="45" id="Sl5-5I-E2c"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Favorite Restaurant" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oUU-Nc-lvp" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="445" width="584" height="45"/>
+                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="eiB-XL-bQ2"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="jyp-IV-Lac"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                </textField>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="B86-gZ-JIP" secondAttribute="trailing" constant="8" id="2U0-xj-JZo"/>
+                <constraint firstItem="tyw-fi-ae5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Dfq-nr-yGN"/>
+                <constraint firstItem="oUU-Nc-lvp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="F3c-Uo-QHw"/>
+                <constraint firstItem="oUU-Nc-lvp" firstAttribute="top" secondItem="tyw-fi-ae5" secondAttribute="bottom" constant="8" id="LYl-bF-U4V"/>
+                <constraint firstAttribute="trailing" secondItem="tyw-fi-ae5" secondAttribute="trailing" constant="8" id="Lc5-lD-C3U"/>
+                <constraint firstItem="tyw-fi-ae5" firstAttribute="top" secondItem="B86-gZ-JIP" secondAttribute="bottom" constant="8" id="Njb-Tq-8NW"/>
+                <constraint firstItem="1OT-YX-yWC" firstAttribute="top" secondItem="nIl-aT-07t" secondAttribute="bottom" constant="8" id="NuT-IJ-QQV"/>
+                <constraint firstAttribute="trailing" secondItem="1OT-YX-yWC" secondAttribute="trailing" constant="8" id="OEG-x3-h7L"/>
+                <constraint firstItem="WIZ-5S-h7Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="S8c-TF-zMT"/>
+                <constraint firstItem="nIl-aT-07t" firstAttribute="top" secondItem="WIZ-5S-h7Z" secondAttribute="bottom" constant="9" id="TG6-HA-PqO"/>
+                <constraint firstItem="1OT-YX-yWC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Vrd-LG-sJW"/>
+                <constraint firstItem="B86-gZ-JIP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Wfo-E8-xHO"/>
+                <constraint firstAttribute="centerX" secondItem="WIZ-5S-h7Z" secondAttribute="centerX" id="Zoe-JC-HIV"/>
+                <constraint firstItem="B86-gZ-JIP" firstAttribute="top" secondItem="1OT-YX-yWC" secondAttribute="bottom" constant="8" id="a78-8N-9MS"/>
+                <constraint firstAttribute="trailing" secondItem="oUU-Nc-lvp" secondAttribute="trailing" constant="8" id="kLl-UQ-EIQ"/>
+                <constraint firstItem="nIl-aT-07t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="kpb-Ii-IaZ"/>
+                <constraint firstAttribute="trailing" secondItem="nIl-aT-07t" secondAttribute="trailing" constant="8" id="mfr-hw-2Ft"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="test" width="140" height="140"/>
+    </resources>
 </document>

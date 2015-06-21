@@ -8,30 +8,28 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 	
 	@IBOutlet var usernameField: UITextField!
 	@IBOutlet var passwordField: UITextField!
 	@IBOutlet var loginButton: UIButton!
+	@IBOutlet var forgotPasswordButtonBottomConstraint: NSLayoutConstraint!
 
 	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-		usernameField.layer.cornerRadius = 10
-		usernameField.layer.borderWidth = 1
-		usernameField.layer.borderColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1).CGColor
-		usernameField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
-
-		passwordField.layer.cornerRadius = 10
-		passwordField.layer.borderWidth = 1
-		passwordField.layer.borderColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1).CGColor
-		passwordField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
 		
-		loginButton.layer.cornerRadius = 10
-		loginButton.layer.borderWidth = 1
-		loginButton.layer.borderColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1).CGColor
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide"), name: UIKeyboardWillHideNotification, object: nil)
+		
+		usernameField.delegate = self
+		passwordField.delegate = self
+		
+		usernameField.layer.cornerRadius = 3
+		passwordField.layer.cornerRadius = 3
+		
+		loginButton.layer.cornerRadius = 3
 		
         // Do any additional setup after loading the view.
     }
@@ -41,14 +39,72 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 	
-	//MARK: - UIButton Actions
-	@IBAction func loginButtonTapped(sender: AnyObject) {
+	func login() {
 		
 		let mainVC = MainViewController(nibName: "MainViewController", bundle: nil)
 		
 		let mainNavigationController = UINavigationController(rootViewController: mainVC)
 		
 		appDelegate.window?.rootViewController = mainNavigationController
+		
+	}
+	
+	//MARK: - Keyboard Notifications
+	func keyboardWillShow(notification: NSNotification) {
+		
+		let keyboardFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+		
+		forgotPasswordButtonBottomConstraint.constant = keyboardFrame.size.height
+		
+		UIView.animateWithDuration(0.3, animations: { () -> Void in
+			
+			self.view.layoutIfNeeded()
+			
+		})
+		
+	}
+	
+	func keyboardWillHide() {
+		
+		forgotPasswordButtonBottomConstraint.constant = 8
+		
+		UIView.animateWithDuration(0.3, animations: { () -> Void in
+			
+			self.view.layoutIfNeeded()
+			
+		})
+		
+	}
+	
+	//MARK: - UITextField
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		
+		if textField == usernameField {
+			
+			passwordField.becomeFirstResponder()
+			
+		} else {
+			
+			if passwordField.text != "" && usernameField.text != "" {
+				
+				login()
+				
+			} else {
+				
+				usernameField.becomeFirstResponder()
+				
+			}
+			
+		}
+		
+		return true
+		
+	}
+	
+	//MARK: - UIButton Actions
+	@IBAction func loginButtonTapped(sender: AnyObject) {
+		
+		login()
 		
 	}
 
