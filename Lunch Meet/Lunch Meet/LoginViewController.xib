@@ -27,7 +27,7 @@
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CQU-Qs-ygG" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="25" y="167" width="550" height="40"/>
@@ -38,14 +38,13 @@
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-LT-VQy">
-                    <rect key="frame" x="230" y="219" width="140" height="32"/>
+                    <rect key="frame" x="75" y="219" width="450" height="32"/>
                     <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="32" id="Imo-MK-Qgo"/>
-                        <constraint firstAttribute="width" constant="140" id="v5b-O0-Kcd"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Login">
@@ -83,7 +82,8 @@
                 <constraint firstItem="CQU-Qs-ygG" firstAttribute="top" secondItem="VNn-kA-fft" secondAttribute="bottom" constant="8" id="hSL-yp-mFQ"/>
                 <constraint firstItem="VNn-kA-fft" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="j7X-2L-Qhi"/>
                 <constraint firstItem="AkS-Ah-V6C" firstAttribute="top" secondItem="3Oa-pf-oec" secondAttribute="bottom" constant="8" id="o3R-1N-Nlg"/>
-                <constraint firstAttribute="centerX" secondItem="wdp-LT-VQy" secondAttribute="centerX" id="v8R-CA-b1d"/>
+                <constraint firstItem="wdp-LT-VQy" firstAttribute="leading" secondItem="CQU-Qs-ygG" secondAttribute="leading" constant="50" id="xd0-Hw-epR"/>
+                <constraint firstItem="wdp-LT-VQy" firstAttribute="trailing" secondItem="CQU-Qs-ygG" secondAttribute="trailing" constant="-50" id="ydK-E0-HHs"/>
                 <constraint firstItem="CQU-Qs-ygG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="zlv-3V-hQk"/>
             </constraints>
         </view>

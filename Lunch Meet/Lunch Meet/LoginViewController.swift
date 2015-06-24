@@ -26,9 +26,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		usernameField.delegate = self
 		passwordField.delegate = self
 		
-		usernameField.layer.cornerRadius = 3
-		passwordField.layer.cornerRadius = 3
-		
 		loginButton.layer.cornerRadius = 3
 		
         // Do any additional setup after loading the view.

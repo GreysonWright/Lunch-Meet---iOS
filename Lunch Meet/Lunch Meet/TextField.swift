@@ -9,14 +9,14 @@
 import UIKit
 
 class TextField: UITextField {
-
-    /*
+	
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-        // Drawing code
+		
+		layer.cornerRadius = 3
+		
     }
-    */
 
 	override func textRectForBounds(bounds: CGRect) -> CGRect {
 		
