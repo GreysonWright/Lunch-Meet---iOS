@@ -26,8 +26,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		usernameField.delegate = self
 		passwordField.delegate = self
 		
-		loginButton.layer.cornerRadius = 3
-		
         // Do any additional setup after loading the view.
     }
 
@@ -95,6 +93,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		}
 		
 		return true
+		
+	}
+	
+	func textFieldDidEndEditing(textField: UITextField) {
+		
+		if usernameField.text == "" {
+			
+			passwordField.returnKeyType = .Next
+			
+		} else {
+			
+			passwordField.returnKeyType = .Go
+			
+		}
 		
 	}
 	

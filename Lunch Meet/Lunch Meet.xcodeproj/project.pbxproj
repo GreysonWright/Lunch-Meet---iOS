@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2E540ED81B367F9D00DA4490 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E540ED71B367F9D00DA4490 /* TextField.swift */; };
+		2E8D05E51B3F928600223559 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D05E31B3F928600223559 /* FriendViewController.swift */; };
+		2E8D05E61B3F928600223559 /* FriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8D05E41B3F928600223559 /* FriendViewController.xib */; };
+		2E8D05EA1B3F929800223559 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D05E81B3F929800223559 /* GroupViewController.swift */; };
+		2E8D05EB1B3F929800223559 /* GroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8D05E91B3F929800223559 /* GroupViewController.xib */; };
+		2E8D05EF1B3F93E600223559 /* EditProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D05ED1B3F93E600223559 /* EditProfileImageViewController.swift */; };
+		2E8D05F01B3F93E600223559 /* EditProfileImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8D05EE1B3F93E600223559 /* EditProfileImageViewController.xib */; };
+		2E8D05F31B3F9CD800223559 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D05F21B3F9CD800223559 /* Button.swift */; };
 		2EF4A0E31B293E95003ED259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4A0E21B293E95003ED259 /* AppDelegate.swift */; };
 		2EF4A0EA1B293E95003ED259 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4A0E91B293E95003ED259 /* Images.xcassets */; };
 		2EF4A0ED1B293E95003ED259 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4A0EB1B293E95003ED259 /* LaunchScreen.xib */; };
@@ -33,6 +40,13 @@
 
 /* Begin PBXFileReference section */
 		2E540ED71B367F9D00DA4490 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		2E8D05E31B3F928600223559 /* FriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		2E8D05E41B3F928600223559 /* FriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendViewController.xib; sourceTree = "<group>"; };
+		2E8D05E81B3F929800223559 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		2E8D05E91B3F929800223559 /* GroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupViewController.xib; sourceTree = "<group>"; };
+		2E8D05ED1B3F93E600223559 /* EditProfileImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileImageViewController.swift; sourceTree = "<group>"; };
+		2E8D05EE1B3F93E600223559 /* EditProfileImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileImageViewController.xib; sourceTree = "<group>"; };
+		2E8D05F21B3F9CD800223559 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		2EF4A0DD1B293E95003ED259 /* Lunch Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Meet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF4A0E11B293E95003ED259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF4A0E21B293E95003ED259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +87,36 @@
 			isa = PBXGroup;
 			children = (
 				2E540ED71B367F9D00DA4490 /* TextField.swift */,
+				2E8D05F21B3F9CD800223559 /* Button.swift */,
 			);
 			name = "Custom Objects";
+			sourceTree = "<group>";
+		};
+		2E8D05E71B3F928C00223559 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				2E8D05E31B3F928600223559 /* FriendViewController.swift */,
+				2E8D05E41B3F928600223559 /* FriendViewController.xib */,
+			);
+			name = Friend;
+			sourceTree = "<group>";
+		};
+		2E8D05EC1B3F929D00223559 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				2E8D05E81B3F929800223559 /* GroupViewController.swift */,
+				2E8D05E91B3F929800223559 /* GroupViewController.xib */,
+			);
+			name = Group;
+			sourceTree = "<group>";
+		};
+		2E8D05F11B3F93EA00223559 /* Edit Image */ = {
+			isa = PBXGroup;
+			children = (
+				2E8D05ED1B3F93E600223559 /* EditProfileImageViewController.swift */,
+				2E8D05EE1B3F93E600223559 /* EditProfileImageViewController.xib */,
+			);
+			name = "Edit Image";
 			sourceTree = "<group>";
 		};
 		2EF4A0D41B293E95003ED259 = {
@@ -149,6 +191,9 @@
 				2EF4A1061B293F28003ED259 /* Login */,
 				2EF4A10C1B294204003ED259 /* Main */,
 				2EF4A1131B2949D2003ED259 /* Profile */,
+				2E8D05E71B3F928C00223559 /* Friend */,
+				2E8D05EC1B3F929D00223559 /* Group */,
+				2E8D05F11B3F93EA00223559 /* Edit Image */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -251,8 +296,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8D05E61B3F928600223559 /* FriendViewController.xib in Resources */,
 				2EF4A0ED1B293E95003ED259 /* LaunchScreen.xib in Resources */,
 				2EF4A0EA1B293E95003ED259 /* Images.xcassets in Resources */,
+				2E8D05EB1B3F929800223559 /* GroupViewController.xib in Resources */,
+				2E8D05F01B3F93E600223559 /* EditProfileImageViewController.xib in Resources */,
 				2EF4A1051B293F24003ED259 /* LoginViewController.xib in Resources */,
 				2EF4A1121B2949CE003ED259 /* ProfileViewController.xib in Resources */,
 				2EF4A10B1B294201003ED259 /* MainViewController.xib in Resources */,
@@ -273,11 +321,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8D05EF1B3F93E600223559 /* EditProfileImageViewController.swift in Sources */,
+				2E8D05E51B3F928600223559 /* FriendViewController.swift in Sources */,
 				2EF4A10A1B294201003ED259 /* MainViewController.swift in Sources */,
 				2EF4A1041B293F24003ED259 /* LoginViewController.swift in Sources */,
 				2EF4A1111B2949CE003ED259 /* ProfileViewController.swift in Sources */,
 				2E540ED81B367F9D00DA4490 /* TextField.swift in Sources */,
 				2EF4A0E31B293E95003ED259 /* AppDelegate.swift in Sources */,
+				2E8D05F31B3F9CD800223559 /* Button.swift in Sources */,
+				2E8D05EA1B3F929800223559 /* GroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

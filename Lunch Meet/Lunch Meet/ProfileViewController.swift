@@ -22,12 +22,16 @@ class ProfileViewController: UIViewController, ADBannerViewDelegate {
 	@IBOutlet var birthdateField: TextField!
 	@IBOutlet var cityStateField: TextField!
 	@IBOutlet var restaurantField: TextField!
+	@IBOutlet var friendsButton: UIButton!
+	@IBOutlet var groupsButton: UIButton!
+	@IBOutlet var signOutButton: UIButton!
 
+	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		let navSegmentedControl = UISegmentedControl(items: ["Profile", "Friends", "Groups"])
-		navigationItem.titleView = navSegmentedControl
+		title = "Profile"
 		
 		editButton.layer.cornerRadius = editButton.frame.height / 2
 		
@@ -81,4 +85,31 @@ class ProfileViewController: UIViewController, ADBannerViewDelegate {
 		
 	}
 	
+	//MARK: - UIButton Actions
+	@IBAction func editProfileImageButtonTapped(sender: AnyObject) {
+		
+		let editImageVC = EditProfileImageViewController(nibName: "EditProfileImageViewController", bundle: nil)
+		navigationController?.pushViewController(editImageVC, animated: true)
+		
+	}
+	
+	@IBAction func friendsButtonTapped(sender: AnyObject) {
+		
+		let friendVC = FriendViewController(nibName: "FriendViewController", bundle: nil)
+		navigationController?.pushViewController(friendVC, animated: true)
+		
+	}
+	
+	@IBAction func groupsButtonTapped(sender: AnyObject) {
+		
+		let groupVC = GroupViewController(nibName: "GroupViewController", bundle: nil)
+		navigationController?.pushViewController(groupVC, animated: true)
+		
+	}
+	
+	@IBAction func signOutButtonTapped(sender: AnyObject) {
+		
+		appDelegate.window?.rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+		
+	}
 }

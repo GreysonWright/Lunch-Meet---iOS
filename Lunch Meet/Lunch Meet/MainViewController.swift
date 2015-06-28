@@ -16,6 +16,8 @@ class MainViewController: UIViewController, ADBannerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		title = "Plans"
+		
 		canDisplayBannerAds = true
 		
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("profileButtonTapped"))
