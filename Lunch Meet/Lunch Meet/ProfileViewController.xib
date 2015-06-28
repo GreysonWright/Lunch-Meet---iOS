@@ -10,6 +10,7 @@
                 <outlet property="cityStateField" destination="tyw-fi-ae5" id="AGl-A1-tki"/>
                 <outlet property="containerView" destination="VBo-sO-WjF" id="xwI-lg-n8x"/>
                 <outlet property="editButton" destination="Z1X-5T-3IM" id="fdT-3R-1hB"/>
+                <outlet property="emailField" destination="vXy-WX-fIy" id="JyD-tz-vb6"/>
                 <outlet property="firstNameField" destination="nIl-aT-07t" id="Coq-bn-Qoe"/>
                 <outlet property="friendsButton" destination="z9z-ff-M2a" id="TdA-9n-vVd"/>
                 <outlet property="groupsButton" destination="HlY-Jl-aIQ" id="gT8-0n-cTU"/>
@@ -44,7 +45,7 @@
             </constraints>
         </view>
         <view contentMode="scaleToFill" id="VBo-sO-WjF">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="434"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1OT-YX-yWC" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
@@ -70,7 +71,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City, State" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tyw-fi-ae5" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="137" width="584" height="35"/>
+                    <rect key="frame" x="8" y="180" width="584" height="35"/>
                     <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -81,7 +82,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Favorite Restaurant" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oUU-Nc-lvp" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="180" width="584" height="35"/>
+                    <rect key="frame" x="8" y="223" width="584" height="35"/>
                     <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -92,7 +93,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Birth Date" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="B86-gZ-JIP" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="94" width="584" height="35"/>
+                    <rect key="frame" x="8" y="137" width="584" height="35"/>
                     <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -110,7 +111,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFG-Xo-TSa" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="343" width="584" height="40"/>
+                    <rect key="frame" x="8" y="386" width="584" height="40"/>
                     <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="all-2v-UkL"/>
@@ -125,7 +126,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-ff-M2a" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="231" width="584" height="40"/>
+                    <rect key="frame" x="8" y="274" width="584" height="40"/>
                     <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="4ay-u2-sYU"/>
@@ -140,7 +141,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlY-Jl-aIQ" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="287" width="584" height="40"/>
+                    <rect key="frame" x="8" y="330" width="584" height="40"/>
                     <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="JA3-eP-XsI"/>
@@ -165,12 +166,23 @@
                         <action selector="editProfileImageButtonTapped:" destination="-1" eventType="touchUpInside" id="W7O-mE-gG3"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vXy-WX-fIy" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="94" width="584" height="35"/>
+                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="E8Y-RT-GMG"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="B86-gZ-JIP" firstAttribute="top" secondItem="WIZ-5S-h7Z" secondAttribute="bottom" constant="8" id="3I9-YS-p6B"/>
                 <constraint firstItem="tyw-fi-ae5" firstAttribute="top" secondItem="B86-gZ-JIP" secondAttribute="bottom" constant="8" id="6mj-kY-Eey"/>
                 <constraint firstItem="HlY-Jl-aIQ" firstAttribute="top" secondItem="z9z-ff-M2a" secondAttribute="bottom" constant="16" id="6xu-g5-QnP"/>
+                <constraint firstItem="vXy-WX-fIy" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="9yi-p8-8OD"/>
                 <constraint firstAttribute="trailing" secondItem="HlY-Jl-aIQ" secondAttribute="trailing" constant="8" id="CNc-S3-plb"/>
                 <constraint firstAttribute="trailing" secondItem="tyw-fi-ae5" secondAttribute="trailing" constant="8" id="Fwf-2c-ZRV"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="trailing" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" id="ILr-lI-hyI"/>
@@ -187,6 +199,7 @@
                 <constraint firstItem="nIl-aT-07t" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" constant="8" id="YwE-yi-PXB"/>
                 <constraint firstAttribute="trailing" secondItem="z9z-ff-M2a" secondAttribute="trailing" constant="8" id="Zx7-rS-ygB"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="leading" id="aPT-V3-Dll"/>
+                <constraint firstItem="vXy-WX-fIy" firstAttribute="top" secondItem="Z1X-5T-3IM" secondAttribute="bottom" constant="8" id="bqG-nw-FNf"/>
                 <constraint firstItem="z9z-ff-M2a" firstAttribute="top" secondItem="oUU-Nc-lvp" secondAttribute="bottom" constant="16" id="c3R-Ae-uhr"/>
                 <constraint firstItem="nIl-aT-07t" firstAttribute="top" secondItem="VBo-sO-WjF" secondAttribute="top" constant="8" id="cz7-ab-Rcz"/>
                 <constraint firstItem="oUU-Nc-lvp" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="e3E-3a-F5Y"/>
@@ -195,12 +208,14 @@
                 <constraint firstItem="B86-gZ-JIP" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="iMR-zr-alS"/>
                 <constraint firstItem="1OT-YX-yWC" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" constant="8" id="iPv-75-aLA"/>
                 <constraint firstAttribute="trailing" secondItem="B86-gZ-JIP" secondAttribute="trailing" constant="8" id="k1U-78-p7x"/>
+                <constraint firstAttribute="trailing" secondItem="vXy-WX-fIy" secondAttribute="trailing" constant="8" id="rU8-Rv-lKY"/>
                 <constraint firstItem="tyw-fi-ae5" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="vER-Km-xeC"/>
                 <constraint firstAttribute="trailing" secondItem="oUU-Nc-lvp" secondAttribute="trailing" constant="8" id="vZr-bC-fIh"/>
                 <constraint firstItem="IFG-Xo-TSa" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="wPX-58-J4u"/>
+                <constraint firstItem="B86-gZ-JIP" firstAttribute="top" secondItem="vXy-WX-fIy" secondAttribute="bottom" constant="8" id="wpw-8T-5dA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="1006" y="233"/>
+            <point key="canvasLocation" x="1006" y="234"/>
         </view>
     </objects>
     <resources>

@@ -43,7 +43,7 @@ class EditProfileImageViewController: UIViewController, UIImagePickerControllerD
 
 	func presentImagePicker(sourceType: UIImagePickerControllerSourceType) {
 		
-		if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+		if UIImagePickerController.isSourceTypeAvailable(sourceType) {
 			
 			let imagePickerVC = UIImagePickerController()
 			

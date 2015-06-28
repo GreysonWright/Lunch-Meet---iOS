@@ -117,4 +117,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		
 	}
 
+	@IBAction func signUpButtonTapped(sender: AnyObject) {
+		
+		let loginOptionsVC = LoginOptionsViewController(nibName: "LoginOptionsViewController", bundle: nil)
+		loginOptionsVC.type = .SignUp
+		
+		let loginOptionsNavController = UINavigationController(rootViewController: loginOptionsVC)
+		
+		presentViewController(loginOptionsNavController, animated: true, completion: nil)
+		
+	}
+	
+	@IBAction func forgotPasswordButtonTapped(sender: AnyObject) {
+		
+		let loginOptionsVC = LoginOptionsViewController(nibName: "LoginOptionsViewController", bundle: nil)
+		loginOptionsVC.type = .CreateNew
+		
+		let loginOptionsNavController = UINavigationController(rootViewController: loginOptionsVC)
+		
+		presentViewController(loginOptionsNavController, animated: true, completion: nil)
+		
+	}
+	
 }

@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController, ADBannerViewDelegate {
 	
 	@IBOutlet var firstNameField: TextField!
 	@IBOutlet var lastNameField: TextField!
+	@IBOutlet var emailField: TextField!
 	@IBOutlet var birthdateField: TextField!
 	@IBOutlet var cityStateField: TextField!
 	@IBOutlet var restaurantField: TextField!
