@@ -15,24 +15,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TDt-sC-GZj">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="XUe-Vt-ldf">
-                    <rect key="frame" x="0.0" y="550" width="320" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="q66-Fh-zle"/>
-                    </connections>
-                </adBannerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="XUe-Vt-ldf" secondAttribute="bottom" id="Agj-KW-RJd"/>
-                <constraint firstItem="XUe-Vt-ldf" firstAttribute="leading" secondItem="TDt-sC-GZj" secondAttribute="leading" id="CNI-bq-yj0"/>
+                <constraint firstAttribute="bottom" secondItem="TDt-sC-GZj" secondAttribute="bottom" id="8Kz-tN-Zed"/>
                 <constraint firstAttribute="trailing" secondItem="TDt-sC-GZj" secondAttribute="trailing" id="g3E-kM-M0o"/>
                 <constraint firstItem="TDt-sC-GZj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gAz-Sh-dAI"/>
-                <constraint firstItem="XUe-Vt-ldf" firstAttribute="top" secondItem="TDt-sC-GZj" secondAttribute="bottom" id="jvi-5I-VFm"/>
                 <constraint firstItem="TDt-sC-GZj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wzH-nd-t9n"/>
             </constraints>
         </view>

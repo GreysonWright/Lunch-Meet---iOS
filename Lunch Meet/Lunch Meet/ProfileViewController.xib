@@ -28,20 +28,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnC-Z2-fWj">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </scrollView>
-                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="s0s-94-rCy">
-                    <rect key="frame" x="0.0" y="550" width="320" height="50"/>
-                </adBannerView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="TnC-Z2-fWj" secondAttribute="bottom" id="GRc-JU-NEq"/>
                 <constraint firstItem="TnC-Z2-fWj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MGR-3V-vdA"/>
                 <constraint firstItem="TnC-Z2-fWj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TQb-T7-NXF"/>
                 <constraint firstAttribute="trailing" secondItem="TnC-Z2-fWj" secondAttribute="trailing" id="ZuO-SL-GAb"/>
-                <constraint firstItem="s0s-94-rCy" firstAttribute="leading" secondItem="TnC-Z2-fWj" secondAttribute="leading" id="hcD-6R-1pR"/>
-                <constraint firstAttribute="bottom" secondItem="s0s-94-rCy" secondAttribute="bottom" id="qqT-MU-hzt"/>
-                <constraint firstItem="s0s-94-rCy" firstAttribute="top" secondItem="TnC-Z2-fWj" secondAttribute="bottom" id="sPz-Lp-Rc6"/>
             </constraints>
         </view>
         <view contentMode="scaleToFill" id="VBo-sO-WjF">

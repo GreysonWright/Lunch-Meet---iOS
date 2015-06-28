@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import iAd
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ADBannerViewDelegate {
 
 	var window: UIWindow?
-
+	var bannerView: ADBannerView!
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		
+		bannerView = ADBannerView(adType: .Banner)
+		bannerView.setTranslatesAutoresizingMaskIntoConstraints(false)
+		bannerView.delegate = self
+		bannerView.hidden = true
 		
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		

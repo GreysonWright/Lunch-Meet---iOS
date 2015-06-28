@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import iAd
 
-class MainViewController: UIViewController, ADBannerViewDelegate {
-
+class MainViewController: UIViewController {
+	
 	var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 	
     override func viewDidLoad() {
@@ -29,38 +28,6 @@ class MainViewController: UIViewController, ADBannerViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 	
-	//MARK: - ADBannerViewDelegate
-	func bannerViewWillLoadAd(banner: ADBannerView!) {
-
-		
-		
-	}
-	
-	func bannerViewDidLoadAd(banner: ADBannerView!) {
-
-		
-		
-	}
-	
-	func bannerViewActionDidFinish(banner: ADBannerView!) {
-		
-		//optional resume paused game code
-		
-	}
-	
-	func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
-		
-		//optional pause game code
-		
-		return true
-	}
-	
-	func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-		
-		
-		
-	}
-
 	//MARK: - BarButton Actions
 	func profileButtonTapped() {
 		
