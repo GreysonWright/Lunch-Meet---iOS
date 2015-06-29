@@ -40,7 +40,7 @@
             </constraints>
         </view>
         <view contentMode="scaleToFill" id="VBo-sO-WjF">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="434"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="458"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1OT-YX-yWC" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
@@ -105,51 +105,6 @@
                         <constraint firstAttribute="height" constant="78" id="eUW-kP-3uF"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFG-Xo-TSa" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="386" width="584" height="40"/>
-                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="all-2v-UkL"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Sign Out">
-                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="signOutButtonTapped:" destination="-1" eventType="touchUpInside" id="1sj-O5-cEO"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-ff-M2a" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="274" width="584" height="40"/>
-                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="4ay-u2-sYU"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Friends">
-                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="friendsButtonTapped:" destination="-1" eventType="touchUpInside" id="f2A-FU-9LY"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlY-Jl-aIQ" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="330" width="584" height="40"/>
-                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="JA3-eP-XsI"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Groups">
-                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="groupsButtonTapped:" destination="-1" eventType="touchUpInside" id="vNV-PB-XUu"/>
-                    </connections>
-                </button>
                 <button opaque="NO" alpha="0.25000000000000006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-5T-3IM">
                     <rect key="frame" x="8" y="8" width="78" height="78"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -172,26 +127,86 @@
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nX-do-aYr" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="266" width="584" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="sNd-0T-hgr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Settings">
+                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFG-Xo-TSa" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="410" width="584" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="all-2v-UkL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Sign Out">
+                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="signOutButtonTapped:" destination="-1" eventType="touchUpInside" id="1sj-O5-cEO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-ff-M2a" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="314" width="584" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="4ay-u2-sYU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Friends">
+                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="friendsButtonTapped:" destination="-1" eventType="touchUpInside" id="f2A-FU-9LY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlY-Jl-aIQ" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="362" width="584" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="JA3-eP-XsI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Groups">
+                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="groupsButtonTapped:" destination="-1" eventType="touchUpInside" id="vNV-PB-XUu"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="tyw-fi-ae5" firstAttribute="top" secondItem="B86-gZ-JIP" secondAttribute="bottom" constant="8" id="6mj-kY-Eey"/>
-                <constraint firstItem="HlY-Jl-aIQ" firstAttribute="top" secondItem="z9z-ff-M2a" secondAttribute="bottom" constant="16" id="6xu-g5-QnP"/>
+                <constraint firstItem="HlY-Jl-aIQ" firstAttribute="top" secondItem="z9z-ff-M2a" secondAttribute="bottom" constant="8" id="6xu-g5-QnP"/>
                 <constraint firstItem="vXy-WX-fIy" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="9yi-p8-8OD"/>
                 <constraint firstAttribute="trailing" secondItem="HlY-Jl-aIQ" secondAttribute="trailing" constant="8" id="CNc-S3-plb"/>
                 <constraint firstAttribute="trailing" secondItem="tyw-fi-ae5" secondAttribute="trailing" constant="8" id="Fwf-2c-ZRV"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="trailing" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" id="ILr-lI-hyI"/>
                 <constraint firstAttribute="trailing" secondItem="nIl-aT-07t" secondAttribute="trailing" constant="8" id="IU7-TL-DpI"/>
                 <constraint firstItem="oUU-Nc-lvp" firstAttribute="top" secondItem="tyw-fi-ae5" secondAttribute="bottom" constant="8" id="KZR-NV-CHd"/>
+                <constraint firstItem="1nX-do-aYr" firstAttribute="top" secondItem="oUU-Nc-lvp" secondAttribute="bottom" constant="8" id="LxA-91-mhB"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="bottom" secondItem="WIZ-5S-h7Z" secondAttribute="bottom" id="NNA-2k-2we"/>
                 <constraint firstAttribute="trailing" secondItem="1OT-YX-yWC" secondAttribute="trailing" constant="8" id="Nbr-k4-wvA"/>
                 <constraint firstAttribute="trailing" secondItem="IFG-Xo-TSa" secondAttribute="trailing" constant="8" id="OVB-Sj-jdI"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="top" secondItem="WIZ-5S-h7Z" secondAttribute="top" id="Pr7-hM-JIv"/>
-                <constraint firstItem="IFG-Xo-TSa" firstAttribute="top" secondItem="HlY-Jl-aIQ" secondAttribute="bottom" constant="16" id="QKA-4d-bxa"/>
+                <constraint firstItem="IFG-Xo-TSa" firstAttribute="top" secondItem="HlY-Jl-aIQ" secondAttribute="bottom" constant="8" id="QKA-4d-bxa"/>
                 <constraint firstItem="z9z-ff-M2a" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="SN2-SM-p3Q"/>
                 <constraint firstItem="1OT-YX-yWC" firstAttribute="top" secondItem="nIl-aT-07t" secondAttribute="bottom" constant="8" id="TKe-KM-zWK"/>
                 <constraint firstItem="HlY-Jl-aIQ" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="U4p-jm-n69"/>
+                <constraint firstItem="1nX-do-aYr" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="XOh-7W-mwt"/>
                 <constraint firstItem="nIl-aT-07t" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" constant="8" id="YwE-yi-PXB"/>
+                <constraint firstAttribute="trailing" secondItem="1nX-do-aYr" secondAttribute="trailing" constant="8" id="Z04-Jd-bHW"/>
                 <constraint firstAttribute="trailing" secondItem="z9z-ff-M2a" secondAttribute="trailing" constant="8" id="Zx7-rS-ygB"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="leading" id="aPT-V3-Dll"/>
                 <constraint firstItem="vXy-WX-fIy" firstAttribute="top" secondItem="Z1X-5T-3IM" secondAttribute="bottom" constant="8" id="bqG-nw-FNf"/>
@@ -199,6 +214,7 @@
                 <constraint firstItem="nIl-aT-07t" firstAttribute="top" secondItem="VBo-sO-WjF" secondAttribute="top" constant="8" id="cz7-ab-Rcz"/>
                 <constraint firstItem="oUU-Nc-lvp" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="e3E-3a-F5Y"/>
                 <constraint firstItem="WIZ-5S-h7Z" firstAttribute="top" secondItem="VBo-sO-WjF" secondAttribute="top" constant="8" id="g5t-QU-tME"/>
+                <constraint firstItem="z9z-ff-M2a" firstAttribute="top" secondItem="1nX-do-aYr" secondAttribute="bottom" constant="8" id="h9I-bC-LlK"/>
                 <constraint firstItem="WIZ-5S-h7Z" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="hCl-Hj-eUg"/>
                 <constraint firstItem="B86-gZ-JIP" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="iMR-zr-alS"/>
                 <constraint firstItem="1OT-YX-yWC" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" constant="8" id="iPv-75-aLA"/>
@@ -210,7 +226,12 @@
                 <constraint firstItem="B86-gZ-JIP" firstAttribute="top" secondItem="vXy-WX-fIy" secondAttribute="bottom" constant="8" id="wpw-8T-5dA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="1006" y="234"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="c3R-Ae-uhr"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="1006" y="246"/>
         </view>
     </objects>
     <resources>

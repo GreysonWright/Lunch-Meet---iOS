@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Lunch_Meet" customModuleProvider="target">
             <connections>
+                <outlet property="calendarContainerView" destination="phj-va-zVk" id="46J-In-aJZ"/>
+                <outlet property="calendarView" destination="NPe-u5-wO4" id="QJk-R4-Be3"/>
+                <outlet property="menuView" destination="Mbq-Ti-awC" id="zoM-5C-B5s"/>
+                <outlet property="tableView" destination="TDt-sC-GZj" id="CoR-Of-TVR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,19 +17,41 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TDt-sC-GZj">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
-            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="TDt-sC-GZj" secondAttribute="bottom" id="8Kz-tN-Zed"/>
-                <constraint firstAttribute="trailing" secondItem="TDt-sC-GZj" secondAttribute="trailing" id="g3E-kM-M0o"/>
-                <constraint firstItem="TDt-sC-GZj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gAz-Sh-dAI"/>
-                <constraint firstItem="TDt-sC-GZj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wzH-nd-t9n"/>
-            </constraints>
         </view>
+        <view contentMode="scaleToFill" id="phj-va-zVk">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbq-Ti-awC" customClass="JTCalendarMenuView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="M9U-hO-jdN"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPe-u5-wO4" customClass="JTCalendarContentView">
+                    <rect key="frame" x="0.0" y="40" width="600" height="560"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="NPe-u5-wO4" secondAttribute="bottom" id="8pb-fE-0UY"/>
+                <constraint firstAttribute="trailing" secondItem="Mbq-Ti-awC" secondAttribute="trailing" id="LPk-7l-iWx"/>
+                <constraint firstItem="Mbq-Ti-awC" firstAttribute="leading" secondItem="phj-va-zVk" secondAttribute="leading" id="LS0-MC-SFo"/>
+                <constraint firstItem="NPe-u5-wO4" firstAttribute="top" secondItem="Mbq-Ti-awC" secondAttribute="bottom" id="Vsc-J0-yUo"/>
+                <constraint firstItem="NPe-u5-wO4" firstAttribute="leading" secondItem="phj-va-zVk" secondAttribute="leading" id="gkN-H0-Mh5"/>
+                <constraint firstItem="Mbq-Ti-awC" firstAttribute="top" secondItem="phj-va-zVk" secondAttribute="top" id="nbr-9A-1Wb"/>
+                <constraint firstAttribute="trailing" secondItem="NPe-u5-wO4" secondAttribute="trailing" id="wEq-tF-nt1"/>
+            </constraints>
+            <point key="canvasLocation" x="1008" y="317"/>
+        </view>
+        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TDt-sC-GZj">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="-303" y="247"/>
+        </tableView>
     </objects>
 </document>

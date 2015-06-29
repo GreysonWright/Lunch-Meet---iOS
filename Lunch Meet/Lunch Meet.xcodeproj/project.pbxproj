@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E11049D1B40FDD4003ACDD7 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E11049B1B40FDD4003ACDD7 /* DatePickerViewController.swift */; };
+		2E11049E1B40FDD4003ACDD7 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E11049C1B40FDD4003ACDD7 /* DatePickerViewController.xib */; };
 		2E540ED81B367F9D00DA4490 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E540ED71B367F9D00DA4490 /* TextField.swift */; };
 		2E77CFA91B4077F0001AA867 /* LoginOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E77CFA71B4077F0001AA867 /* LoginOptionsViewController.swift */; };
 		2E77CFAA1B4077F0001AA867 /* LoginOptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E77CFA81B4077F0001AA867 /* LoginOptionsViewController.xib */; };
@@ -17,6 +19,17 @@
 		2E8D05EF1B3F93E600223559 /* EditProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D05ED1B3F93E600223559 /* EditProfileImageViewController.swift */; };
 		2E8D05F01B3F93E600223559 /* EditProfileImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8D05EE1B3F93E600223559 /* EditProfileImageViewController.xib */; };
 		2E8D05F31B3F9CD800223559 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D05F21B3F9CD800223559 /* Button.swift */; };
+		2E92C9F11B40CC8B00E9BF45 /* JTCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9DB1B40CC8B00E9BF45 /* JTCalendar.m */; };
+		2E92C9F21B40CC8B00E9BF45 /* JTCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9DD1B40CC8B00E9BF45 /* JTCalendarAppearance.m */; };
+		2E92C9F31B40CC8B00E9BF45 /* JTCalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9DF1B40CC8B00E9BF45 /* JTCalendarContentView.m */; };
+		2E92C9F41B40CC8B00E9BF45 /* JTCalendarDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9E11B40CC8B00E9BF45 /* JTCalendarDataCache.m */; };
+		2E92C9F51B40CC8B00E9BF45 /* JTCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9E31B40CC8B00E9BF45 /* JTCalendarDayView.m */; };
+		2E92C9F61B40CC8B00E9BF45 /* JTCalendarMenuMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9E51B40CC8B00E9BF45 /* JTCalendarMenuMonthView.m */; };
+		2E92C9F71B40CC8B00E9BF45 /* JTCalendarMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9E71B40CC8B00E9BF45 /* JTCalendarMenuView.m */; };
+		2E92C9F81B40CC8B00E9BF45 /* JTCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9E91B40CC8B00E9BF45 /* JTCalendarMonthView.m */; };
+		2E92C9F91B40CC8B00E9BF45 /* JTCalendarMonthWeekDaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9EB1B40CC8B00E9BF45 /* JTCalendarMonthWeekDaysView.m */; };
+		2E92C9FA1B40CC8B00E9BF45 /* JTCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9EE1B40CC8B00E9BF45 /* JTCalendarWeekView.m */; };
+		2E92C9FB1B40CC8B00E9BF45 /* JTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9F01B40CC8B00E9BF45 /* JTCircleView.m */; };
 		2EF4A0E31B293E95003ED259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4A0E21B293E95003ED259 /* AppDelegate.swift */; };
 		2EF4A0EA1B293E95003ED259 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4A0E91B293E95003ED259 /* Images.xcassets */; };
 		2EF4A0ED1B293E95003ED259 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4A0EB1B293E95003ED259 /* LaunchScreen.xib */; };
@@ -41,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E11049B1B40FDD4003ACDD7 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		2E11049C1B40FDD4003ACDD7 /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
 		2E540ED71B367F9D00DA4490 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		2E77CFA71B4077F0001AA867 /* LoginOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsViewController.swift; sourceTree = "<group>"; };
 		2E77CFA81B4077F0001AA867 /* LoginOptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginOptionsViewController.xib; sourceTree = "<group>"; };
@@ -51,6 +66,30 @@
 		2E8D05ED1B3F93E600223559 /* EditProfileImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileImageViewController.swift; sourceTree = "<group>"; };
 		2E8D05EE1B3F93E600223559 /* EditProfileImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileImageViewController.xib; sourceTree = "<group>"; };
 		2E8D05F21B3F9CD800223559 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		2E92C9DA1B40CC8B00E9BF45 /* JTCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendar.h; sourceTree = "<group>"; };
+		2E92C9DB1B40CC8B00E9BF45 /* JTCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendar.m; sourceTree = "<group>"; };
+		2E92C9DC1B40CC8B00E9BF45 /* JTCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarAppearance.h; sourceTree = "<group>"; };
+		2E92C9DD1B40CC8B00E9BF45 /* JTCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarAppearance.m; sourceTree = "<group>"; };
+		2E92C9DE1B40CC8B00E9BF45 /* JTCalendarContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarContentView.h; sourceTree = "<group>"; };
+		2E92C9DF1B40CC8B00E9BF45 /* JTCalendarContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarContentView.m; sourceTree = "<group>"; };
+		2E92C9E01B40CC8B00E9BF45 /* JTCalendarDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarDataCache.h; sourceTree = "<group>"; };
+		2E92C9E11B40CC8B00E9BF45 /* JTCalendarDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarDataCache.m; sourceTree = "<group>"; };
+		2E92C9E21B40CC8B00E9BF45 /* JTCalendarDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarDayView.h; sourceTree = "<group>"; };
+		2E92C9E31B40CC8B00E9BF45 /* JTCalendarDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarDayView.m; sourceTree = "<group>"; };
+		2E92C9E41B40CC8B00E9BF45 /* JTCalendarMenuMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMenuMonthView.h; sourceTree = "<group>"; };
+		2E92C9E51B40CC8B00E9BF45 /* JTCalendarMenuMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMenuMonthView.m; sourceTree = "<group>"; };
+		2E92C9E61B40CC8B00E9BF45 /* JTCalendarMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMenuView.h; sourceTree = "<group>"; };
+		2E92C9E71B40CC8B00E9BF45 /* JTCalendarMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMenuView.m; sourceTree = "<group>"; };
+		2E92C9E81B40CC8B00E9BF45 /* JTCalendarMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMonthView.h; sourceTree = "<group>"; };
+		2E92C9E91B40CC8B00E9BF45 /* JTCalendarMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMonthView.m; sourceTree = "<group>"; };
+		2E92C9EA1B40CC8B00E9BF45 /* JTCalendarMonthWeekDaysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMonthWeekDaysView.h; sourceTree = "<group>"; };
+		2E92C9EB1B40CC8B00E9BF45 /* JTCalendarMonthWeekDaysView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMonthWeekDaysView.m; sourceTree = "<group>"; };
+		2E92C9EC1B40CC8B00E9BF45 /* JTCalendarViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarViewDataSource.h; sourceTree = "<group>"; };
+		2E92C9ED1B40CC8B00E9BF45 /* JTCalendarWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarWeekView.h; sourceTree = "<group>"; };
+		2E92C9EE1B40CC8B00E9BF45 /* JTCalendarWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarWeekView.m; sourceTree = "<group>"; };
+		2E92C9EF1B40CC8B00E9BF45 /* JTCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCircleView.h; sourceTree = "<group>"; };
+		2E92C9F01B40CC8B00E9BF45 /* JTCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCircleView.m; sourceTree = "<group>"; };
+		2E92C9FD1B40CE8C00E9BF45 /* LunchMeet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LunchMeet-Bridging-Header.h"; sourceTree = "<group>"; };
 		2EF4A0DD1B293E95003ED259 /* Lunch Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Meet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF4A0E11B293E95003ED259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF4A0E21B293E95003ED259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E11049F1B40FDDA003ACDD7 /* Date Picker */ = {
+			isa = PBXGroup;
+			children = (
+				2E11049B1B40FDD4003ACDD7 /* DatePickerViewController.swift */,
+				2E11049C1B40FDD4003ACDD7 /* DatePickerViewController.xib */,
+			);
+			name = "Date Picker";
+			sourceTree = "<group>";
+		};
 		2E540ED91B367FA300DA4490 /* Custom Objects */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +180,44 @@
 			name = "Edit Image";
 			sourceTree = "<group>";
 		};
+		2E92C9511B40996A00E9BF45 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2E92C9D91B40CC8B00E9BF45 /* JTCalendar */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		2E92C9D91B40CC8B00E9BF45 /* JTCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				2E92C9DA1B40CC8B00E9BF45 /* JTCalendar.h */,
+				2E92C9DB1B40CC8B00E9BF45 /* JTCalendar.m */,
+				2E92C9DC1B40CC8B00E9BF45 /* JTCalendarAppearance.h */,
+				2E92C9DD1B40CC8B00E9BF45 /* JTCalendarAppearance.m */,
+				2E92C9DE1B40CC8B00E9BF45 /* JTCalendarContentView.h */,
+				2E92C9DF1B40CC8B00E9BF45 /* JTCalendarContentView.m */,
+				2E92C9E01B40CC8B00E9BF45 /* JTCalendarDataCache.h */,
+				2E92C9E11B40CC8B00E9BF45 /* JTCalendarDataCache.m */,
+				2E92C9E21B40CC8B00E9BF45 /* JTCalendarDayView.h */,
+				2E92C9E31B40CC8B00E9BF45 /* JTCalendarDayView.m */,
+				2E92C9E41B40CC8B00E9BF45 /* JTCalendarMenuMonthView.h */,
+				2E92C9E51B40CC8B00E9BF45 /* JTCalendarMenuMonthView.m */,
+				2E92C9E61B40CC8B00E9BF45 /* JTCalendarMenuView.h */,
+				2E92C9E71B40CC8B00E9BF45 /* JTCalendarMenuView.m */,
+				2E92C9E81B40CC8B00E9BF45 /* JTCalendarMonthView.h */,
+				2E92C9E91B40CC8B00E9BF45 /* JTCalendarMonthView.m */,
+				2E92C9EA1B40CC8B00E9BF45 /* JTCalendarMonthWeekDaysView.h */,
+				2E92C9EB1B40CC8B00E9BF45 /* JTCalendarMonthWeekDaysView.m */,
+				2E92C9EC1B40CC8B00E9BF45 /* JTCalendarViewDataSource.h */,
+				2E92C9ED1B40CC8B00E9BF45 /* JTCalendarWeekView.h */,
+				2E92C9EE1B40CC8B00E9BF45 /* JTCalendarWeekView.m */,
+				2E92C9EF1B40CC8B00E9BF45 /* JTCircleView.h */,
+				2E92C9F01B40CC8B00E9BF45 /* JTCircleView.m */,
+			);
+			path = JTCalendar;
+			sourceTree = "<group>";
+		};
 		2EF4A0D41B293E95003ED259 = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +240,9 @@
 		2EF4A0DF1B293E95003ED259 /* Lunch Meet */ = {
 			isa = PBXGroup;
 			children = (
+				2E92C9FD1B40CE8C00E9BF45 /* LunchMeet-Bridging-Header.h */,
 				2EF4A0E21B293E95003ED259 /* AppDelegate.swift */,
+				2E92C9511B40996A00E9BF45 /* Libraries */,
 				2E540ED91B367FA300DA4490 /* Custom Objects */,
 				2EF4A1071B293F30003ED259 /* Controllers */,
 				2EF4A0E91B293E95003ED259 /* Images.xcassets */,
@@ -204,6 +292,7 @@
 				2E77CFA61B40773E001AA867 /* Login Options */,
 				2EF4A1061B293F28003ED259 /* Login */,
 				2EF4A10C1B294204003ED259 /* Main */,
+				2E11049F1B40FDDA003ACDD7 /* Date Picker */,
 				2EF4A1131B2949D2003ED259 /* Profile */,
 				2E8D05E71B3F928C00223559 /* Friend */,
 				2E8D05EC1B3F929D00223559 /* Group */,
@@ -316,6 +405,7 @@
 				2EF4A0EA1B293E95003ED259 /* Images.xcassets in Resources */,
 				2E8D05EB1B3F929800223559 /* GroupViewController.xib in Resources */,
 				2E8D05F01B3F93E600223559 /* EditProfileImageViewController.xib in Resources */,
+				2E11049E1B40FDD4003ACDD7 /* DatePickerViewController.xib in Resources */,
 				2EF4A1051B293F24003ED259 /* LoginViewController.xib in Resources */,
 				2EF4A1121B2949CE003ED259 /* ProfileViewController.xib in Resources */,
 				2EF4A10B1B294201003ED259 /* MainViewController.xib in Resources */,
@@ -336,16 +426,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E92C9F51B40CC8B00E9BF45 /* JTCalendarDayView.m in Sources */,
 				2E8D05EF1B3F93E600223559 /* EditProfileImageViewController.swift in Sources */,
+				2E92C9F71B40CC8B00E9BF45 /* JTCalendarMenuView.m in Sources */,
+				2E92C9F61B40CC8B00E9BF45 /* JTCalendarMenuMonthView.m in Sources */,
+				2E11049D1B40FDD4003ACDD7 /* DatePickerViewController.swift in Sources */,
 				2E8D05E51B3F928600223559 /* FriendViewController.swift in Sources */,
 				2EF4A10A1B294201003ED259 /* MainViewController.swift in Sources */,
 				2EF4A1041B293F24003ED259 /* LoginViewController.swift in Sources */,
+				2E92C9F91B40CC8B00E9BF45 /* JTCalendarMonthWeekDaysView.m in Sources */,
+				2E92C9F81B40CC8B00E9BF45 /* JTCalendarMonthView.m in Sources */,
 				2E77CFA91B4077F0001AA867 /* LoginOptionsViewController.swift in Sources */,
+				2E92C9FA1B40CC8B00E9BF45 /* JTCalendarWeekView.m in Sources */,
+				2E92C9F21B40CC8B00E9BF45 /* JTCalendarAppearance.m in Sources */,
 				2EF4A1111B2949CE003ED259 /* ProfileViewController.swift in Sources */,
+				2E92C9F31B40CC8B00E9BF45 /* JTCalendarContentView.m in Sources */,
+				2E92C9F41B40CC8B00E9BF45 /* JTCalendarDataCache.m in Sources */,
 				2E540ED81B367F9D00DA4490 /* TextField.swift in Sources */,
 				2EF4A0E31B293E95003ED259 /* AppDelegate.swift in Sources */,
 				2E8D05F31B3F9CD800223559 /* Button.swift in Sources */,
 				2E8D05EA1B3F929800223559 /* GroupViewController.swift in Sources */,
+				2E92C9FB1B40CC8B00E9BF45 /* JTCircleView.m in Sources */,
+				2E92C9F11B40CC8B00E9BF45 /* JTCalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,9 +569,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Lunch Meet/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/LunchMeet-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -478,9 +582,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Lunch Meet/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/LunchMeet-Bridging-Header.h";
 			};
 			name = Release;
 		};
