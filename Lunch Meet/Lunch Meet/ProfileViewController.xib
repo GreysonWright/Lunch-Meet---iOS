@@ -40,114 +40,96 @@
             </constraints>
         </view>
         <view contentMode="scaleToFill" id="VBo-sO-WjF">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="458"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="558"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1OT-YX-yWC" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="94" y="51" width="498" height="35"/>
+                    <rect key="frame" x="114" y="61" width="478" height="45"/>
                     <color key="backgroundColor" red="0.88762204406849698" green="0.91974055140566391" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="Hkx-PH-Zqs"/>
+                        <constraint firstAttribute="height" constant="45" id="Hkx-PH-Zqs"/>
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nIl-aT-07t" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="94" y="8" width="498" height="35"/>
+                    <rect key="frame" x="114" y="8" width="478" height="45"/>
                     <color key="backgroundColor" red="0.88762204406849698" green="0.91974055140566391" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="ugg-Ms-MA6"/>
+                        <constraint firstAttribute="height" constant="45" id="ugg-Ms-MA6"/>
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City, State" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tyw-fi-ae5" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="180" width="584" height="35"/>
+                    <rect key="frame" x="8" y="220" width="584" height="45"/>
                     <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="s2S-Vz-Kx2"/>
+                        <constraint firstAttribute="height" constant="45" id="s2S-Vz-Kx2"/>
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Favorite Restaurant" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oUU-Nc-lvp" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="223" width="584" height="35"/>
+                    <rect key="frame" x="8" y="273" width="584" height="45"/>
                     <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="3Hk-Sn-cyU"/>
+                        <constraint firstAttribute="height" constant="45" id="3Hk-Sn-cyU"/>
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Birth Date" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="B86-gZ-JIP" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="137" width="584" height="35"/>
+                    <rect key="frame" x="8" y="167" width="584" height="45"/>
                     <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="gma-B7-eYJ"/>
+                        <constraint firstAttribute="height" constant="45" id="gma-B7-eYJ"/>
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="WIZ-5S-h7Z">
-                    <rect key="frame" x="8" y="8" width="78" height="78"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="78" id="Ryd-LK-9gm"/>
-                        <constraint firstAttribute="height" constant="78" id="eUW-kP-3uF"/>
-                    </constraints>
-                </imageView>
-                <button opaque="NO" alpha="0.25000000000000006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-5T-3IM">
-                    <rect key="frame" x="8" y="8" width="78" height="78"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="Edit">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="editProfileImageButtonTapped:" destination="-1" eventType="touchUpInside" id="W7O-mE-gG3"/>
-                    </connections>
-                </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vXy-WX-fIy" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="94" width="584" height="35"/>
+                    <rect key="frame" x="8" y="114" width="584" height="45"/>
                     <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="E8Y-RT-GMG"/>
+                        <constraint firstAttribute="height" constant="45" id="E8Y-RT-GMG"/>
                     </constraints>
                     <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nX-do-aYr" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="266" width="584" height="40"/>
+                    <rect key="frame" x="8" y="326" width="584" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="sNd-0T-hgr"/>
+                        <constraint firstAttribute="height" constant="50" id="sNd-0T-hgr"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Settings">
-                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.81797826753305902" green="0.88544251407089714" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFG-Xo-TSa" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="410" width="584" height="40"/>
-                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="8" y="500" width="584" height="50"/>
+                    <color key="backgroundColor" red="0.6967592592592593" green="0.0070020652283975778" blue="0.013722950353504348" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="all-2v-UkL"/>
+                        <constraint firstAttribute="height" constant="50" id="all-2v-UkL"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Sign Out">
-                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="1" green="0.7847786779689695" blue="0.85525456700543723" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -155,14 +137,14 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-ff-M2a" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="314" width="584" height="40"/>
+                    <rect key="frame" x="8" y="384" width="584" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="4ay-u2-sYU"/>
+                        <constraint firstAttribute="height" constant="50" id="4ay-u2-sYU"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Friends">
-                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.81797826753305902" green="0.88544251407089714" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -170,18 +152,36 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlY-Jl-aIQ" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="362" width="584" height="40"/>
+                    <rect key="frame" x="8" y="442" width="584" height="50"/>
                     <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="JA3-eP-XsI"/>
+                        <constraint firstAttribute="height" constant="50" id="JA3-eP-XsI"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Groups">
-                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.81797826753305902" green="0.88544251407089714" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="groupsButtonTapped:" destination="-1" eventType="touchUpInside" id="vNV-PB-XUu"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WIZ-5S-h7Z">
+                    <rect key="frame" x="8" y="8" width="98" height="98"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="98" id="Ryd-LK-9gm"/>
+                        <constraint firstAttribute="height" constant="98" id="eUW-kP-3uF"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" alpha="0.25000000000000006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-5T-3IM">
+                    <rect key="frame" x="8" y="8" width="98" height="98"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Edit">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="editProfileImageButtonTapped:" destination="-1" eventType="touchUpInside" id="W7O-mE-gG3"/>
                     </connections>
                 </button>
             </subviews>
@@ -207,13 +207,13 @@
                 <constraint firstItem="1nX-do-aYr" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="XOh-7W-mwt"/>
                 <constraint firstItem="nIl-aT-07t" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" constant="8" id="YwE-yi-PXB"/>
                 <constraint firstAttribute="trailing" secondItem="1nX-do-aYr" secondAttribute="trailing" constant="8" id="Z04-Jd-bHW"/>
+                <constraint firstItem="vXy-WX-fIy" firstAttribute="top" secondItem="1OT-YX-yWC" secondAttribute="bottom" constant="8" id="Zc0-pi-2Tc"/>
                 <constraint firstAttribute="trailing" secondItem="z9z-ff-M2a" secondAttribute="trailing" constant="8" id="Zx7-rS-ygB"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="leading" id="aPT-V3-Dll"/>
-                <constraint firstItem="vXy-WX-fIy" firstAttribute="top" secondItem="Z1X-5T-3IM" secondAttribute="bottom" constant="8" id="bqG-nw-FNf"/>
                 <constraint firstItem="z9z-ff-M2a" firstAttribute="top" secondItem="oUU-Nc-lvp" secondAttribute="bottom" constant="16" id="c3R-Ae-uhr"/>
                 <constraint firstItem="nIl-aT-07t" firstAttribute="top" secondItem="VBo-sO-WjF" secondAttribute="top" constant="8" id="cz7-ab-Rcz"/>
                 <constraint firstItem="oUU-Nc-lvp" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="e3E-3a-F5Y"/>
-                <constraint firstItem="WIZ-5S-h7Z" firstAttribute="top" secondItem="VBo-sO-WjF" secondAttribute="top" constant="8" id="g5t-QU-tME"/>
+                <constraint firstItem="WIZ-5S-h7Z" firstAttribute="top" secondItem="VBo-sO-WjF" secondAttribute="top" constant="8" id="h1L-eW-QtL"/>
                 <constraint firstItem="z9z-ff-M2a" firstAttribute="top" secondItem="1nX-do-aYr" secondAttribute="bottom" constant="8" id="h9I-bC-LlK"/>
                 <constraint firstItem="WIZ-5S-h7Z" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="hCl-Hj-eUg"/>
                 <constraint firstItem="B86-gZ-JIP" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="iMR-zr-alS"/>
@@ -231,10 +231,7 @@
                     <exclude reference="c3R-Ae-uhr"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="1006" y="246"/>
+            <point key="canvasLocation" x="1005" y="296"/>
         </view>
     </objects>
-    <resources>
-        <image name="test" width="140" height="140"/>
-    </resources>
 </document>

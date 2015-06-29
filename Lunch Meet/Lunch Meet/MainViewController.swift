@@ -33,7 +33,6 @@ class MainViewController: UIViewController, JTCalendarDataSource {
 		let navigationSegmentedControl = UISegmentedControl(items: ["List", "Calendar"])
 		navigationSegmentedControl.setWidth(95, forSegmentAtIndex: 0)
 		navigationSegmentedControl.setWidth(95, forSegmentAtIndex: 1)
-		navigationSegmentedControl.setTitleTextAttributes(NSDictionary(object: UIFont(name: "HelveticaNeue", size: 17)!, forKey: NSFontAttributeName) as [NSObject : AnyObject], forState: .Normal)
 		navigationSegmentedControl.tintColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1)
 		navigationSegmentedControl.selectedSegmentIndex = 0
 		navigationSegmentedControl.addTarget(self, action: Selector("navigationSegmentedControl:"), forControlEvents: UIControlEvents.ValueChanged)
