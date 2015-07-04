@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ADBannerViewDelegate {
 
 	var window: UIWindow?
 	var bannerView: ADBannerView!
-
+	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		
 		bannerView = ADBannerView(adType: .Banner)

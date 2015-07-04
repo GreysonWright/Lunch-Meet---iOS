@@ -9,7 +9,7 @@
 import UIKit
 import iAd
 
-class MainViewController: UIViewController, JTCalendarDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ADBannerViewDelegate, JTCalendarDataSource {
 	
 	@IBOutlet var calendarContainerView: UIView!
 	@IBOutlet var menuView: JTCalendarMenuView!
@@ -20,15 +20,12 @@ class MainViewController: UIViewController, JTCalendarDataSource {
 	
 	var calendar: JTCalendar!
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
 		title = "Plans"
 		
 		canDisplayBannerAds = true
-		
-		tableView.frame = CGRect(origin: CGPoint(x: 0, y: navigationController!.navigationBar.bounds.height + 20), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - (navigationController!.navigationBar.bounds.height - 20)))
-		view.addSubview(tableView)
 		
 		let navigationSegmentedControl = UISegmentedControl(items: ["List", "Calendar"])
 		navigationSegmentedControl.setWidth(95, forSegmentAtIndex: 0)
@@ -50,12 +47,26 @@ class MainViewController: UIViewController, JTCalendarDataSource {
 		calendar.reloadData()
 		calendar.reloadAppearance()
 		
-    }
+		tableView.registerNib(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCell")
+		tableView.frame = CGRect(origin: CGPoint(x: 0, y: navigationController!.navigationBar.bounds.height + 20), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - (navigationController!.navigationBar.bounds.height + 20)))
+		view.addSubview(tableView)
+		
+	}
 	
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+	override func viewWillAppear(animated: Bool) {
+		
+		super.viewWillAppear(animated)
+		
+//		tableView.registerNib(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCell")
+//		tableView.frame = CGRect(origin: CGPoint(x: 0, y: navigationController!.navigationBar.bounds.height + 20), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - (navigationController!.navigationBar.bounds.height + 20)))
+//		view.addSubview(tableView)
+		
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
 	
 	func navigationSegmentedControl(sender: AnyObject) {
 		
@@ -77,25 +88,30 @@ class MainViewController: UIViewController, JTCalendarDataSource {
 			
 		}
 		
+	}
+	
+	override func viewDidLayoutSubviews() {
+		
+		calendar.repositionViews()
+		
 		for subView in view.subviews {
 			
 			if (subView as? ADBannerView != nil) {
 				
-				view.bringSubviewToFront(subView as! ADBannerView)
-				
-				calendarContainerView.frame.size = CGSize(width: calendarContainerView.frame.size.width, height: calendarContainerView.frame.size.height - (subView.frame.size.height + 15))
+				if(subView as! ADBannerView).bannerLoaded {
+					
+					view.bringSubviewToFront(subView as! ADBannerView)
+					
+					calendarContainerView.frame.size = CGSize(width: UIScreen.mainScreen().bounds.size.width, height: UIScreen.mainScreen().bounds.size.height - ((subView.frame.size.height * 2) + 15))
+					tableView.frame.size = CGSize(width: UIScreen.mainScreen().bounds.size.width, height: UIScreen.mainScreen().bounds.size.height - ((subView.frame.size.height * 2) + 15))
+					
+				}
 				
 				break
 				
 			}
 			
 		}
-		
-	}
-	
-	override func viewDidLayoutSubviews() {
-		
-		calendar.repositionViews()
 		
 	}
 	
@@ -108,11 +124,8 @@ class MainViewController: UIViewController, JTCalendarDataSource {
 	
 	func calendarDidDateSelected(calendar: JTCalendar!, date: NSDate!) {
 		
-		let dateFormatter = NSDateFormatter()
-		dateFormatter.dateFormat = "MMMM d, yyyy"
-		
 		let datePickerVC = DatePickerViewController(nibName: "DatePickerViewController", bundle: nil)
-		datePickerVC.title = dateFormatter.stringFromDate(date)
+		datePickerVC.date = date
 		
 		let datePickerNavController = UINavigationController(rootViewController: datePickerVC)
 		
@@ -132,6 +145,27 @@ class MainViewController: UIViewController, JTCalendarDataSource {
 		let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
 		
 		navigationController?.pushViewController(profileVC, animated: true)
+		
+	}
+	
+	//MARK: UITableView
+	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+		
+		return 67
+		
+	}
+	
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		
+		return LunchMeetSingleton.sharedInstance.lunchPlans.count
+		
+	}
+	
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		
+		let cell = tableView.dequeueReusableCellWithIdentifier("MainCell", forIndexPath: indexPath) as! MainTableViewCell
+		
+		return cell
 		
 	}
 	

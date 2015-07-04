@@ -48,12 +48,26 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		profileImageView.image = LunchMeetSingleton.sharedInstance.image
+		
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 	//MARK: - UIButton Actions
+	@IBAction func settingsButtonTapped(sender: AnyObject) {
+		
+		let settingsVC = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+		navigationController?.pushViewController(settingsVC, animated: true)
+		
+	}
+	
 	@IBAction func editProfileImageButtonTapped(sender: AnyObject) {
 		
 		let editImageVC = EditProfileImageViewController(nibName: "EditProfileImageViewController", bundle: nil)

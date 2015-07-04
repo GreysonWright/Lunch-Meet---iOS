@@ -33,6 +33,9 @@ class EditProfileImageViewController: UIViewController, UIImagePickerControllerD
 			
 		}
 		
+		imageView.layer.borderColor = UIColor.grayColor().CGColor
+		imageView.layer.borderWidth = 1
+		
         // Do any additional setup after loading the view.
     }
 	
@@ -63,6 +66,7 @@ class EditProfileImageViewController: UIViewController, UIImagePickerControllerD
 	func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
 		
 		imageView.image = image
+		LunchMeetSingleton.sharedInstance.image = image
 		
 		noImageLabel.hidden = true
 		
