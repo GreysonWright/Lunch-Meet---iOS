@@ -9,7 +9,7 @@
 import UIKit
 import iAd
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ADBannerViewDelegate, JTCalendarDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ADBannerViewDelegate, JTCalendarDataSource, DatePickerViewDelegate {
 	
 	@IBOutlet var calendarContainerView: UIView!
 	@IBOutlet var menuView: JTCalendarMenuView!
@@ -56,10 +56,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 	override func viewWillAppear(animated: Bool) {
 		
 		super.viewWillAppear(animated)
-		
-//		tableView.registerNib(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCell")
-//		tableView.frame = CGRect(origin: CGPoint(x: 0, y: navigationController!.navigationBar.bounds.height + 20), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - (navigationController!.navigationBar.bounds.height + 20)))
-//		view.addSubview(tableView)
 		
 	}
 	
@@ -115,6 +111,27 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 		
 	}
 	
+	//MARK: - DatePickerView
+	func didSaveDate(date: NSDate) {
+		
+		calendar.currentDateSelected = date
+		calendar.reloadAppearance()
+		calendar.reloadData()
+		
+	}
+	
+	func presentDatePicker(date: NSDate) {
+		
+		let datePickerVC = DatePickerViewController(nibName: "DatePickerViewController", bundle: nil)
+		datePickerVC.delegate = self
+		datePickerVC.date = date
+		
+		let datePickerNavController = UINavigationController(rootViewController: datePickerVC)
+		
+		navigationController!.presentViewController(datePickerNavController, animated: true, completion: nil)
+		
+	}
+	
 	//MARK: - JTCalendar
 	func calendar(calendar: JTCalendar!, canSelectDate date: NSDate!) -> Bool {
 		
@@ -124,27 +141,37 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 	
 	func calendarDidDateSelected(calendar: JTCalendar!, date: NSDate!) {
 		
-		let datePickerVC = DatePickerViewController(nibName: "DatePickerViewController", bundle: nil)
-		datePickerVC.date = date
-		
-		let datePickerNavController = UINavigationController(rootViewController: datePickerVC)
-		
-		navigationController!.presentViewController(datePickerNavController, animated: true, completion: nil)
+		presentDatePicker(date)
 		
 	}
 	
 	func calendarHaveEvent(calendar: JTCalendar!, date: NSDate!) -> Bool {
 		
+		let dateFormatter = NSDateFormatter()
+		dateFormatter.dateFormat = "MM/dd/yyyy"
+		
+		if dateFormatter.stringFromDate(date) == dateFormatter.stringFromDate(NSDate()) {
+			
+			return true
+			
+		}
+		
 		return false
 		
 	}
 	
-	//MARK: - BarButton Actions
+	//MARK: - UIButton Actions
 	func profileButtonTapped() {
 		
 		let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
 		
 		navigationController?.pushViewController(profileVC, animated: true)
+		
+	}
+	
+	func addButtonTapped() {
+		
+		presentDatePicker(NSDate())
 		
 	}
 	
@@ -166,6 +193,30 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 		let cell = tableView.dequeueReusableCellWithIdentifier("MainCell", forIndexPath: indexPath) as! MainTableViewCell
 		
 		return cell
+		
+	}
+	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+		
+	}
+	
+	func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		
+		return 50
+		
+	}
+	
+	func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+	
+		let addButton = UIButton(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: tableView.sectionHeaderHeight)))
+		addButton.addTarget(self, action: Selector("addButtonTapped"), forControlEvents: .TouchUpInside)
+		addButton.setTitleColor(UIColor(red: 209/255, green: 206/255, blue: 255/255, alpha: 1), forState: .Normal)
+		addButton.backgroundColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1)
+		addButton.setTitle("Plan Lunch", forState: .Normal)
+		
+		return addButton
 		
 	}
 	

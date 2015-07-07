@@ -8,10 +8,17 @@
 
 import UIKit
 
+protocol DatePickerViewDelegate {
+	
+	func didSaveDate(date: NSDate)
+	
+}
+
 class DatePickerViewController: UIViewController {
 
 	@IBOutlet var datePicker: UIDatePicker!
 	
+	var delegate: DatePickerViewDelegate?
 	var date: NSDate!
 	
     override func viewDidLoad() {
@@ -36,6 +43,7 @@ class DatePickerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 	
+	//MARK: - UIButton Actions
 	func navigationCancelButtonTapped() {
 		
 		dismissViewControllerAnimated(true, completion: nil)
@@ -46,14 +54,19 @@ class DatePickerViewController: UIViewController {
 		
 		dismissViewControllerAnimated(true, completion: nil)
 		
+		delegate?.didSaveDate(date)
+		
 	}
 	
+	//MARK: - DatePicker
 	@IBAction func datePickerValueChanged(sender: AnyObject) {
 		
 		let dateFormatter = NSDateFormatter()
 		dateFormatter.dateFormat = "MMMM d, yyyy"
 		
 		title = dateFormatter.stringFromDate((sender as! UIDatePicker).date)
+		
+		date = (sender as! UIDatePicker).date
 		
 	}
 	
