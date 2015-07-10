@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ADBannerViewDelegate {
 		bannerView.delegate = self
 		bannerView.hidden = true
 		
+		UINavigationBar.appearance().tintColor = UIColor(red: 2/255, green: 102/255, blue: 157/255, alpha: 1)
+		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 2/255, green: 102/255, blue: 157/255, alpha: 1)]
+//		UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 17)]
+		
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		
 		window?.rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)

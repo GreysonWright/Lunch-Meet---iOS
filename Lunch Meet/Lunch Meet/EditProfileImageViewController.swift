@@ -21,6 +21,10 @@ class EditProfileImageViewController: UIViewController, UIImagePickerControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		canDisplayBannerAds = true
+		
+		savedImage = LunchMeetSingleton.sharedInstance.image
+		
 		if savedImage != nil {
 			
 			imageView.image = savedImage

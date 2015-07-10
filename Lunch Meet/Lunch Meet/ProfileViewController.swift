@@ -53,6 +53,16 @@ class ProfileViewController: UIViewController {
 		
 		profileImageView.image = LunchMeetSingleton.sharedInstance.image
 		
+		if profileImageView.image == nil {
+			
+			editButton.setTitle("Add", forState: .Normal)
+			
+		} else {
+			
+			editButton.setTitle("Edit", forState: .Normal)
+			
+		}
+		
 	}
 	
     override func didReceiveMemoryWarning() {
@@ -77,14 +87,18 @@ class ProfileViewController: UIViewController {
 	
 	@IBAction func friendsButtonTapped(sender: AnyObject) {
 		
-		let friendVC = FriendViewController(nibName: "FriendViewController", bundle: nil)
+		let friendVC = ProfileListTableViewController(nibName: "ProfileListTableViewController", bundle: nil)
+		friendVC.title = "Friends"
+		
 		navigationController?.pushViewController(friendVC, animated: true)
 		
 	}
 	
 	@IBAction func groupsButtonTapped(sender: AnyObject) {
 		
-		let groupVC = GroupViewController(nibName: "GroupViewController", bundle: nil)
+		let groupVC = ProfileListTableViewController(nibName: "ProfileListTableViewController", bundle: nil)
+		groupVC.title = "Groups"
+		
 		navigationController?.pushViewController(groupVC, animated: true)
 		
 	}

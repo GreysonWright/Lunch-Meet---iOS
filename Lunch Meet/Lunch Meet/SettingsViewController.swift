@@ -15,6 +15,8 @@ class SettingsViewController: UIViewController {
 		
 		title = "Settings"
 		
+		canDisplayBannerAds = true
+		
         // Do any additional setup after loading the view.
     }
 
