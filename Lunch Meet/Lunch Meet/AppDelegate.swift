@@ -17,11 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ADBannerViewDelegate {
 	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		
-		bannerView = ADBannerView(adType: .Banner)
-		bannerView.setTranslatesAutoresizingMaskIntoConstraints(false)
-		bannerView.delegate = self
-		bannerView.hidden = true
-		
 		UINavigationBar.appearance().tintColor = UIColor(red: 2/255, green: 102/255, blue: 157/255, alpha: 1)
 		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 2/255, green: 102/255, blue: 157/255, alpha: 1)]
 //		UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 17)]

@@ -19,6 +19,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 	
 	var calendar: JTCalendar!
+	var calendarPassCount = 0
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -150,9 +151,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 		let dateFormatter = NSDateFormatter()
 		dateFormatter.dateFormat = "MM/dd/yyyy"
 		
-		if dateFormatter.stringFromDate(date) == dateFormatter.stringFromDate(NSDate()) {
+		for scheduledDate in LunchMeetSingleton.sharedInstance.scheduledDates {
 			
-			return true
+			if dateFormatter.stringFromDate(date) == scheduledDate {
+				
+				return true
+				
+			}
 			
 		}
 		
@@ -184,7 +189,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
-		return LunchMeetSingleton.sharedInstance.lunchPlans.count
+		return LunchMeetSingleton.sharedInstance.scheduledDates.count
 		
 	}
 	

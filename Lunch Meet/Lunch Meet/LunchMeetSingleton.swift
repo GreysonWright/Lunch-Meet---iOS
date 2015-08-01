@@ -12,7 +12,7 @@ class LunchMeetSingleton: NSObject {
 	
 	static let sharedInstance = LunchMeetSingleton()
 	
-	var lunchPlans = []
+	var scheduledDates: [String] = []
 	var image:UIImage? = nil
 	
 }

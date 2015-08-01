@@ -97,7 +97,7 @@ class ProfileViewController: UIViewController {
 	@IBAction func groupsButtonTapped(sender: AnyObject) {
 		
 		let groupVC = ProfileListTableViewController(nibName: "ProfileListTableViewController", bundle: nil)
-		groupVC.title = "Groups"
+		groupVC.title = "Parties"
 		
 		navigationController?.pushViewController(groupVC, animated: true)
 		

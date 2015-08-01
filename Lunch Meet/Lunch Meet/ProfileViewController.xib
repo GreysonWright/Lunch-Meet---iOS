@@ -161,7 +161,7 @@
                         <constraint firstAttribute="height" constant="50" id="JA3-eP-XsI"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Groups">
+                    <state key="normal" title="Parties">
                         <color key="titleColor" red="0.81797826753305902" green="0.88544251407089714" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>

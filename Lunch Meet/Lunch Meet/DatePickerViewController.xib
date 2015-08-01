@@ -15,15 +15,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="uRc-92-jGJ">
-                    <rect key="frame" x="0.0" y="125" width="600" height="162"/>
-                    <date key="date" timeIntervalSinceReferenceDate="457644867.360488">
-                        <!--2015-07-03 19:34:27 +0000-->
-                    </date>
-                    <connections>
-                        <action selector="datePickerValueChanged:" destination="-1" eventType="valueChanged" id="jKC-xg-Iw8"/>
-                    </connections>
-                </datePicker>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZFo-Zd-IrP" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="8" y="72" width="584" height="45"/>
                     <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,17 +26,39 @@
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Party Members" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5GS-H9-z24" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="125" width="584" height="45"/>
+                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="G6a-Gq-5FP"/>
+                    </constraints>
+                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                </textField>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="uRc-92-jGJ">
+                    <rect key="frame" x="0.0" y="178" width="600" height="162"/>
+                    <date key="date" timeIntervalSinceReferenceDate="457644867.360488">
+                        <!--2015-07-03 19:34:27 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="datePickerValueChanged:" destination="-1" eventType="valueChanged" id="jKC-xg-Iw8"/>
+                    </connections>
+                </datePicker>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="uRc-92-jGJ" firstAttribute="top" secondItem="5GS-H9-z24" secondAttribute="bottom" constant="8" id="AHi-Ez-5S8"/>
                 <constraint firstAttribute="trailing" secondItem="uRc-92-jGJ" secondAttribute="trailing" id="Q2p-5K-ecW"/>
                 <constraint firstItem="ZFo-Zd-IrP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="WOP-oZ-CP6"/>
                 <constraint firstAttribute="trailing" secondItem="ZFo-Zd-IrP" secondAttribute="trailing" constant="8" id="lPB-LW-V3E"/>
-                <constraint firstItem="uRc-92-jGJ" firstAttribute="top" secondItem="ZFo-Zd-IrP" secondAttribute="bottom" constant="8" id="pFt-4a-bt3"/>
+                <constraint firstItem="5GS-H9-z24" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="nee-wD-Sif"/>
+                <constraint firstItem="5GS-H9-z24" firstAttribute="top" secondItem="ZFo-Zd-IrP" secondAttribute="bottom" constant="8" id="oun-vF-YQZ"/>
+                <constraint firstAttribute="trailing" secondItem="5GS-H9-z24" secondAttribute="trailing" constant="8" id="voO-UJ-dCB"/>
                 <constraint firstItem="ZFo-Zd-IrP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="wb5-9k-luA"/>
                 <constraint firstItem="uRc-92-jGJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="z3S-mt-L6s"/>
             </constraints>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>
     </objects>
 </document>

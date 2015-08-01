@@ -8,3 +8,4 @@
 
 #import <Foundation/Foundation.h>
 #import "JTCalendar.h"
+#import "UIColor+MaterialPalette.h"
