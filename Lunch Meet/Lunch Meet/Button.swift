@@ -13,6 +13,7 @@ class Button: UIButton {
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
+		super.drawRect(rect)
 		
 		layer.masksToBounds = true
 		layer.cornerRadius = 3

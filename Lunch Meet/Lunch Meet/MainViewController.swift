@@ -31,17 +31,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 		let navigationSegmentedControl = UISegmentedControl(items: ["List", "Calendar"])
 		navigationSegmentedControl.setWidth(95, forSegmentAtIndex: 0)
 		navigationSegmentedControl.setWidth(95, forSegmentAtIndex: 1)
-		navigationSegmentedControl.tintColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1)
+		navigationSegmentedControl.tintColor = UIColor.blue700()
 		navigationSegmentedControl.selectedSegmentIndex = 0
 		navigationSegmentedControl.addTarget(self, action: Selector("navigationSegmentedControl:"), forControlEvents: UIControlEvents.ValueChanged)
 		navigationItem.titleView = navigationSegmentedControl
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("profileButtonTapped"))
 		
 		calendar = JTCalendar()
-		calendar.calendarAppearance.dayCircleColorTodayOtherMonth = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1)
-		calendar.calendarAppearance.dayCircleColorSelected = UIColor(red: 183/255, green: 214/255, blue: 1, alpha: 1)
-		calendar.calendarAppearance.dayCircleColorSelectedOtherMonth = UIColor(red: 183/255, green: 214/255, blue: 1, alpha: 1)
-		calendar.calendarAppearance.dayCircleColorToday = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1)
+		calendar.calendarAppearance.dayCircleColorToday = UIColor.blue200()
+		calendar.calendarAppearance.dayCircleColorTodayOtherMonth = UIColor.blue200()
+		calendar.calendarAppearance.dayCircleColorSelected = UIColor.blue700()
+		calendar.calendarAppearance.dayCircleColorSelectedOtherMonth = UIColor.blue700()
 		calendar.menuMonthsView = menuView
 		calendar.contentView = calendarView
 		calendar.dataSource = self
@@ -217,8 +217,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 	
 		let addButton = UIButton(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: tableView.sectionHeaderHeight)))
 		addButton.addTarget(self, action: Selector("addButtonTapped"), forControlEvents: .TouchUpInside)
-		addButton.setTitleColor(UIColor(red: 209/255, green: 206/255, blue: 255/255, alpha: 1), forState: .Normal)
-		addButton.backgroundColor = UIColor(red: 0, green: 102/255, blue: 153/255, alpha: 1)
+		addButton.backgroundColor = UIColor.blue700()
 		addButton.setTitle("Plan Lunch", forState: .Normal)
 		
 		return addButton

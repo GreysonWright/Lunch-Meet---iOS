@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -20,35 +20,35 @@
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VNn-kA-fft" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="25" y="96" width="550" height="40"/>
-                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.9116295163" green="0.93725490199999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.089720785619999993" green="0.37210342289999998" blue="0.78222197289999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="wwb-Zp-ov9"/>
                     </constraints>
-                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.089720785619999993" green="0.37210342289999998" blue="0.78222197289999995" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CQU-Qs-ygG" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="25" y="144" width="550" height="40"/>
-                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.9116295163" green="0.93725490199999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" red="0.089720785619999993" green="0.37210342289999998" blue="0.78222197289999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="kBY-ze-eGh"/>
                     </constraints>
-                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.089720785619999993" green="0.37210342289999998" blue="0.78222197289999995" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-LT-VQy" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="75" y="196" width="450" height="40"/>
-                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="25" y="196" width="550" height="40"/>
+                    <color key="backgroundColor" red="0.089720785619999993" green="0.37210342289999998" blue="0.78222197289999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Imo-MK-Qgo"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <state key="normal" title="Login">
-                        <color key="titleColor" red="0.71743990520000001" green="0.8407451923" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -58,7 +58,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkS-Ah-V6C">
                     <rect key="frame" x="242" y="562" width="117" height="30"/>
                     <state key="normal" title="Forgot Password">
-                        <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" red="0.089720785619999993" green="0.37210342289999998" blue="0.78222197289999995" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -68,7 +68,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Oa-pf-oec">
                     <rect key="frame" x="273" y="524" width="55" height="30"/>
                     <state key="normal" title="Sign Up">
-                        <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" red="0.089720785619999993" green="0.37210342289999998" blue="0.78222197289999995" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -78,7 +78,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch Meet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1J-qu-GsT">
                     <rect key="frame" x="222" y="40" width="156" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.051960200071334839" green="0.19789251685142517" blue="0.56280845403671265" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -96,8 +96,8 @@
                 <constraint firstItem="VNn-kA-fft" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="j7X-2L-Qhi"/>
                 <constraint firstItem="AkS-Ah-V6C" firstAttribute="top" secondItem="3Oa-pf-oec" secondAttribute="bottom" constant="8" id="o3R-1N-Nlg"/>
                 <constraint firstItem="VNn-kA-fft" firstAttribute="top" secondItem="Y1J-qu-GsT" secondAttribute="bottom" constant="20" id="wfq-ht-TOc"/>
-                <constraint firstItem="wdp-LT-VQy" firstAttribute="leading" secondItem="CQU-Qs-ygG" secondAttribute="leading" constant="50" id="xd0-Hw-epR"/>
-                <constraint firstItem="wdp-LT-VQy" firstAttribute="trailing" secondItem="CQU-Qs-ygG" secondAttribute="trailing" constant="-50" id="ydK-E0-HHs"/>
+                <constraint firstItem="wdp-LT-VQy" firstAttribute="leading" secondItem="CQU-Qs-ygG" secondAttribute="leading" id="xd0-Hw-epR"/>
+                <constraint firstItem="wdp-LT-VQy" firstAttribute="trailing" secondItem="CQU-Qs-ygG" secondAttribute="trailing" id="ydK-E0-HHs"/>
                 <constraint firstItem="CQU-Qs-ygG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="zlv-3V-hQk"/>
             </constraints>
         </view>

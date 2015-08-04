@@ -1,30 +1,30 @@
 //
-//  TextField.swift
+//  GroupedTextField.swift
 //  Lunch Meet
 //
-//  Created by greyson on 6/21/15.
+//  Created by greyson on 8/1/15.
 //  Copyright (c) 2015 Greyson Wright. All rights reserved.
 //
 
 import UIKit
 
-class TextField: UITextField {
+class GroupedTextField: UITextField {
 	
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
 		super.drawRect(rect)
 		
-		layer.masksToBounds = true
-		layer.cornerRadius = 3
+		let bottomBorder = CALayer()
+		bottomBorder.frame = CGRectMake(0, frame.size.height - 0.5, frame.size.width, 0.5)
+		bottomBorder.backgroundColor = UIColor.blue700().CGColor
+		layer.addSublayer(bottomBorder)
 		
     }
-
+	
 	override func textRectForBounds(bounds: CGRect) -> CGRect {
 		super.textRectForBounds(bounds)
 		
 		return CGRectInset( bounds , 10 , 0 )
-	
+		
 	}
 	
 	override func editingRectForBounds(bounds: CGRect) -> CGRect {
@@ -33,5 +33,5 @@ class TextField: UITextField {
 		return CGRectInset( bounds , 10 , 0 )
 		
 	}
-	
+
 }

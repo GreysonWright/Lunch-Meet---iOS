@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MobileCoreServices
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	@IBOutlet var scrollView: UIScrollView!
 	@IBOutlet var containerView: UIView!
@@ -24,14 +25,17 @@ class ProfileViewController: UIViewController {
 	@IBOutlet var restaurantField: TextField!
 	@IBOutlet var friendsButton: UIButton!
 	@IBOutlet var groupsButton: UIButton!
-	@IBOutlet var signOutButton: UIButton!
 
 	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+	
+	var savedImage: UIImage?
+	var newMedia: Bool?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		title = "Profile"
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: Selector("settingsNavigationButtonTapped:"))
 		
 		editButton.layer.cornerRadius = editButton.frame.height / 2
 		
@@ -70,18 +74,60 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-	//MARK: - UIButton Actions
-	@IBAction func settingsButtonTapped(sender: AnyObject) {
+	func presentImagePicker(sourceType: UIImagePickerControllerSourceType) {
+		
+		if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+			
+			let imagePickerVC = UIImagePickerController()
+			
+			imagePickerVC.delegate = self
+			imagePickerVC.sourceType = sourceType
+			imagePickerVC.mediaTypes = [kUTTypeImage as NSString]
+			imagePickerVC.allowsEditing = false
+			
+			self.presentViewController(imagePickerVC, animated: true, completion: nil)
+			newMedia = true
+			
+		}
+		
+	}
+	
+	//MARK: - UIImagePickerController
+	func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+		
+		profileImageView.image = image
+		LunchMeetSingleton.sharedInstance.image = image
+		
+		editButton.setTitle("edit", forState: UIControlState.Normal)
+		
+		picker.dismissViewControllerAnimated(true, completion: nil)
+		
+	}
+	
+	//MARK: - NavButton Actions
+	func settingsNavigationButtonTapped(sender: AnyObject) {
 		
 		let settingsVC = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
 		navigationController?.pushViewController(settingsVC, animated: true)
 		
 	}
 	
+	//MARK: - UIButton Actions
 	@IBAction func editProfileImageButtonTapped(sender: AnyObject) {
 		
-		let editImageVC = EditProfileImageViewController(nibName: "EditProfileImageViewController", bundle: nil)
-		navigationController?.pushViewController(editImageVC, animated: true)
+		let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+		actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .Default, handler: { (action: UIAlertAction!) -> Void in
+			
+			self.presentImagePicker(.PhotoLibrary)
+			
+		}))
+		actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { (action: UIAlertAction!) -> Void in
+			
+			self.presentImagePicker(.Camera)
+			
+		}))
+		actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+		presentViewController(actionSheet, animated: true, completion: nil)
 		
 	}
 	
@@ -103,9 +149,4 @@ class ProfileViewController: UIViewController {
 		
 	}
 	
-	@IBAction func signOutButtonTapped(sender: AnyObject) {
-		
-		appDelegate.window?.rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
-		
-	}
 }

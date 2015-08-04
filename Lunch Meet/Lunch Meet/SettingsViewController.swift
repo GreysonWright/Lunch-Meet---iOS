@@ -14,6 +14,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 		
 		title = "Settings"
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .Plain, target: self, action: Selector("logoutButtonTapped"))
 		
 		canDisplayBannerAds = true
 		
@@ -24,5 +25,12 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	func logoutButtonTapped() {
+		
+		let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+		appDelegate.window!.rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+		
+	}
 	
 }

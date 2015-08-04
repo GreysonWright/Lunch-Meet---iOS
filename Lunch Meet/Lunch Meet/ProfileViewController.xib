@@ -18,7 +18,6 @@
                 <outlet property="profileImageView" destination="WIZ-5S-h7Z" id="ZyV-xv-tc6"/>
                 <outlet property="restaurantField" destination="oUU-Nc-lvp" id="GQx-di-9Mh"/>
                 <outlet property="scrollView" destination="TnC-Z2-fWj" id="VMU-Zd-TEC"/>
-                <outlet property="signOutButton" destination="IFG-Xo-TSa" id="L8b-7Z-PYn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,7 +26,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnC-Z2-fWj">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="TnC-Z2-fWj">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </scrollView>
             </subviews>
@@ -40,135 +39,75 @@
             </constraints>
         </view>
         <view contentMode="scaleToFill" id="VBo-sO-WjF">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="558"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1OT-YX-yWC" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="114" y="61" width="478" height="45"/>
-                    <color key="backgroundColor" red="0.88762204406849698" green="0.91974055140566391" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.9116295163" green="0.93725490199999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="Hkx-PH-Zqs"/>
                     </constraints>
-                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nIl-aT-07t" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="114" y="8" width="478" height="45"/>
-                    <color key="backgroundColor" red="0.88762204406849698" green="0.91974055140566391" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.9116295163" green="0.93725490199999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="ugg-Ms-MA6"/>
                     </constraints>
-                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City, State" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tyw-fi-ae5" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="8" y="220" width="584" height="45"/>
-                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.9116295163" green="0.93725490199999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="s2S-Vz-Kx2"/>
                     </constraints>
-                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Favorite Restaurant" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oUU-Nc-lvp" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="8" y="273" width="584" height="45"/>
-                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.9116295163" green="0.93725490199999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="3Hk-Sn-cyU"/>
                     </constraints>
-                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Birth Date" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="B86-gZ-JIP" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="8" y="167" width="584" height="45"/>
-                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.9116295163" green="0.93725490199999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="gma-B7-eYJ"/>
                     </constraints>
-                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vXy-WX-fIy" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="8" y="114" width="584" height="45"/>
-                    <color key="backgroundColor" red="0.88762204410000001" green="0.91974055139999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.9116295163" green="0.93725490199999995" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="E8Y-RT-GMG"/>
                     </constraints>
-                    <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nX-do-aYr" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="326" width="584" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="sNd-0T-hgr"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Settings">
-                        <color key="titleColor" red="0.81797826753305902" green="0.88544251407089714" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="settingsButtonTapped:" destination="-1" eventType="touchUpInside" id="vQV-XM-gBf"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFG-Xo-TSa" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="500" width="584" height="50"/>
-                    <color key="backgroundColor" red="0.6967592592592593" green="0.0070020652283975778" blue="0.013722950353504348" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="all-2v-UkL"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Sign Out">
-                        <color key="titleColor" red="1" green="0.7847786779689695" blue="0.85525456700543723" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="signOutButtonTapped:" destination="-1" eventType="touchUpInside" id="1sj-O5-cEO"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-ff-M2a" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="384" width="584" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="4ay-u2-sYU"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Friends">
-                        <color key="titleColor" red="0.81797826753305902" green="0.88544251407089714" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="friendsButtonTapped:" destination="-1" eventType="touchUpInside" id="f2A-FU-9LY"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlY-Jl-aIQ" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="8" y="442" width="584" height="50"/>
-                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="JA3-eP-XsI"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <state key="normal" title="Parties">
-                        <color key="titleColor" red="0.81797826753305902" green="0.88544251407089714" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="groupsButtonTapped:" destination="-1" eventType="touchUpInside" id="vNV-PB-XUu"/>
-                    </connections>
-                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WIZ-5S-h7Z">
                     <rect key="frame" x="8" y="8" width="98" height="98"/>
                     <constraints>
@@ -187,29 +126,55 @@
                         <action selector="editProfileImageButtonTapped:" destination="-1" eventType="touchUpInside" id="W7O-mE-gG3"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9z-ff-M2a" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="334" width="584" height="50"/>
+                    <color key="backgroundColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="4ay-u2-sYU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Friends">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="friendsButtonTapped:" destination="-1" eventType="touchUpInside" id="f2A-FU-9LY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlY-Jl-aIQ" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
+                    <rect key="frame" x="8" y="400" width="584" height="50"/>
+                    <color key="backgroundColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="JA3-eP-XsI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Parties">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="groupsButtonTapped:" destination="-1" eventType="touchUpInside" id="vNV-PB-XUu"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="tyw-fi-ae5" firstAttribute="top" secondItem="B86-gZ-JIP" secondAttribute="bottom" constant="8" id="6mj-kY-Eey"/>
-                <constraint firstItem="HlY-Jl-aIQ" firstAttribute="top" secondItem="z9z-ff-M2a" secondAttribute="bottom" constant="8" id="6xu-g5-QnP"/>
+                <constraint firstItem="HlY-Jl-aIQ" firstAttribute="top" secondItem="z9z-ff-M2a" secondAttribute="bottom" constant="16" id="6xu-g5-QnP"/>
                 <constraint firstItem="vXy-WX-fIy" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="9yi-p8-8OD"/>
                 <constraint firstAttribute="trailing" secondItem="HlY-Jl-aIQ" secondAttribute="trailing" constant="8" id="CNc-S3-plb"/>
+                <constraint firstItem="z9z-ff-M2a" firstAttribute="top" secondItem="oUU-Nc-lvp" secondAttribute="bottom" constant="16" id="F5s-b9-vk4"/>
                 <constraint firstAttribute="trailing" secondItem="tyw-fi-ae5" secondAttribute="trailing" constant="8" id="Fwf-2c-ZRV"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="trailing" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" id="ILr-lI-hyI"/>
                 <constraint firstAttribute="trailing" secondItem="nIl-aT-07t" secondAttribute="trailing" constant="8" id="IU7-TL-DpI"/>
                 <constraint firstItem="oUU-Nc-lvp" firstAttribute="top" secondItem="tyw-fi-ae5" secondAttribute="bottom" constant="8" id="KZR-NV-CHd"/>
-                <constraint firstItem="1nX-do-aYr" firstAttribute="top" secondItem="oUU-Nc-lvp" secondAttribute="bottom" constant="8" id="LxA-91-mhB"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="bottom" secondItem="WIZ-5S-h7Z" secondAttribute="bottom" id="NNA-2k-2we"/>
                 <constraint firstAttribute="trailing" secondItem="1OT-YX-yWC" secondAttribute="trailing" constant="8" id="Nbr-k4-wvA"/>
-                <constraint firstAttribute="trailing" secondItem="IFG-Xo-TSa" secondAttribute="trailing" constant="8" id="OVB-Sj-jdI"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="top" secondItem="WIZ-5S-h7Z" secondAttribute="top" id="Pr7-hM-JIv"/>
-                <constraint firstItem="IFG-Xo-TSa" firstAttribute="top" secondItem="HlY-Jl-aIQ" secondAttribute="bottom" constant="8" id="QKA-4d-bxa"/>
                 <constraint firstItem="z9z-ff-M2a" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="SN2-SM-p3Q"/>
                 <constraint firstItem="1OT-YX-yWC" firstAttribute="top" secondItem="nIl-aT-07t" secondAttribute="bottom" constant="8" id="TKe-KM-zWK"/>
                 <constraint firstItem="HlY-Jl-aIQ" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="U4p-jm-n69"/>
-                <constraint firstItem="1nX-do-aYr" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="XOh-7W-mwt"/>
                 <constraint firstItem="nIl-aT-07t" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" constant="8" id="YwE-yi-PXB"/>
-                <constraint firstAttribute="trailing" secondItem="1nX-do-aYr" secondAttribute="trailing" constant="8" id="Z04-Jd-bHW"/>
                 <constraint firstItem="vXy-WX-fIy" firstAttribute="top" secondItem="1OT-YX-yWC" secondAttribute="bottom" constant="8" id="Zc0-pi-2Tc"/>
                 <constraint firstAttribute="trailing" secondItem="z9z-ff-M2a" secondAttribute="trailing" constant="8" id="Zx7-rS-ygB"/>
                 <constraint firstItem="Z1X-5T-3IM" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="leading" id="aPT-V3-Dll"/>
@@ -217,7 +182,6 @@
                 <constraint firstItem="nIl-aT-07t" firstAttribute="top" secondItem="VBo-sO-WjF" secondAttribute="top" constant="8" id="cz7-ab-Rcz"/>
                 <constraint firstItem="oUU-Nc-lvp" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="e3E-3a-F5Y"/>
                 <constraint firstItem="WIZ-5S-h7Z" firstAttribute="top" secondItem="VBo-sO-WjF" secondAttribute="top" constant="8" id="h1L-eW-QtL"/>
-                <constraint firstItem="z9z-ff-M2a" firstAttribute="top" secondItem="1nX-do-aYr" secondAttribute="bottom" constant="8" id="h9I-bC-LlK"/>
                 <constraint firstItem="WIZ-5S-h7Z" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="hCl-Hj-eUg"/>
                 <constraint firstItem="B86-gZ-JIP" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="iMR-zr-alS"/>
                 <constraint firstItem="1OT-YX-yWC" firstAttribute="leading" secondItem="WIZ-5S-h7Z" secondAttribute="trailing" constant="8" id="iPv-75-aLA"/>
@@ -225,7 +189,6 @@
                 <constraint firstAttribute="trailing" secondItem="vXy-WX-fIy" secondAttribute="trailing" constant="8" id="rU8-Rv-lKY"/>
                 <constraint firstItem="tyw-fi-ae5" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="vER-Km-xeC"/>
                 <constraint firstAttribute="trailing" secondItem="oUU-Nc-lvp" secondAttribute="trailing" constant="8" id="vZr-bC-fIh"/>
-                <constraint firstItem="IFG-Xo-TSa" firstAttribute="leading" secondItem="VBo-sO-WjF" secondAttribute="leading" constant="8" id="wPX-58-J4u"/>
                 <constraint firstItem="B86-gZ-JIP" firstAttribute="top" secondItem="vXy-WX-fIy" secondAttribute="bottom" constant="8" id="wpw-8T-5dA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -234,7 +197,7 @@
                     <exclude reference="c3R-Ae-uhr"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="1011" y="224"/>
+            <point key="canvasLocation" x="1011" y="170"/>
         </view>
     </objects>
 </document>
