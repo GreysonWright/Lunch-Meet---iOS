@@ -28,12 +28,12 @@ class LoginOptionsViewController: UIViewController {
 	@IBOutlet var forgotPasswordView: UIView!
 	@IBOutlet var resetEmailField: TextField!
 	
-	var type: LoginOptions!
+//	var type: LoginOptions!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		title = type.rawValue
+		title = "Sign Up"
 		
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: Selector("cancelBarButtonTapped"))
 		
@@ -43,17 +43,8 @@ class LoginOptionsViewController: UIViewController {
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		if type == .SignUp {
-			
 			signUpView.frame = CGRect(origin: CGPoint(x: 0, y: navigationController!.navigationBar.bounds.height + 20), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - (navigationController!.navigationBar.bounds.height - 20)))
 			view.addSubview(signUpView)
-			
-		} else {
-			
-			forgotPasswordView.frame = CGRect(origin: CGPoint(x: 0, y: navigationController!.navigationBar.bounds.height + 20), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - (navigationController!.navigationBar.bounds.height - 20)))
-			view.addSubview(forgotPasswordView)
-			
-		}
 		
 	}
 

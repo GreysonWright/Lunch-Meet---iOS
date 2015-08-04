@@ -41,7 +41,7 @@
                     <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-LT-VQy" customClass="Button" customModule="Lunch_Meet" customModuleProvider="target">
-                    <rect key="frame" x="25" y="196" width="550" height="40"/>
+                    <rect key="frame" x="25" y="192" width="550" height="40"/>
                     <color key="backgroundColor" red="0.089720785619999993" green="0.37210342289999998" blue="0.78222197289999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Imo-MK-Qgo"/>
@@ -87,7 +87,7 @@
                 <constraint firstAttribute="centerX" secondItem="Y1J-qu-GsT" secondAttribute="centerX" id="6ya-E1-hNs"/>
                 <constraint firstAttribute="trailing" secondItem="VNn-kA-fft" secondAttribute="trailing" constant="25" id="WTb-Pn-HMR"/>
                 <constraint firstAttribute="trailing" secondItem="CQU-Qs-ygG" secondAttribute="trailing" constant="25" id="X4r-5F-Ivi"/>
-                <constraint firstItem="wdp-LT-VQy" firstAttribute="top" secondItem="CQU-Qs-ygG" secondAttribute="bottom" constant="12" id="azn-ye-gLX"/>
+                <constraint firstItem="wdp-LT-VQy" firstAttribute="top" secondItem="CQU-Qs-ygG" secondAttribute="bottom" constant="8" id="azn-ye-gLX"/>
                 <constraint firstAttribute="centerX" secondItem="3Oa-pf-oec" secondAttribute="centerX" id="bcy-F7-Xdq"/>
                 <constraint firstItem="Y1J-qu-GsT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="g5t-vl-aHX"/>
                 <constraint firstAttribute="centerX" secondItem="AkS-Ah-V6C" secondAttribute="centerX" id="gKf-0R-oRX"/>

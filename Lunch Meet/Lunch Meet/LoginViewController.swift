@@ -120,7 +120,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	@IBAction func signUpButtonTapped(sender: AnyObject) {
 		
 		let loginOptionsVC = LoginOptionsViewController(nibName: "LoginOptionsViewController", bundle: nil)
-		loginOptionsVC.type = .SignUp
+//		loginOptionsVC.type = .SignUp
 		
 		let loginOptionsNavController = UINavigationController(rootViewController: loginOptionsVC)
 		
@@ -129,13 +129,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	}
 	
 	@IBAction func forgotPasswordButtonTapped(sender: AnyObject) {
+	
+		let forgotPasswordAlert = UIAlertController(title: nil, message: "We're just going to need your email for this.", preferredStyle: .Alert)
+		forgotPasswordAlert.addTextFieldWithConfigurationHandler { (textField: UITextField!) -> Void in
+			
+			textField.placeholder = "Email"
+			
+		}
+		forgotPasswordAlert.addAction(UIAlertAction(title: "Reset", style: .Default, handler: { (action: UIAlertAction!) -> Void in
+			
+			
+			
+		}))
+		forgotPasswordAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) -> Void in
+			
+			
+			
+		}))
+		presentViewController(forgotPasswordAlert, animated: true, completion: nil)
 		
-		let loginOptionsVC = LoginOptionsViewController(nibName: "LoginOptionsViewController", bundle: nil)
-		loginOptionsVC.type = .CreateNew
-		
-		let loginOptionsNavController = UINavigationController(rootViewController: loginOptionsVC)
-		
-		presentViewController(loginOptionsNavController, animated: true, completion: nil)
+//		let loginOptionsVC = LoginOptionsViewController(nibName: "LoginOptionsViewController", bundle: nil)
+//		loginOptionsVC.type = .CreateNew
+//		
+//		let loginOptionsNavController = UINavigationController(rootViewController: loginOptionsVC)
+//		
+//		presentViewController(loginOptionsNavController, animated: true, completion: nil)
 		
 	}
 	
