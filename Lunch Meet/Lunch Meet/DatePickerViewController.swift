@@ -31,6 +31,7 @@ class DatePickerViewController: UIViewController {
 		
 		datePicker.minimumDate = NSDate()
 		datePicker.date = date
+		datePicker.backgroundColor = UIColor(red: 232.0 / 255.0, green: 239.0 / 255.0, blue: 252.0 / 255.0, alpha: 1)
 		
 		let dateFormatter = NSDateFormatter()
 		dateFormatter.dateFormat = "MMMM d, yyyy"

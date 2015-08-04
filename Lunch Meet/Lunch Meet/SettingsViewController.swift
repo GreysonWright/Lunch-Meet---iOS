@@ -14,7 +14,8 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
 		
 		title = "Settings"
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .Plain, target: self, action: Selector("logoutButtonTapped"))
+		navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .Plain, target: self, action: Selector("logoutButtonTapped"))
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: Selector("doneButtonTapped"))
 		
 		canDisplayBannerAds = true
 		
@@ -30,6 +31,12 @@ class SettingsViewController: UIViewController {
 		
 		let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 		appDelegate.window!.rootViewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+		
+	}
+	
+	func doneButtonTapped() {
+		
+		dismissViewControllerAnimated(true, completion: nil)
 		
 	}
 	

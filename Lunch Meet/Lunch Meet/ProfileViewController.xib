@@ -96,6 +96,9 @@
                     <color key="textColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                    <connections>
+                        <action selector="textFieldDidBeginEditing:" destination="-1" eventType="editingDidBegin" id="7vv-Nz-973"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vXy-WX-fIy" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="8" y="114" width="584" height="45"/>
@@ -106,7 +109,7 @@
                     </constraints>
                     <color key="textColor" red="0.089720785617828369" green="0.37210342288017273" blue="0.78222197294235229" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                 </textField>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WIZ-5S-h7Z">
                     <rect key="frame" x="8" y="8" width="98" height="98"/>

@@ -92,6 +92,27 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 		
 	}
 	
+	//MARK: - UITextField
+	@IBAction func textFieldDidBeginEditing(textField: UITextField) {
+		
+		if textField == birthdateField {
+			
+			let containerView = UIView(frame: UIScreen.mainScreen().bounds)
+			containerView.backgroundColor = UIColor.blackColor()
+			containerView.alpha = 0.3
+			
+			let datePickerView = UIDatePicker(frame: UIScreen.mainScreen().bounds)
+//			datePickerView.addTarget(self, action: Selector("dateSelected"), forControlEvents: UIControlEvents.ValueChanged)
+			containerView.addSubview(datePickerView)
+			
+			view.addSubview(containerView)
+			
+			textField.resignFirstResponder()
+			
+		}
+		
+	}
+	
 	//MARK: - UIImagePickerController
 	func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
 		
@@ -108,7 +129,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 	func settingsNavigationButtonTapped(sender: AnyObject) {
 		
 		let settingsVC = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
-		navigationController?.pushViewController(settingsVC, animated: true)
+		let settingsNavigationController = UINavigationController(rootViewController: settingsVC)
+		
+		navigationController?.presentViewController(settingsNavigationController, animated: true, completion: nil)
 		
 	}
 	

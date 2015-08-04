@@ -38,7 +38,8 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="uRc-92-jGJ">
-                    <rect key="frame" x="0.0" y="178" width="600" height="162"/>
+                    <rect key="frame" x="0.0" y="438" width="600" height="162"/>
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.93725490196078431" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                     <date key="date" timeIntervalSinceReferenceDate="457644867.360488">
                         <!--2015-07-03 19:34:27 +0000-->
                     </date>
@@ -49,8 +50,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="uRc-92-jGJ" firstAttribute="top" secondItem="5GS-H9-z24" secondAttribute="bottom" constant="8" id="AHi-Ez-5S8"/>
+                <constraint firstAttribute="bottom" secondItem="uRc-92-jGJ" secondAttribute="bottom" id="2tM-yh-YX4"/>
+                <constraint firstItem="uRc-92-jGJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8OR-Dt-OEs"/>
                 <constraint firstAttribute="trailing" secondItem="uRc-92-jGJ" secondAttribute="trailing" id="Q2p-5K-ecW"/>
+                <constraint firstAttribute="trailing" secondItem="uRc-92-jGJ" secondAttribute="trailing" id="VPx-wD-phu"/>
                 <constraint firstItem="ZFo-Zd-IrP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="WOP-oZ-CP6"/>
                 <constraint firstAttribute="trailing" secondItem="ZFo-Zd-IrP" secondAttribute="trailing" constant="8" id="lPB-LW-V3E"/>
                 <constraint firstItem="5GS-H9-z24" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="nee-wD-Sif"/>
