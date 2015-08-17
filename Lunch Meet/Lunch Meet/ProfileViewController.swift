@@ -149,7 +149,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 			self.presentImagePicker(.Camera)
 			
 		}))
-		actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: nil))
+		actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
 		presentViewController(actionSheet, animated: true, completion: nil)
 		
 	}

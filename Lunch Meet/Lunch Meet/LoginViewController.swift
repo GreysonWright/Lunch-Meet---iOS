@@ -131,7 +131,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		let forgotPasswordAlert = UIAlertController(title: nil, message: "We're just going to need your email for this.", preferredStyle: .Alert)
 		forgotPasswordAlert.addTextFieldWithConfigurationHandler { (textField: UITextField!) -> Void in
 			
+			textField.clearButtonMode = .WhileEditing
 			textField.placeholder = "Email"
+			textField.textColor = UIColor.grey700()
+			textField.tintColor = UIColor.grey700()
 			
 		}
 		forgotPasswordAlert.addAction(UIAlertAction(title: "Reset", style: .Default, handler: { (action: UIAlertAction!) -> Void in

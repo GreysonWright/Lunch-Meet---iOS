@@ -18,6 +18,8 @@ class TextField: UITextField {
 		layer.masksToBounds = true
 		layer.cornerRadius = 3
 		
+		self.tintColor = UIColor.grey700()
+		
     }
 
 	override func textRectForBounds(bounds: CGRect) -> CGRect {

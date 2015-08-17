@@ -35,7 +35,7 @@ class LoginOptionsViewController: UIViewController {
 
 		title = "Sign Up"
 		
-		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: Selector("cancelBarButtonTapped"))
+		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: Selector("cancelBarButtonTapped"))
 		
         // Do any additional setup after loading the view.
     }

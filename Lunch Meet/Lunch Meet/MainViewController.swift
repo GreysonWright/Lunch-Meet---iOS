@@ -136,7 +136,27 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 	//MARK: - JTCalendar
 	func calendar(calendar: JTCalendar!, canSelectDate date: NSDate!) -> Bool {
 		
-		return true
+		let dateFormatter = NSDateFormatter()
+		
+		dateFormatter.dateFormat = "dd"
+		let selectedDay = dateFormatter.stringFromDate(date).toInt()
+		let currentDay = dateFormatter.stringFromDate(NSDate()).toInt()
+		
+		dateFormatter.dateFormat = "MM"
+		let selectedMonth = dateFormatter.stringFromDate(date).toInt()
+		let currentMonth = dateFormatter.stringFromDate(NSDate()).toInt()
+		
+		dateFormatter.dateFormat = "yyyy"
+		let selectedYear = dateFormatter.stringFromDate(date).toInt()
+		let currentYear = dateFormatter.stringFromDate(NSDate()).toInt()
+		
+		if selectedDay >= currentDay && selectedMonth >= currentMonth && selectedYear >= currentYear {
+			
+			return true
+			
+		}
+		
+		return false
 		
 	}
 	
@@ -209,16 +229,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 	
 	func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 		
-		return 50
+		return 44
 		
 	}
 	
 	func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-	
+		
 		let addButton = UIButton(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: tableView.sectionHeaderHeight)))
 		addButton.addTarget(self, action: Selector("addButtonTapped"), forControlEvents: .TouchUpInside)
 		addButton.backgroundColor = UIColor.blue700()
 		addButton.setTitle("Plan Lunch", forState: .Normal)
+		addButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 22)
 		
 		return addButton
 		
