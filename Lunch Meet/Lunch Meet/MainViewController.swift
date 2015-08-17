@@ -156,6 +156,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 			
 		}
 		
+		let alertController = UIAlertController(title: nil, message: "Dates prior to today cannot be selected.", preferredStyle: .Alert)
+		presentViewController(alertController, animated: true, completion: nil)
+		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
+			
+			alertController.dismissViewControllerAnimated(true, completion: nil)
+			
+		}
+		
 		return false
 		
 	}
