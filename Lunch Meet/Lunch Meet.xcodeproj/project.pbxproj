@@ -33,6 +33,7 @@
 		2E92C9FB1B40CC8B00E9BF45 /* JTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9F01B40CC8B00E9BF45 /* JTCircleView.m */; };
 		2E9D5F6C1B61B2070054D341 /* NonEditableProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D5F6A1B61B2070054D341 /* NonEditableProfileViewController.swift */; };
 		2E9D5F6D1B61B2070054D341 /* NonEditableProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5F6B1B61B2070054D341 /* NonEditableProfileViewController.xib */; };
+		2EAA3BA81B828A270091C2F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAA3BA71B828A270091C2F8 /* MapKit.framework */; };
 		2EF4A0E31B293E95003ED259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF4A0E21B293E95003ED259 /* AppDelegate.swift */; };
 		2EF4A0EA1B293E95003ED259 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4A0E91B293E95003ED259 /* Images.xcassets */; };
 		2EF4A0ED1B293E95003ED259 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF4A0EB1B293E95003ED259 /* LaunchScreen.xib */; };
@@ -101,6 +102,7 @@
 		2E92C9FD1B40CE8C00E9BF45 /* LunchMeet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LunchMeet-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E9D5F6A1B61B2070054D341 /* NonEditableProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonEditableProfileViewController.swift; sourceTree = "<group>"; };
 		2E9D5F6B1B61B2070054D341 /* NonEditableProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NonEditableProfileViewController.xib; sourceTree = "<group>"; };
+		2EAA3BA71B828A270091C2F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2EF4A0DD1B293E95003ED259 /* Lunch Meet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lunch Meet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF4A0E11B293E95003ED259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF4A0E21B293E95003ED259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EAA3BA81B828A270091C2F8 /* MapKit.framework in Frameworks */,
 				2EF4A10E1B294426003ED259 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +259,7 @@
 		2EF4A0D41B293E95003ED259 = {
 			isa = PBXGroup;
 			children = (
+				2EAA3BA71B828A270091C2F8 /* MapKit.framework */,
 				2EF4A10D1B294426003ED259 /* iAd.framework */,
 				2EF4A0DF1B293E95003ED259 /* Lunch Meet */,
 				2EF4A0F51B293E95003ED259 /* Lunch MeetTests */,
@@ -631,7 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Lunch Meet/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
@@ -644,7 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Lunch Meet/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INSTALL_OBJC_HEADER = YES;

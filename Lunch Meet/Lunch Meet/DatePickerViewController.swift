@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 protocol DatePickerViewDelegate {
 	
@@ -14,12 +15,19 @@ protocol DatePickerViewDelegate {
 	
 }
 
-class DatePickerViewController: UIViewController {
+class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
 
+	@IBOutlet var partyMembersField: TextField!
+	@IBOutlet var locationButton: UIButton!
 	@IBOutlet var datePicker: UIDatePicker!
+	@IBOutlet var mapView: MKMapView!
 	
 	var delegate: DatePickerViewDelegate?
+	
 	var date: NSDate!
+	var locationTopContainerView: UIView!
+	var locationTableView: UITableView!
+	var restaurantData: [MKMapItem] = []
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +45,10 @@ class DatePickerViewController: UIViewController {
 		dateFormatter.dateFormat = "MMMM d, yyyy"
 		
 		title = dateFormatter.stringFromDate(date)
+		
+		let locationManager = CLLocationManager()
+		locationManager.delegate = self
+		locationManager.requestAlwaysAuthorization()
 		
         // Do any additional setup after loading the view.
     }
@@ -61,6 +73,67 @@ class DatePickerViewController: UIViewController {
 		
 	}
 	
+	func locationDoneButtonTapped() {
+		
+		UIView.animateWithDuration(0.3, animations: { () -> Void in
+			
+			self.locationTableView.frame.origin.y = UIScreen.mainScreen().bounds.height
+			self.locationTopContainerView.frame.origin.y = 0
+			
+			}) { (completed:Bool) -> Void in
+				
+				self.locationTableView.removeFromSuperview()
+				self.locationTopContainerView.removeFromSuperview()
+				
+		}
+		
+	}
+	
+	@IBAction func locationButtonTapped(sender: AnyObject) {
+		
+		locationTopContainerView = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 44))
+		locationTopContainerView.backgroundColor = UIColor.blue50()
+		
+		let locationField = UITextField(frame: CGRectMake(10, 0, UIScreen.mainScreen().bounds.width - 60, 44))
+		locationField.addTarget(self, action: Selector("locationFieldValueChanged:"), forControlEvents: UIControlEvents.EditingChanged)
+		locationField.placeholder = "Location"
+		locationField.tintColor = UIColor.grey700()
+		locationField.textColor = UIColor.grey700()
+		locationField.backgroundColor = UIColor.blue50()
+		locationField.font = UIFont(name: "HelveticaNeue", size: 22)
+		locationField.borderStyle = .None
+		locationField.clearButtonMode = .WhileEditing
+		
+		let locationDoneButton = UIButton(frame: CGRectMake(locationField.frame.width + 7, 0, 53, 44))
+		locationDoneButton.addTarget(self, action: Selector("locationDoneButtonTapped"), forControlEvents: .TouchUpInside)
+		locationDoneButton.backgroundColor = UIColor.blue700()
+		locationDoneButton.setTitle("Cancel", forState: .Normal)
+		locationDoneButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+		locationDoneButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
+		
+		locationTableView = UITableView(frame: CGRectMake(0, UIScreen.mainScreen().bounds.size.height, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height - 60))
+		locationTableView.delegate = self
+		locationTableView.dataSource = self
+		locationTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "LocationCell")
+		
+		locationTopContainerView.addSubview(locationField)
+		locationTopContainerView.addSubview(locationDoneButton)
+		view.addSubview(locationTopContainerView)
+		view.addSubview(locationTableView)
+		
+		UIView.animateWithDuration(0.3, animations: { () -> Void in
+			
+			self.locationTableView.frame.origin.y = 108
+			self.locationTopContainerView.frame.origin.y = 64
+			
+			}) { (completed:Bool) -> Void in
+				
+				locationField.becomeFirstResponder()
+				
+		}
+		
+	}
+	
 	//MARK: - DatePicker
 	@IBAction func datePickerValueChanged(sender: AnyObject) {
 		
@@ -70,6 +143,59 @@ class DatePickerViewController: UIViewController {
 		title = dateFormatter.stringFromDate((sender as! UIDatePicker).date)
 		
 		date = (sender as! UIDatePicker).date
+		
+	}
+	
+	//MARK: - UITextField
+	func locationFieldValueChanged(field: UITextField) {
+	
+		let searchRequest = MKLocalSearchRequest()
+		searchRequest.naturalLanguageQuery = field.text
+		searchRequest.region = mapView.region
+		
+		let search = MKLocalSearch(request: searchRequest)
+		search.startWithCompletionHandler { (response: MKLocalSearchResponse?, error: NSError?) -> Void in
+			
+			if response != nil {
+			
+				self.restaurantData = response!.mapItems as! [MKMapItem]
+				
+			} else {
+				
+				self.restaurantData = []
+				
+			}
+			
+			println(error)
+			
+			self.locationTableView.reloadData()
+			
+		}
+		
+	}
+	
+	//MARK: - Location Manager
+	func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+		
+		manager.startUpdatingLocation()
+		
+	}
+	
+	//MARK: - UITableView
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		
+		return restaurantData.count
+		
+	}
+	
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		
+		let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath) as! UITableViewCell
+	
+		cell.textLabel?.text = restaurantData[indexPath.row].name
+		cell.detailTextLabel?.text = "\(restaurantData[indexPath.row].placemark)"
+		
+		return cell
 		
 	}
 	
