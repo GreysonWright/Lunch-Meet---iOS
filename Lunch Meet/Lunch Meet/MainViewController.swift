@@ -150,7 +150,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 		let selectedYear = dateFormatter.stringFromDate(date).toInt()
 		let currentYear = dateFormatter.stringFromDate(NSDate()).toInt()
 		
-		if selectedDay >= currentDay && selectedMonth >= currentMonth && selectedYear >= currentYear {
+		if (selectedDay >= currentDay && selectedMonth >= currentMonth && selectedYear >= currentYear) || (selectedMonth > currentMonth && selectedYear >= currentYear) || (selectedYear > currentYear) {
 			
 			return true
 			
@@ -163,6 +163,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 			alertController.dismissViewControllerAnimated(true, completion: nil)
 			
 		}
+		
+		calendar.currentDate = NSDate()
+		calendar.reloadAppearance()
 		
 		return false
 		

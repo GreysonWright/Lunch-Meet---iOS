@@ -15,7 +15,7 @@ protocol DatePickerViewDelegate {
 	
 }
 
-class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, UITextFieldDelegate {
 
 	@IBOutlet var partyMembersField: TextField!
 	@IBOutlet var locationButton: UIButton!
@@ -23,8 +23,9 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 	@IBOutlet var mapView: MKMapView!
 	
 	var delegate: DatePickerViewDelegate?
-	
+	let locationManager = CLLocationManager()
 	var date: NSDate!
+	var membersTableView: UITableView!
 	var locationTopContainerView: UIView!
 	var locationTableView: UITableView!
 	var restaurantData: [MKMapItem] = []
@@ -46,9 +47,20 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 		
 		title = dateFormatter.stringFromDate(date)
 		
-		let locationManager = CLLocationManager()
-		locationManager.delegate = self
-		locationManager.requestAlwaysAuthorization()
+		if CLLocationManager.authorizationStatus() == .NotDetermined {
+		
+			locationManager.delegate = self
+			locationManager.requestWhenInUseAuthorization()
+			
+		} else if CLLocationManager.authorizationStatus() == .Restricted || CLLocationManager.authorizationStatus() == .Denied {
+			
+			presentDeniedAccessAlert()
+			
+		} else {
+			
+			beginShowingUserLocation()
+			
+		}
 		
         // Do any additional setup after loading the view.
     }
@@ -57,6 +69,41 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	func dismissLocationSearch() {
+		
+		UIView.animateWithDuration(0.3, animations: { () -> Void in
+			
+			self.locationTableView.frame.origin.y = UIScreen.mainScreen().bounds.height
+			self.locationTopContainerView.frame.origin.y = 0
+			
+			}) { (completed:Bool) -> Void in
+				
+				self.locationTableView.removeFromSuperview()
+				self.locationTopContainerView.removeFromSuperview()
+				
+		}
+		
+	}
+	
+	func presentDeniedAccessAlert() {
+		
+		let alertController = UIAlertController(title: nil, message: "Lunch Meet must access your location to function properly.", preferredStyle: .Alert)
+		alertController.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: { (action: UIAlertAction!) -> Void in
+			
+			UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+			
+		}))
+		presentViewController(alertController, animated: true, completion: nil)
+		
+	}
+	
+	func beginShowingUserLocation() {
+	
+//		locationManager.startUpdatingLocation()
+		mapView.showsUserLocation = true
+	
+	}
 	
 	//MARK: - UIButton Actions
 	func navigationCancelButtonTapped() {
@@ -75,17 +122,7 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 	
 	func locationDoneButtonTapped() {
 		
-		UIView.animateWithDuration(0.3, animations: { () -> Void in
-			
-			self.locationTableView.frame.origin.y = UIScreen.mainScreen().bounds.height
-			self.locationTopContainerView.frame.origin.y = 0
-			
-			}) { (completed:Bool) -> Void in
-				
-				self.locationTableView.removeFromSuperview()
-				self.locationTopContainerView.removeFromSuperview()
-				
-		}
+		dismissLocationSearch()
 		
 	}
 	
@@ -103,6 +140,8 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 		locationField.font = UIFont(name: "HelveticaNeue", size: 22)
 		locationField.borderStyle = .None
 		locationField.clearButtonMode = .WhileEditing
+		locationField.returnKeyType = .Done
+		locationField.delegate = self
 		
 		let locationDoneButton = UIButton(frame: CGRectMake(locationField.frame.width + 7, 0, 53, 44))
 		locationDoneButton.addTarget(self, action: Selector("locationDoneButtonTapped"), forControlEvents: .TouchUpInside)
@@ -111,10 +150,12 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 		locationDoneButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
 		locationDoneButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 15)
 		
-		locationTableView = UITableView(frame: CGRectMake(0, UIScreen.mainScreen().bounds.size.height, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height - 60))
+		locationTableView = UITableView(frame: CGRectMake(0, UIScreen.mainScreen().bounds.size.height, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height - 107))
+		locationTableView.keyboardDismissMode = .OnDrag
+		
 		locationTableView.delegate = self
 		locationTableView.dataSource = self
-		locationTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "LocationCell")
+		locationTableView.registerNib(UINib(nibName: "LocationTableViewCell", bundle: nil), forCellReuseIdentifier: "LocationCell")
 		
 		locationTopContainerView.addSubview(locationField)
 		locationTopContainerView.addSubview(locationDoneButton)
@@ -131,6 +172,14 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 				locationField.becomeFirstResponder()
 				
 		}
+		
+	}
+	
+	@IBAction func partyMembersFieldButtonTapped(sender: AnyObject) {
+		
+		membersTableView = UITableView(frame: UIScreen.mainScreen().bounds)
+		membersTableView.dataSource = self
+		membersTableView.delegate = self
 		
 	}
 	
@@ -174,14 +223,82 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 		
 	}
 	
+	func textFieldShouldReturn(textField: UITextField) -> Bool {
+		
+		textField.endEditing(true)
+		
+		return true
+		
+	}
+	
 	//MARK: - Location Manager
 	func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 		
-		manager.startUpdatingLocation()
+		if CLLocationManager.authorizationStatus() == .Restricted || CLLocationManager.authorizationStatus() == .Denied {
+			
+			presentDeniedAccessAlert()
+			
+		} else {
+			
+			beginShowingUserLocation()
+			
+		}
+		
+	}
+	
+	//MARK: - MapView
+	func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+		
+		println(mapView.annotations.count)
+		
+		if mapView.annotations.count == 1 {
+		
+			var region = MKCoordinateRegion()
+			region.center = mapView.userLocation.coordinate
+			region.span.latitudeDelta = 0.01
+			region.span.longitudeDelta = 0.01
+			
+			mapView.setRegion(region, animated: true)
+			mapView.userTrackingMode = .Follow
+			
+		}
+		
+	}
+	
+	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+		
+		if let annotation = annotation as? Annotation {
+			
+			let identifier = "LocationAnnotationView"
+			var view: MKPinAnnotationView
+			
+			if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView {
+				
+					dequeuedView.annotation = annotation
+					view = dequeuedView
+				
+			} else {
+				
+				view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+				view.canShowCallout = true
+				
+			}
+			
+			return view
+			
+		}
+		
+		return nil
 		
 	}
 	
 	//MARK: - UITableView
+	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+		
+		return 60
+		
+	}
+	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
 		return restaurantData.count
@@ -190,12 +307,32 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
-		let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath) as! UITableViewCell
-	
-		cell.textLabel?.text = restaurantData[indexPath.row].name
-		cell.detailTextLabel?.text = "\(restaurantData[indexPath.row].placemark)"
+		let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath) as! LocationTableViewCell
+		cell.nameLabel.text = restaurantData[indexPath.row].name
+		cell.addressLabel.text = "\(restaurantData[indexPath.row].placemark.thoroughfare), \(restaurantData[indexPath.row].placemark.locality), \(restaurantData[indexPath.row].placemark.administrativeArea) - \(restaurantData[indexPath.row].placemark.postalCode)"
 		
 		return cell
+		
+	}
+	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		
+		dismissLocationSearch()
+		
+		mapView.removeAnnotations(mapView.annotations)
+		
+		let mapItem = restaurantData[indexPath.row]
+		let annotation = Annotation(coordinate: mapItem.placemark.location.coordinate, title: mapItem.name, subtitle: nil)
+		
+		var region = MKCoordinateRegion()
+		region.center = annotation.coordinate
+		region.span.latitudeDelta = 0.01
+		region.span.longitudeDelta = 0.01
+		
+		mapView.setRegion(region, animated: true)
+		mapView.userTrackingMode = .None
+		mapView.addAnnotation(annotation)
+		mapView.selectAnnotation(annotation, animated: true)
 		
 	}
 	

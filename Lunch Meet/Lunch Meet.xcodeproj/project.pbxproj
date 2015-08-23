@@ -19,6 +19,9 @@
 		2E7D14851B4721F70061CA8B /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E7D14831B4721F70061CA8B /* MainTableViewCell.xib */; };
 		2E8543C81B46E58B006C3BA9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8543C61B46E58B006C3BA9 /* SettingsViewController.swift */; };
 		2E8543C91B46E58B006C3BA9 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8543C71B46E58B006C3BA9 /* SettingsViewController.xib */; };
+		2E865AA11B88FD8C00C3C195 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E865A9F1B88FD8C00C3C195 /* LocationTableViewCell.swift */; };
+		2E865AA21B88FD8C00C3C195 /* LocationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E865AA01B88FD8C00C3C195 /* LocationTableViewCell.xib */; };
+		2E865AA51B891B5300C3C195 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E865AA41B891B5300C3C195 /* Annotation.swift */; };
 		2E8D05F31B3F9CD800223559 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8D05F21B3F9CD800223559 /* Button.swift */; };
 		2E92C9F11B40CC8B00E9BF45 /* JTCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9DB1B40CC8B00E9BF45 /* JTCalendar.m */; };
 		2E92C9F21B40CC8B00E9BF45 /* JTCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92C9DD1B40CC8B00E9BF45 /* JTCalendarAppearance.m */; };
@@ -75,6 +78,9 @@
 		2E7D14831B4721F70061CA8B /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		2E8543C61B46E58B006C3BA9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2E8543C71B46E58B006C3BA9 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		2E865A9F1B88FD8C00C3C195 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		2E865AA01B88FD8C00C3C195 /* LocationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationTableViewCell.xib; sourceTree = "<group>"; };
+		2E865AA41B891B5300C3C195 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		2E8D05F21B3F9CD800223559 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		2E92C9DA1B40CC8B00E9BF45 /* JTCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendar.h; sourceTree = "<group>"; };
 		2E92C9DB1B40CC8B00E9BF45 /* JTCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendar.m; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 				2E540ED71B367F9D00DA4490 /* TextField.swift */,
 				2E8D05F21B3F9CD800223559 /* Button.swift */,
 				2E4402431B6D4FD600B72F0F /* GroupedTextField.swift */,
+				2E865AA41B891B5300C3C195 /* Annotation.swift */,
 			);
 			name = "Custom Objects";
 			sourceTree = "<group>";
@@ -186,6 +193,7 @@
 			children = (
 				2EF6C0421B4F7EB3009C6B35 /* Plans */,
 				2EF6C0471B4F7ED6009C6B35 /* Profile List */,
+				2E865AA31B88FD9000C3C195 /* Location */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -197,6 +205,15 @@
 				2E8543C71B46E58B006C3BA9 /* SettingsViewController.xib */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		2E865AA31B88FD9000C3C195 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				2E865A9F1B88FD8C00C3C195 /* LocationTableViewCell.swift */,
+				2E865AA01B88FD8C00C3C195 /* LocationTableViewCell.xib */,
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 		2E8D05E71B3F928C00223559 /* Profile List */ = {
@@ -458,6 +475,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E865AA21B88FD8C00C3C195 /* LocationTableViewCell.xib in Resources */,
 				2E77CFAA1B4077F0001AA867 /* LoginOptionsViewController.xib in Resources */,
 				2E8543C91B46E58B006C3BA9 /* SettingsViewController.xib in Resources */,
 				2EF4A0ED1B293E95003ED259 /* LaunchScreen.xib in Resources */,
@@ -491,6 +509,7 @@
 				2E92C9F51B40CC8B00E9BF45 /* JTCalendarDayView.m in Sources */,
 				2E92C9F71B40CC8B00E9BF45 /* JTCalendarMenuView.m in Sources */,
 				2EF6C0451B4F7ED3009C6B35 /* ProfileListTableViewCell.swift in Sources */,
+				2E865AA51B891B5300C3C195 /* Annotation.swift in Sources */,
 				2E7D14801B471E8A0061CA8B /* LunchMeetSingleton.swift in Sources */,
 				2E92C9F61B40CC8B00E9BF45 /* JTCalendarMenuMonthView.m in Sources */,
 				2E4402421B6D35F500B72F0F /* UIColor+MaterialPalette.m in Sources */,
@@ -509,6 +528,7 @@
 				2EF6C0401B4F7C9F009C6B35 /* ProfileListTableViewController.swift in Sources */,
 				2E8543C81B46E58B006C3BA9 /* SettingsViewController.swift in Sources */,
 				2E92C9F41B40CC8B00E9BF45 /* JTCalendarDataCache.m in Sources */,
+				2E865AA11B88FD8C00C3C195 /* LocationTableViewCell.swift in Sources */,
 				2E540ED81B367F9D00DA4490 /* TextField.swift in Sources */,
 				2EF4A0E31B293E95003ED259 /* AppDelegate.swift in Sources */,
 				2E8D05F31B3F9CD800223559 /* Button.swift in Sources */,

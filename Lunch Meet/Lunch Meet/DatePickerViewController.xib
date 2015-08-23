@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Party Members" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5GS-H9-z24" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Party Members" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5GS-H9-z24" customClass="TextField" customModule="Lunch_Meet" customModuleProvider="target">
                     <rect key="frame" x="8" y="72" width="584" height="44"/>
                     <color key="backgroundColor" red="0.90980392156862744" green="0.93725490196078431" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.30725997690000001" green="0.30725079770000002" blue="0.30725601320000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -40,21 +40,30 @@
                         <action selector="datePickerValueChanged:" destination="-1" eventType="valueChanged" id="jKC-xg-Iw8"/>
                     </connections>
                 </datePicker>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEi-mY-y6g">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEi-mY-y6g">
                     <rect key="frame" x="0.0" y="124" width="600" height="306"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="87f-Aq-abN"/>
                     </connections>
                 </mapView>
-                <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCa-Ml-mL0">
+                <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCa-Ml-mL0">
                     <rect key="frame" x="0.0" y="124" width="600" height="306"/>
-                    <color key="backgroundColor" red="0.55089282989501953" green="0.55087631940841675" blue="0.55088567733764648" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Add Location">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="locationButtonTapped:" destination="-1" eventType="touchUpInside" id="gUi-rQ-zo2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNC-6h-HgJ">
+                    <rect key="frame" x="8" y="72" width="584" height="44"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="partyMembersFieldButtonTapped:" destination="-1" eventType="touchUpInside" id="SDa-6u-OpC"/>
                     </connections>
                 </button>
             </subviews>
@@ -64,17 +73,21 @@
                 <constraint firstItem="uRc-92-jGJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8OR-Dt-OEs"/>
                 <constraint firstItem="NCa-Ml-mL0" firstAttribute="top" secondItem="nEi-mY-y6g" secondAttribute="top" id="9Ns-jf-8ev"/>
                 <constraint firstItem="nEi-mY-y6g" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DLr-IG-Lqf"/>
+                <constraint firstItem="DNC-6h-HgJ" firstAttribute="top" secondItem="5GS-H9-z24" secondAttribute="top" id="ESk-vB-eDb"/>
                 <constraint firstItem="5GS-H9-z24" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="72" id="FZ7-Uj-Spc"/>
                 <constraint firstItem="nEi-mY-y6g" firstAttribute="top" secondItem="5GS-H9-z24" secondAttribute="bottom" constant="8" id="Ms1-nY-xek"/>
                 <constraint firstAttribute="trailing" secondItem="uRc-92-jGJ" secondAttribute="trailing" id="Q2p-5K-ecW"/>
+                <constraint firstItem="DNC-6h-HgJ" firstAttribute="trailing" secondItem="5GS-H9-z24" secondAttribute="trailing" id="R8e-up-3yK"/>
                 <constraint firstItem="uRc-92-jGJ" firstAttribute="top" secondItem="nEi-mY-y6g" secondAttribute="bottom" constant="8" id="Re8-1V-GwI"/>
                 <constraint firstAttribute="trailing" secondItem="uRc-92-jGJ" secondAttribute="trailing" id="VPx-wD-phu"/>
                 <constraint firstItem="NCa-Ml-mL0" firstAttribute="bottom" secondItem="nEi-mY-y6g" secondAttribute="bottom" id="Zhj-XP-v7H"/>
                 <constraint firstAttribute="trailing" secondItem="5GS-H9-z24" secondAttribute="trailing" constant="8" id="ftq-wl-Arq"/>
+                <constraint firstItem="DNC-6h-HgJ" firstAttribute="bottom" secondItem="5GS-H9-z24" secondAttribute="bottom" id="gfT-nb-Z24"/>
                 <constraint firstItem="5GS-H9-z24" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="nMx-k0-rhk"/>
                 <constraint firstItem="NCa-Ml-mL0" firstAttribute="leading" secondItem="nEi-mY-y6g" secondAttribute="leading" id="noJ-md-21r"/>
                 <constraint firstAttribute="trailing" secondItem="nEi-mY-y6g" secondAttribute="trailing" id="tUA-7a-wVj"/>
                 <constraint firstItem="NCa-Ml-mL0" firstAttribute="trailing" secondItem="nEi-mY-y6g" secondAttribute="trailing" id="upr-7b-1e1"/>
+                <constraint firstItem="DNC-6h-HgJ" firstAttribute="leading" secondItem="5GS-H9-z24" secondAttribute="leading" id="yPT-qW-Md0"/>
                 <constraint firstItem="uRc-92-jGJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="z3S-mt-L6s"/>
             </constraints>
         </view>
