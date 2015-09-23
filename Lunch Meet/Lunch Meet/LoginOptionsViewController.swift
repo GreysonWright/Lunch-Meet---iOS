@@ -59,4 +59,10 @@ class LoginOptionsViewController: UIViewController {
 		
 	}
 
+	@IBAction func createButtonTapped(sender: AnyObject) {
+		
+		dismissViewControllerAnimated(true, completion: nil)
+		
+	}
+	
 }
