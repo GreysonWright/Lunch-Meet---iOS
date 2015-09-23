@@ -137,12 +137,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 			textField.tintColor = UIColor.grey700()
 			
 		}
-		forgotPasswordAlert.addAction(UIAlertAction(title: "Reset", style: .Default, handler: { (action: UIAlertAction!) -> Void in
+		forgotPasswordAlert.addAction(UIAlertAction(title: "Reset", style: .Default, handler: { (action: UIAlertAction) -> Void in
 			
 			
 			
 		}))
-		forgotPasswordAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction!) -> Void in
+		forgotPasswordAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { (action: UIAlertAction) -> Void in
 			
 			
 			

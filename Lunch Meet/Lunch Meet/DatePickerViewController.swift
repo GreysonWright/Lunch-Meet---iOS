@@ -207,7 +207,7 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 			
 			if response != nil {
 			
-				self.restaurantData = response!.mapItems as! [MKMapItem]
+				self.restaurantData = response!.mapItems 
 				
 			} else {
 				
@@ -215,7 +215,7 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 				
 			}
 			
-			println(error)
+			print(error)
 			
 			self.locationTableView.reloadData()
 			
@@ -232,7 +232,7 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 	}
 	
 	//MARK: - Location Manager
-	func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+	func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 		
 		if CLLocationManager.authorizationStatus() == .Restricted || CLLocationManager.authorizationStatus() == .Denied {
 			
@@ -247,9 +247,9 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 	}
 	
 	//MARK: - MapView
-	func mapView(mapView: MKMapView!, didUpdateUserLocation userLocation: MKUserLocation!) {
+	func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
 		
-		println(mapView.annotations.count)
+		print(mapView.annotations.count)
 		
 		if mapView.annotations.count == 1 {
 		
@@ -265,7 +265,7 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 		
 	}
 	
-	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+	func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
 		
 		if let annotation = annotation as? Annotation {
 			
@@ -322,7 +322,7 @@ class DatePickerViewController: UIViewController, MKMapViewDelegate, UITableView
 		mapView.removeAnnotations(mapView.annotations)
 		
 		let mapItem = restaurantData[indexPath.row]
-		let annotation = Annotation(coordinate: mapItem.placemark.location.coordinate, title: mapItem.name, subtitle: nil)
+		let annotation = Annotation(coordinate: mapItem.placemark.location!.coordinate, title: mapItem.name!, subtitle: nil)
 		
 		var region = MKCoordinateRegion()
 		region.center = annotation.coordinate

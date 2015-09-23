@@ -139,16 +139,16 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 		let dateFormatter = NSDateFormatter()
 		
 		dateFormatter.dateFormat = "dd"
-		let selectedDay = dateFormatter.stringFromDate(date).toInt()
-		let currentDay = dateFormatter.stringFromDate(NSDate()).toInt()
+		let selectedDay = Int(dateFormatter.stringFromDate(date))
+		let currentDay = Int(dateFormatter.stringFromDate(NSDate()))
 		
 		dateFormatter.dateFormat = "MM"
-		let selectedMonth = dateFormatter.stringFromDate(date).toInt()
-		let currentMonth = dateFormatter.stringFromDate(NSDate()).toInt()
+		let selectedMonth = Int(dateFormatter.stringFromDate(date))
+		let currentMonth = Int(dateFormatter.stringFromDate(NSDate()))
 		
 		dateFormatter.dateFormat = "yyyy"
-		let selectedYear = dateFormatter.stringFromDate(date).toInt()
-		let currentYear = dateFormatter.stringFromDate(NSDate()).toInt()
+		let selectedYear = Int(dateFormatter.stringFromDate(date))
+		let currentYear = Int(dateFormatter.stringFromDate(NSDate()))
 		
 		if (selectedDay >= currentDay && selectedMonth >= currentMonth && selectedYear >= currentYear) || (selectedMonth > currentMonth && selectedYear >= currentYear) || (selectedYear > currentYear) {
 			

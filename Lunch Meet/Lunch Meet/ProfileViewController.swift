@@ -82,7 +82,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 			
 			imagePickerVC.delegate = self
 			imagePickerVC.sourceType = sourceType
-			imagePickerVC.mediaTypes = [kUTTypeImage as NSString]
+//			imagePickerVC.mediaTypes = [kUTTypeImage as NSString]
 			imagePickerVC.allowsEditing = false
 			
 			self.presentViewController(imagePickerVC, animated: true, completion: nil)
@@ -139,12 +139,12 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
 	@IBAction func editProfileImageButtonTapped(sender: AnyObject) {
 		
 		let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
-		actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .Default, handler: { (action: UIAlertAction!) -> Void in
+		actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .Default, handler: { (action: UIAlertAction) -> Void in
 			
 			self.presentImagePicker(.PhotoLibrary)
 			
 		}))
-		actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { (action: UIAlertAction!) -> Void in
+		actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { (action: UIAlertAction) -> Void in
 			
 			self.presentImagePicker(.Camera)
 			
